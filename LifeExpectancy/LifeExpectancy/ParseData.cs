@@ -26,26 +26,19 @@ namespace Project
 {
     public class ParseData
     {
-        public struct Grocery
+        public struct lifeExpectancy
         {
-            public string storeName;
-            public string licenseID;
-            public string groceryAddress;
+            public string communityName;
+            public string expectancy;            
         };
 
-        public struct BuildingViolation
+        public struct SocioEconomicIndicators
         {
-            public string buildingViolationStatus;
-            public string buildingAddress;
-            public string violation;
+            public string poverty;
+            public string unemployment;
+            public string perCapitaIncome;
         };
-
-        public struct FoodInspection
-        {
-            public string foodInspectionStatus;
-            public string storeLicenseID;
-            public string inspectionDate;
-        };
+      
 
         public struct FinalAnalysis
         {
@@ -63,10 +56,9 @@ namespace Project
             public DateTime date;
         }
             
-        Grocery[] groceryData = new Grocery[6000];
-        FoodInspection[] foodInspectionData = new FoodInspection[40000];
+        lifeExpectancy[] lifeExpectancyData = new lifeExpectancy[6000];        
         FinalAnalysis[] finalAnalysis = new FinalAnalysis[20000];
-        BuildingViolation[] buildingData = new BuildingViolation[200000];
+        SocioEconomicIndicators[] socioeconomicData = new SocioEconomicIndicators[200000];
         TempRecordMatch[] record_match = new TempRecordMatch[1000];
 
         int groceryStoreCnt = 0;
@@ -74,7 +66,7 @@ namespace Project
         long bldg_num = 0;
         
         //Method for parsing the Grocery Stores File         
-        public Grocery[] parseGroceryData(String filePath)
+        public lifeExpectancy[] parseGroceryData(String filePath)
         {
             int i = 0;    
             // STEP - 1 : Parse the "Grocery Stores" data            
@@ -89,14 +81,14 @@ namespace Project
                 {
                     var line = reader.ReadLine();
                     var values = line.Split(new string[] { "#@" }, StringSplitOptions.None);
-                    groceryData[i].storeName = values[0];
-                    groceryData[i].licenseID = values[1];
-                    groceryData[i].groceryAddress = values[5];                    
+                    lifeExpectancyData[i].communityName = values[0];
+                    lifeExpectancyData[i].expectancy = values[1];
+                    lifeExpectancyData[i].groceryAddress = values[5];                    
                     i++;
                 }
 
                 groceryStoreCnt = i;
-            return groceryData;
+            return lifeExpectancyData;
         }
 
         //Method for parsing the Food Inspections File         
@@ -140,7 +132,7 @@ namespace Project
         }
 
         //Method for parsing the Building Violations File         
-        public BuildingViolation[] parseBuildingInspection(String filePath)
+        public SocioEconomicIndicators[] parseBuildingInspection(String filePath)
         {
             long x = 0;                        
             try
@@ -156,8 +148,8 @@ namespace Project
                 {
                     var line = reader3.ReadLine();
                     var values = line.Split(new string[] { "#@" }, StringSplitOptions.None);
-                    buildingData[x].violation = values[6];
-                    buildingData[x].buildingAddress = values[16];
+                    socioeconomicData[x].perCapitaIncome = values[6];
+                    socioeconomicData[x].unemployment = values[16];
                     x++;
                 }
                 bldg_num = x;
@@ -170,12 +162,12 @@ namespace Project
             {
                 Console.WriteLine("\n Exception while parsing the Building Inspection file {0}", e.StackTrace);
             }
-            return buildingData;
+            return socioeconomicData;
         
         }
 
         //Method for Analyzing the Grocery Stores. Food Inspection and Building Violations File        
-        public FinalAnalysis[] analysisGroceryFood(Grocery[] groceryData, FoodInspection[] foodInspectionData, BuildingViolation[] buildingInspectionData, ref int n)
+        public FinalAnalysis[] analysisGroceryFood(lifeExpectancy[] groceryData, FoodInspection[] foodInspectionData, SocioEconomicIndicators[] buildingInspectionData, ref int n)
         {
             
             int c = 0;
@@ -191,10 +183,10 @@ namespace Project
                 {
 
                     //comparing the license ID of grocery stores with the stores in food inspections data
-                    if (string.Compare(groceryData[k].licenseID, foodInspectionData[m].storeLicenseID) == 0)
+                    if (string.Compare(groceryData[k].expectancy, foodInspectionData[m].storeLicenseID) == 0)
                     {
                         isInspcted = true;
-                        record_match[c].licenseID = groceryData[k].licenseID;
+                        record_match[c].licenseID = groceryData[k].expectancy;
                         record_match[c].date = Convert.ToDateTime(foodInspectionData[m].inspectionDate);
                         record_match[c].status = foodInspectionData[m].foodInspectionStatus;
                         c++;
@@ -206,8 +198,8 @@ namespace Project
                 if (!isInspcted)
                 {
                     finalAnalysis[n].storeInspectionStatus = "NOT INSPECTED";
-                    finalAnalysis[n].storeName = groceryData[k].storeName;
-                    finalAnalysis[n].storeLicenceID = groceryData[k].licenseID;
+                    finalAnalysis[n].storeName = groceryData[k].communityName;
+                    finalAnalysis[n].storeLicenceID = groceryData[k].expectancy;
                     finalAnalysis[n].addressFailedGrocery = groceryData[k].groceryAddress;
 
                     // populating the grocery stores not inspected and having building violations
@@ -215,9 +207,9 @@ namespace Project
                     {
 
                         //comparing grocery store address with building address to check for violation
-                        if (string.Compare(finalAnalysis[n].addressFailedGrocery, buildingData[g].buildingAddress) == 0)
+                        if (string.Compare(finalAnalysis[n].addressFailedGrocery, socioeconomicData[g].unemployment) == 0)
                         {
-                            finalAnalysis[n].violation = buildingData[g].violation;
+                            finalAnalysis[n].violation = socioeconomicData[g].perCapitaIncome;
                             break;
                         }
                         else
@@ -249,7 +241,7 @@ namespace Project
                             if (record_match[q].status != null && string.Compare(record_match[q].status.ToUpper(), "FAIL") == 0)
                             {
                                 finalAnalysis[n].storeInspectionStatus = record_match[q].status;
-                                finalAnalysis[n].storeName = groceryData[k].storeName;
+                                finalAnalysis[n].storeName = groceryData[k].communityName;
                                 finalAnalysis[n].storeLicenceID = record_match[q].licenseID;
                                 finalAnalysis[n].addressFailedGrocery = groceryData[k].groceryAddress;
 
@@ -258,9 +250,9 @@ namespace Project
                                 {
 
                                     //comparing grocery store address with building address to check for violation
-                                    if (string.Compare(finalAnalysis[n].addressFailedGrocery, buildingData[g].buildingAddress) == 0)
+                                    if (string.Compare(finalAnalysis[n].addressFailedGrocery, socioeconomicData[g].unemployment) == 0)
                                     {
-                                        finalAnalysis[n].violation = buildingData[g].violation;
+                                        finalAnalysis[n].violation = socioeconomicData[g].perCapitaIncome;
                                         break;
                                     }
                                     else

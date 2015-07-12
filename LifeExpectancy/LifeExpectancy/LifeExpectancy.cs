@@ -34,21 +34,21 @@ namespace Project
         {
             string filePath = "..\\..\\..\\..\\Data\\";
             int size = 0;
-            string groceryFilePath=filePath+ "Grocery_Stores_2013.csv";
-            string foodInspFilePath = filePath + "Food_Inspections_2013.csv";
-            string buildingViolationPath = filePath + "Building_Violations.csv";
+            string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
+            string SocioEconomicIndicatorsFilePath = filePath + "SocioEconomic Indicators_Chicago.csv";
+            
 
             Console.WriteLine("\n\n Please wait...It may take a few minutes for the data to load");
             
             ParseData pd = new ParseData();
             // Function call to parse grocery file
-            Project.ParseData.Grocery[] groceryStoresData = pd.parseGroceryData(groceryFilePath);
+            Project.ParseData.lifeExpectancy[] groceryStoresData = pd.parseGroceryData(lifeExpectancyFilePath);
             
             // Function call to parse Food Inspection file
             Project.ParseData.FoodInspection[] foodInspectionData = pd.parseFoodInspection(foodInspFilePath);
             
             // Function call to parse Building Violations file
-            Project.ParseData.BuildingViolation[] buildingViolationData = pd.parseBuildingInspection(buildingViolationPath);
+            Project.ParseData.SocioEconomicIndicators[] buildingViolationData = pd.parseBuildingInspection(buildingViolationPath);
             
             //Function call to Analyze data
             Project.ParseData.FinalAnalysis[] finalAnalysis = pd.analysisGroceryFood(groceryStoresData, foodInspectionData, buildingViolationData, ref size);
