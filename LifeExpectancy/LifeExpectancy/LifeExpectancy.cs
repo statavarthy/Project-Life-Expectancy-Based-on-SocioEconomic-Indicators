@@ -41,14 +41,12 @@ namespace Project
             Console.WriteLine("\n\n Please wait...It may take a few minutes for the data to load");
             
             ParseData pd = new ParseData();
-            // Function call to parse grocery file
+            // Function call to parse Life Expectancy file
             Project.ParseData.lifeExpectancy[] lifeExpectancyData = pd.parselifeExpectancyData(lifeExpectancyFilePath);
             
-            // Function call to parse Food Inspection file
+            // Function call to parse Socio Economic Indicators file
             Project.ParseData.SocioEconomicIndicators[] socioEconomicData = pd.parsesocioEconomicData(SocioEconomicIndicatorsFilePath);
-            
-            // Function call to parse Building Violations file
-            Project.ParseData.SocioEconomicIndicators[] buildingViolationData = pd.parseBuildingInspection(buildingViolationPath);
+                       
             
             //Function call to Analyze data
             Project.ParseData.FinalAnalysis[] finalAnalysis = pd.analysisGroceryFood(lifeExpectancyData, socioEconomicData, buildingViolationData, ref size);

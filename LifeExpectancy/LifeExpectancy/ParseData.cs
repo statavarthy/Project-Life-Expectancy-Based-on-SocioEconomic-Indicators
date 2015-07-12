@@ -62,7 +62,7 @@ namespace Project
         TempRecordMatch[] record_match = new TempRecordMatch[1000];
 
         int lifeExpectancyCnt = 0;
-        long foodInspectionCnt = 0;
+        long SocioEconomicIndicatorsCnt = 0;
         long bldg_num = 0;
         
         //Method for parsing the Grocery Stores File         
@@ -104,67 +104,19 @@ namespace Project
                 while (!reader1.EndOfStream)
                 {
                     var line = reader1.ReadLine();
-                    var values = line.Split(new string[] { "#@" }, StringSplitOptions.None);
+                    var values = line.Split(',');
                     //checking the start of each line  
-                    bool chk = long.TryParse(values[0], out num);
-                    if (chk && num > 9999)
-                    {
-                        string facilityType = values[4].ToUpper();
-                        bool isGroceryStore = facilityType.Contains("GROCERY");
-                        string inspectionDate = values[10];
-                        //Considering records for 2013 only
-                        bool is2013Record = inspectionDate.Contains("2013");
-
-                        // Populating foodInspection data
-                        if (isGroceryStore && is2013Record)
-                        {
-                            foodInspectionData[j].storeLicenseID = values[3];
-                            foodInspectionData[j].foodInspectionStatus = values[12];
-                            foodInspectionData[j].inspectionDate = values[10];
-                            j++;
-                        }
-                    }
+                    socioeconomicData[j].unemployment = values[4];
+                    socioeconomicData[j].poverty = values[3];
+                    socioeconomicData[j].perCapitaIncome = values[7];
+                    
                 }
-                foodInspectionCnt = j;
+                SocioEconomicIndicatorsCnt = j;
 
-            return foodInspectionData;
+                return socioeconomicData;
         }
 
-        //Method for parsing the Building Violations File         
-        public SocioEconomicIndicators[] parseBuildingInspection(String filePath)
-        {
-            long x = 0;                        
-            try
-            {
-
-
-                // STEP - 3 : Parse the Building Violations data
-                var reader3 = new StreamReader(File.OpenRead(@filePath));
-
-                var line_first = reader3.ReadLine();
-                // Populating Building Violations data           
-                while (!reader3.EndOfStream)
-                {
-                    var line = reader3.ReadLine();
-                    var values = line.Split(new string[] { "#@" }, StringSplitOptions.None);
-                    socioeconomicData[x].perCapitaIncome = values[6];
-                    socioeconomicData[x].unemployment = values[16];
-                    x++;
-                }
-                bldg_num = x;
-            }
-            catch (FileNotFoundException fnfe)
-            {
-                Console.WriteLine("\n Building Inspection File not Found {0}", fnfe.StackTrace);
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("\n Exception while parsing the Building Inspection file {0}", e.StackTrace);
-            }
-            return socioeconomicData;
-        
-        }
-
+       
         //Method for Analyzing the Grocery Stores. Food Inspection and Building Violations File        
         public FinalAnalysis[] analysisGroceryFood(lifeExpectancy[] groceryData, FoodInspection[] foodInspectionData, SocioEconomicIndicators[] buildingInspectionData, ref int n)
         {
@@ -178,7 +130,7 @@ namespace Project
                 bool isInspcted = false;
                 c = 0;
                 maxDate = DateTime.MinValue;
-                for (m = 0; m < foodInspectionCnt; m++)
+                for (m = 0; m < SocioEconomicIndicatorsCnt; m++)
                 {
 
                     //comparing the license ID of grocery stores with the stores in food inspections data
