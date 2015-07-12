@@ -32,7 +32,7 @@ namespace Project
         
         static void Main(string[] args)
         {
-            string filePath = "..\\..\\data\\" + "actualData" + "\\";
+            string filePath = "..\\..\\..\\..\\Data\\";
             int size = 0;
             string groceryFilePath=filePath+ "Grocery_Stores_2013.csv";
             string foodInspFilePath = filePath + "Food_Inspections_2013.csv";
