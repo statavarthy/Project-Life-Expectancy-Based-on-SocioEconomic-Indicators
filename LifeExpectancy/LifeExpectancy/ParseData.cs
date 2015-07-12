@@ -61,12 +61,12 @@ namespace Project
         SocioEconomicIndicators[] socioeconomicData = new SocioEconomicIndicators[200000];
         TempRecordMatch[] record_match = new TempRecordMatch[1000];
 
-        int groceryStoreCnt = 0;
+        int lifeExpectancyCnt = 0;
         long foodInspectionCnt = 0;
         long bldg_num = 0;
         
         //Method for parsing the Grocery Stores File         
-        public lifeExpectancy[] parseGroceryData(String filePath)
+        public lifeExpectancy[] parselifeExpectancyData(String filePath)
         {
             int i = 0;    
             // STEP - 1 : Parse the "Grocery Stores" data            
@@ -80,26 +80,25 @@ namespace Project
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
-                    var values = line.Split(new string[] { "#@" }, StringSplitOptions.None);
-                    lifeExpectancyData[i].communityName = values[0];
-                    lifeExpectancyData[i].expectancy = values[1];
-                    lifeExpectancyData[i].groceryAddress = values[5];                    
+                    var values = line.Split(',');
+                    lifeExpectancyData[i].communityName = values[1];
+                    lifeExpectancyData[i].expectancy = values[8];                    
                     i++;
                 }
 
-                groceryStoreCnt = i;
+                lifeExpectancyCnt = i;
             return lifeExpectancyData;
         }
 
         //Method for parsing the Food Inspections File         
 
-        public FoodInspection[] parseFoodInspection(String filePath)
+        public SocioEconomicIndicators[] parsesocioEconomicData(String SocioEconomicIndicatorsFilePath)
         {
             long j = 0;
             long num = 0;
 
                 // STEP - 2 : Parse the Food Inspections data
-                var reader1 = new StreamReader(File.OpenRead(@filePath));
+                var reader1 = new StreamReader(File.OpenRead(SocioEconomicIndicatorsFilePath));
                 var line0_new = reader1.ReadLine();
 
                 while (!reader1.EndOfStream)
@@ -174,7 +173,7 @@ namespace Project
             long m = 0;
             DateTime maxDate = DateTime.MinValue;            
             // Analysis between Grocery Stores and Food Inspection
-            for (long k = 0; k < groceryStoreCnt; k++)
+            for (long k = 0; k < lifeExpectancyCnt; k++)
             {
                 bool isInspcted = false;
                 c = 0;

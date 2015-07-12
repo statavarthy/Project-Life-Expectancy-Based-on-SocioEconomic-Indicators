@@ -42,16 +42,16 @@ namespace Project
             
             ParseData pd = new ParseData();
             // Function call to parse grocery file
-            Project.ParseData.lifeExpectancy[] groceryStoresData = pd.parseGroceryData(lifeExpectancyFilePath);
+            Project.ParseData.lifeExpectancy[] lifeExpectancyData = pd.parselifeExpectancyData(lifeExpectancyFilePath);
             
             // Function call to parse Food Inspection file
-            Project.ParseData.FoodInspection[] foodInspectionData = pd.parseFoodInspection(foodInspFilePath);
+            Project.ParseData.SocioEconomicIndicators[] socioEconomicData = pd.parsesocioEconomicData(SocioEconomicIndicatorsFilePath);
             
             // Function call to parse Building Violations file
             Project.ParseData.SocioEconomicIndicators[] buildingViolationData = pd.parseBuildingInspection(buildingViolationPath);
             
             //Function call to Analyze data
-            Project.ParseData.FinalAnalysis[] finalAnalysis = pd.analysisGroceryFood(groceryStoresData, foodInspectionData, buildingViolationData, ref size);
+            Project.ParseData.FinalAnalysis[] finalAnalysis = pd.analysisGroceryFood(lifeExpectancyData, socioEconomicData, buildingViolationData, ref size);
             pd.displayData(finalAnalysis, ref size);
             
         }
