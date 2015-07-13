@@ -38,11 +38,11 @@ namespace Project
             public string unemployment;
             public string perCapitaIncome;
         };
-      
 
-        public struct FinalAnalysis
+
+        public struct CorrelationAnalysis
         {
-            public string storeInspectionStatus;
+            public string communityName;
             public string storeName;
             public string storeLicenceID;
             public string addressFailedGrocery;
@@ -56,8 +56,8 @@ namespace Project
             public DateTime date;
         }
             
-        lifeExpectancy[] lifeExpectancyData = new lifeExpectancy[6000];        
-        //FinalAnalysis[] finalAnalysis = new FinalAnalysis[20000];
+        lifeExpectancy[] lifeExpectancyData = new lifeExpectancy[6000];
+        CorrelationAnalysis[] finalCorrelationData = new CorrelationAnalysis[20000];
         SocioEconomicIndicators[] socioeconomicData = new SocioEconomicIndicators[200000];
         //TempRecordMatch[] record_match = new TempRecordMatch[1000];
 
@@ -130,121 +130,15 @@ namespace Project
         }
 
        
-        ////Method for Analyzing the Grocery Stores. Food Inspection and Building Violations File        
-        //public FinalAnalysis[] analysisGroceryFood(lifeExpectancy[] groceryData, FoodInspection[] foodInspectionData, SocioEconomicIndicators[] buildingInspectionData, ref int n)
-        //{
+        //Method for Analyzing the Grocery Stores. Food Inspection and Building Violations File        
+        public CorrelationAnalysis[] finalCorrelationAnalysis(lifeExpectancy[] lifeExpectancyData, SocioEconomicIndicators[] socioEconomicData, ref int n)
+        {
             
-        //    int c = 0;
-        //    long m = 0;
-        //    DateTime maxDate = DateTime.MinValue;            
-        //    // Analysis between Grocery Stores and Food Inspection
-        //    for (long k = 0; k < lifeExpectancyCnt; k++)
-        //    {
-        //        bool isInspcted = false;
-        //        c = 0;
-        //        maxDate = DateTime.MinValue;
-        //        for (m = 0; m < SocioEconomicIndicatorsCnt; m++)
-        //        {
-
-        //            //comparing the license ID of grocery stores with the stores in food inspections data
-        //            if (string.Compare(groceryData[k].expectancy, foodInspectionData[m].storeLicenseID) == 0)
-        //            {
-        //                isInspcted = true;
-        //                record_match[c].licenseID = groceryData[k].expectancy;
-        //                record_match[c].date = Convert.ToDateTime(foodInspectionData[m].inspectionDate);
-        //                record_match[c].status = foodInspectionData[m].foodInspectionStatus;
-        //                c++;
-        //            }
-
-        //        }
-
-        //        // populating the grocery stores that are not matched (not been inspected)
-        //        if (!isInspcted)
-        //        {
-        //            finalAnalysis[n].storeInspectionStatus = "NOT INSPECTED";
-        //            finalAnalysis[n].storeName = groceryData[k].communityName;
-        //            finalAnalysis[n].storeLicenceID = groceryData[k].expectancy;
-        //            finalAnalysis[n].addressFailedGrocery = groceryData[k].groceryAddress;
-
-        //            // populating the grocery stores not inspected and having building violations
-        //            for (int g = 0; g < bldg_num; g++)
-        //            {
-
-        //                //comparing grocery store address with building address to check for violation
-        //                if (string.Compare(finalAnalysis[n].addressFailedGrocery, socioeconomicData[g].unemployment) == 0)
-        //                {
-        //                    finalAnalysis[n].violation = socioeconomicData[g].perCapitaIncome;
-        //                    break;
-        //                }
-        //                else
-        //                {
-        //                    finalAnalysis[n].violation = "No Building Violation";
-        //                }
-        //            }
-        //            n++;
-        //        }
-
-        //        // Considering the latest (max) inspection date for all the matched records
-        //        if (isInspcted)
-        //        {
-        //            foreach (var r in record_match)
-        //            {
-        //                if (maxDate < r.date)
-        //                {
-        //                    maxDate = r.date;
-        //                }
-        //            }
-
-        //            // considering only failed inpsection records
-        //            for (int q = 0; q < record_match.Length; q++)
-        //            {
-        //                if (record_match[q].date == maxDate)
-        //                {
-
-        //                    // Comparing the status to find only the failed records
-        //                    if (record_match[q].status != null && string.Compare(record_match[q].status.ToUpper(), "FAIL") == 0)
-        //                    {
-        //                        finalAnalysis[n].storeInspectionStatus = record_match[q].status;
-        //                        finalAnalysis[n].storeName = groceryData[k].communityName;
-        //                        finalAnalysis[n].storeLicenceID = record_match[q].licenseID;
-        //                        finalAnalysis[n].addressFailedGrocery = groceryData[k].groceryAddress;
-
-        //                        // populating the grocery stores that have failed food inspection and have building violations
-        //                        for (int g = 0; g < bldg_num; g++)
-        //                        {
-
-        //                            //comparing grocery store address with building address to check for violation
-        //                            if (string.Compare(finalAnalysis[n].addressFailedGrocery, socioeconomicData[g].unemployment) == 0)
-        //                            {
-        //                                finalAnalysis[n].violation = socioeconomicData[g].perCapitaIncome;
-        //                                break;
-        //                            }
-        //                            else
-        //                            {
-        //                                finalAnalysis[n].violation = "No Building Violation";
-        //                            }
-        //                        }
-        //                        n++;
-        //                    }
-        //                }
-        //            }
-
-        //            // Clearing the temporary records for next iteration
-        //            for (int u = 0; u < record_match.Length; u++)
-        //            {
-        //                record_match[u].date = DateTime.MinValue;
-        //                record_match[u].licenseID = null;
-        //                record_match[u].status = null;
-        //            }
-        //        }
-
-
-        //    }
-
+       
             
-        //    return finalAnalysis;
+           return finalCorrelationData;
            
-        //}
+        }
         //public void displayData(FinalAnalysis[] finalAnalysis, ref int n)
         //{
         //    int i = 0;
