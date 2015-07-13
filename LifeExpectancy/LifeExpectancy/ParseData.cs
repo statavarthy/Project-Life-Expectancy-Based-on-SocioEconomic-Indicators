@@ -21,6 +21,8 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using MathNet.Numerics.Statistics;
+
 
 namespace Project
 {
@@ -42,11 +44,10 @@ namespace Project
 
         public struct CorrelationAnalysis
         {
-            public string communityName;
-            public string storeName;
-            public string storeLicenceID;
-            public string addressFailedGrocery;
-            public string violation;
+            public double lifePoverty;
+            public double lifeUnemp;
+            public double lifeCapita;
+           
         };
 
         public struct TempRecordMatch
@@ -131,12 +132,41 @@ namespace Project
 
        
         //Method for Analyzing the Grocery Stores. Food Inspection and Building Violations File        
-        public CorrelationAnalysis[] finalCorrelationAnalysis(lifeExpectancy[] lifeExpectancyData, SocioEconomicIndicators[] socioEconomicData, ref int n)
+        public CorrelationAnalysis[] finalCorrelationAnalysis(lifeExpectancy[] lifeExpectancyData, SocioEconomicIndicators[] socioEconomicData)
         {
-            
-       
-            
-           return finalCorrelationData;
+
+            int l=0;
+
+            double[] expectancy = new double[500];
+            double[] poverty = new double[500];
+            double[] unemployment = new double[500];
+            double[] perCapitaIncome = new double[500];
+
+            for (int k = 0; k < lifeExpectancyData.Length; k++)
+            {
+                expectancy[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy);
+            }
+            for (int k = 0; k < socioEconomicData.Length; k++)
+            {
+                poverty[k] = Convert.ToDouble(socioEconomicData[k].poverty);
+            }
+            for (int k = 0; k < socioEconomicData.Length; k++)
+            {
+                unemployment[k] = Convert.ToDouble(socioEconomicData[k].unemployment);
+            }
+            for (int k = 0; k < socioEconomicData.Length; k++)
+            {
+                perCapitaIncome[k] = Convert.ToDouble(socioEconomicData[k].perCapitaIncome);
+            }
+            int i=0;
+            var correl = Correlation.Pearson(expectancy, poverty);
+
+
+
+                
+           
+
+                return finalCorrelationData;
            
         }
         //public void displayData(FinalAnalysis[] finalAnalysis, ref int n)
