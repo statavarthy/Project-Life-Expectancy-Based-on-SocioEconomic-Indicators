@@ -26,14 +26,17 @@ using MathNet.Numerics.Statistics;
 
 namespace Project
 {
+    
     public class ParseData
     {
+        //Structure for storing parsed data from life Expectancy file
         public struct lifeExpectancy
         {
             public string communityName;
             public string expectancy;            
         };
 
+        //Structure for storing parsed data from Socio Economic Indicators file
         public struct SocioEconomicIndicators
         {
             public string poverty;
@@ -45,24 +48,19 @@ namespace Project
             
         lifeExpectancy[] lifeExpectancyData = new lifeExpectancy[78];       
         SocioEconomicIndicators[] socioeconomicData = new SocioEconomicIndicators[78];
-        //TempRecordMatch[] record_match = new TempRecordMatch[1000];
+        
 
         int lifeExpectancyCnt = 0;
         long SocioEconomicIndicatorsCnt = 0;
         long bldg_num = 0;
         
-        //Method for parsing the Grocery Stores File         
+        //Method for parsing the Life Expectancy File         
         public lifeExpectancy[] parselifeExpectancyData(String filePath)
         {
-            int i = 0;    
-            // STEP - 1 : Parse the "Grocery Stores" data            
-            //try
-            //{
-
-
+            int i = 0;                
                 var reader = new StreamReader(File.OpenRead(@filePath));
                 var line0 = reader.ReadLine();
-                // Populating groceryData
+                // Populating lifeExpectancy Data
                 while (!reader.EndOfStream)
                 {
                     var line = reader.ReadLine();
@@ -71,67 +69,63 @@ namespace Project
                     lifeExpectancyData[i].expectancy = values[8];                    
                     i++;
                 }
-
+                //counter for storing the number of entries in life expectancy file
                 lifeExpectancyCnt = i;
-                Console.WriteLine("\n Life Expectancy Data");
-                for (int k = 0; k < lifeExpectancyCnt; k++)
-                {
-                    Console.WriteLine("{0},{1}", lifeExpectancyData[k].communityName, lifeExpectancyData[k].expectancy);
-                }
+                //Console.WriteLine("\n Life Expectancy Data");
+                //for (int k = 0; k < lifeExpectancyCnt; k++)
+                //{
+                //    Console.WriteLine("{0},{1}", lifeExpectancyData[k].communityName, lifeExpectancyData[k].expectancy);
+                //}
                     return lifeExpectancyData;
         }
 
-        //Method for parsing the Food Inspections File         
-
+        //Method for parsing the Socio Economic Indicators File         
         public SocioEconomicIndicators[] parsesocioEconomicData(String SocioEconomicIndicatorsFilePath)
         {
             long j = 0;
-            long num = 0;
-
-                // STEP - 2 : Parse the Food Inspections data
+            long num = 0;                
                 var reader1 = new StreamReader(File.OpenRead(SocioEconomicIndicatorsFilePath));
                 var line0_new = reader1.ReadLine();
-
+                // Populating Socio Economic Indicators Data
                 while (!reader1.EndOfStream)
                 {
                     var line = reader1.ReadLine();
-                    var values = line.Split(',');
-                    //checking the start of each line  
+                    var values = line.Split(',');                    
                     socioeconomicData[j].unemployment = values[4];
                     socioeconomicData[j].poverty = values[3];
                     socioeconomicData[j].perCapitaIncome = values[7];
                     j++;
                     
                 }
+                //counter for storing the number of entries in life expectancy file
                 SocioEconomicIndicatorsCnt = j;
 
-            Console.WriteLine("\n Socio Economic Indicators");
+            //Console.WriteLine("\n Socio Economic Indicators");
 
-                for (int k = 0; k < SocioEconomicIndicatorsCnt; k++)
-                {
-                    Console.WriteLine("{0} {1} {2}", socioeconomicData[k].perCapitaIncome, socioeconomicData[k].poverty, socioeconomicData[k].unemployment);
-                }
+            //    for (int k = 0; k < SocioEconomicIndicatorsCnt; k++)
+            //    {
+            //        Console.WriteLine("{0} {1} {2}", socioeconomicData[k].perCapitaIncome, socioeconomicData[k].poverty, socioeconomicData[k].unemployment);
+            //    }
 
                     return socioeconomicData;
         }
 
        
-        //Method for Analyzing the Grocery Stores. Food Inspection and Building Violations File        
+        //Method for Calculating the Correlation between Life Expectancy and Socio Economic Indicators        
         public void CorrelationAnalysis(lifeExpectancy[] lifeExpectancyData, SocioEconomicIndicators[] socioEconomicData)
         {
-
-            int l=0;
+     
 
             double[] expectancy = new double[78];
             double[] poverty = new double[78];
             double[] unemployment = new double[78];
             double[] perCapitaIncome = new double[78];
 
-            for (int k = 0; k < lifeExpectancyData.Length; k++)
+            for (int k = 0; k < 1; k++)
             {
                 expectancy[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy);
             }
-            for (int k = 0; k < socioEconomicData.Length; k++)
+            for (int k = 0; k < 1; k++)
             {
                 poverty[k] = Convert.ToDouble(socioEconomicData[k].poverty);
             }
@@ -143,16 +137,14 @@ namespace Project
             {
                 perCapitaIncome[k] = Convert.ToDouble(socioEconomicData[k].perCapitaIncome);
             }
-            int i=0;
+            //Pearson Correlation for calculating correlation
             var correlLifePoverty = Correlation.Pearson(expectancy, poverty);            
             var correlLifeUnemp = Correlation.Pearson(expectancy, unemployment);
             var correlLifePerCapita = Correlation.Pearson(expectancy, perCapitaIncome);
             Console.WriteLine("\n Correlation between Life Expectancy and Poverty is  {0} ", correlLifePoverty);
             Console.WriteLine("\n Correlation between Life Expectancy and Unemployment is {0} ", correlLifeUnemp);
             Console.WriteLine("\n Correlation between Life Expectancy and Per Capita Income is {0} ", correlLifePerCapita);
-            
-
-           
+                      
         }
         //public void displayData(FinalAnalysis[] finalAnalysis, ref int n)
         //{

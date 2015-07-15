@@ -32,26 +32,23 @@ namespace Project
         
         static void Main(string[] args)
         {
-            string filePath = "..\\..\\..\\..\\Data\\";
-           // int size = 0;
+            //File path where data is stored
+            string filePath = "..\\..\\..\\..\\Data\\";    
+            //File path where the life expectancy file is saved
             string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
-            string SocioEconomicIndicatorsFilePath = filePath + "SocioEconomic_Indicators_Chicago.csv";
-            
-
-            //Console.WriteLine("\n\n Please wait...It may take a few minutes for the data to load");
+            //File path where the Socio Economic indicators file is saved
+            string SocioEconomicIndicatorsFilePath = filePath + "SocioEconomic_Indicators_Chicago.csv";                       
             
             ParseData pd = new ParseData();
             // Function call to parse Life Expectancy file
             Project.ParseData.lifeExpectancy[] lifeExpectancyData = pd.parselifeExpectancyData(lifeExpectancyFilePath);
-            
-            
+                        
             // Function call to parse Socio Economic Indicators file
             Project.ParseData.SocioEconomicIndicators[] socioEconomicData = pd.parsesocioEconomicData(SocioEconomicIndicatorsFilePath);
-                       
+                                   
+            //Function call to find correlation between the data
+            pd.CorrelationAnalysis(lifeExpectancyData, socioEconomicData);
             
-            //Function call to Analyze data
-             pd.CorrelationAnalysis(lifeExpectancyData, socioEconomicData);
-            //pd.displayData(finalAnalysis, ref size);
             
         }
     }
