@@ -10,7 +10,7 @@
  * This program contain methods for parsing data.
  * The different methods help in populating the life Expectancy and 
  * and SocioEconomic Indicators
- * The Analysis method helps in identifying the correlation between 
+ * The Correlation Analysis method helps in calculating the correlation between 
  * the life Expectancy and SocioEconomic Indicators.
  * 
  
@@ -45,15 +45,14 @@ namespace Project
         };
 
 
-            
+        //Declaring structure of arrays for storing parsed data    
         lifeExpectancy[] lifeExpectancyData = new lifeExpectancy[78];       
         SocioEconomicIndicators[] socioeconomicData = new SocioEconomicIndicators[78];
         
-
+        //counters for maintaining count of the records
         int lifeExpectancyCnt = 0;
-        long SocioEconomicIndicatorsCnt = 0;
-        long bldg_num = 0;
-        
+        long SocioEconomicIndicatorsCnt = 0;        
+       
         //Method for parsing the Life Expectancy File         
         public lifeExpectancy[] parselifeExpectancyData(String filePath)
         {
@@ -137,7 +136,7 @@ namespace Project
             {
                 perCapitaIncome[k] = Convert.ToDouble(socioEconomicData[k].perCapitaIncome);
             }
-            //Pearson Correlation for calculating correlation
+            //Pearson Correlation for calculating correlation between life expectancies and different socioeconomic indicators
             var correlLifePoverty = Correlation.Pearson(expectancy, poverty);            
             var correlLifeUnemp = Correlation.Pearson(expectancy, unemployment);
             var correlLifePerCapita = Correlation.Pearson(expectancy, perCapitaIncome);
@@ -145,103 +144,6 @@ namespace Project
             Console.WriteLine("\n Correlation between Life Expectancy and Unemployment is {0} ", correlLifeUnemp);
             Console.WriteLine("\n Correlation between Life Expectancy and Per Capita Income is {0} ", correlLifePerCapita);
                       
-        }
-        //public void displayData(FinalAnalysis[] finalAnalysis, ref int n)
-        //{
-        //    int i = 0;
-        //    //Display records for the user by giving options about the different analysis
-        //    string choice;
-        //    string answer = "Y";
-
-        //    Console.WriteLine("\n\n*************************** Chicago Grocery Stores Database*************************************************");
-
-        //    Console.WriteLine("\n\nThe Following Database will give you information about grocery stores that have been inspected in chicago");
-        //    Console.WriteLine("It will display the grocery stores that have failed food inspections,have building violations, and that have not been inspected for food.");
-        //    Console.WriteLine("This database has been compiled considering the records of 2013 and shows only the FAILED records");
-
-        //    do
-        //    {
-        //        Console.WriteLine("\n\n******************************************MENU*********************************************************");
-        //        Console.WriteLine("\n 1. Grocery Stores that have failed the Inspection");
-        //        Console.WriteLine("\n 2. Grocery Stores that have not undergone the Inspection");
-        //        Console.WriteLine("\n 3. Grocery Stores with failed Food Inspection and Building Violations");
-        //        Console.WriteLine("\n 4. Grocery Stores that have not undergone the Inpsection and have Building violations");
-        //        Console.Write("\n Enter your choice : ");
-        //        choice = Console.ReadLine();
-
-        //        while(choice!="1"&&choice!="2"&&choice!="3"&&choice!="4")
-        //        {
-        //            Console.WriteLine("\n Invalid Input Entered!!!!");
-        //            Console.Write(" Please reenter your choice (1-4):");
-        //            choice = Console.ReadLine();
-        //        } 
-
-        //        if (choice == "1")
-        //        {
-        //            Console.WriteLine("Grocery Stores that have failed Food Inspection : ");
-        //            Console.WriteLine("----------------------------------------------------------------------------------------------------------------------------------");
-        //            Console.WriteLine("{0,-15}  {1,-40}  {2,20}  ", "License ID", "Store Name", "Inspection Status");
-        //            for (i = 0; i < n; i++)
-        //            {
-        //                if (string.Compare(finalAnalysis[i].storeInspectionStatus.ToUpper(), "FAIL") == 0)
-        //                    Console.WriteLine(string.Format("{0,-15}  {1,-40}  {2,20} ", finalAnalysis[i].storeLicenceID, finalAnalysis[i].storeName, finalAnalysis[i].storeInspectionStatus));
-
-        //            }
-
-        //        }
-
-        //        if (choice == "2")
-        //        {
-        //            Console.WriteLine("Grocery Stores that have not undergone Food Inspection : ");
-        //            Console.WriteLine("----------------------------------------------------------------------------------------------------------------------------------");
-        //            Console.WriteLine("{0,-15}  {1,-40}  {2,20}  ", "License ID", "Store Name", "Inspection Status");
-        //            for (i = 0; i < n; i++)
-        //            {
-        //                if (string.Compare(finalAnalysis[i].storeInspectionStatus.ToUpper(), "NOT INSPECTED") == 0)
-        //                    Console.WriteLine(string.Format("{0,-15}  {1,-40}  {2,20} ", finalAnalysis[i].storeLicenceID, finalAnalysis[i].storeName, finalAnalysis[i].storeInspectionStatus));
-
-        //            }
-
-        //        }
-
-        //        if (choice == "3")
-        //        {
-        //            Console.WriteLine("Grocery Stores that have failed Food Inspection and have building violations : ");
-        //            Console.WriteLine("----------------------------------------------------------------------------------------------------------------------------------");
-        //            Console.WriteLine("{0,-15}  {1,-40}  {2,20} {3,40} ", "License ID", "Store Name", "Inspection Status", " Building Violation");
-        //            for (i = 0; i < n; i++)
-        //            {
-        //                if ((string.Compare(finalAnalysis[i].storeInspectionStatus.ToUpper(), "FAIL") == 0) && (string.Compare(finalAnalysis[i].violation.ToUpper(), "NO BUILDING VIOLATION") != 0))
-        //                    Console.WriteLine(string.Format("{0,-15}  {1,-40}  {2,20}  {3,40}", finalAnalysis[i].storeLicenceID, finalAnalysis[i].storeName, finalAnalysis[i].storeInspectionStatus, finalAnalysis[i].violation));
-        //            }
-
-        //        }
-
-        //        if (choice == "4")
-        //        {
-        //            Console.WriteLine("Grocery Stores that have failed Food Inspection and have building violations : ");
-        //            Console.WriteLine("----------------------------------------------------------------------------------------------------------------------------------");
-        //            Console.WriteLine("{0,-15}  {1,-40}  {2,20}  {3,40}", "License ID", "Store Name", "Inspection Status", " Building Violation");
-        //            for (i = 0; i < n; i++)
-        //            {
-        //                if ((string.Compare(finalAnalysis[i].storeInspectionStatus.ToUpper(), "NOT INSPECTED") == 0) && (string.Compare(finalAnalysis[i].violation.ToUpper(), "NO BUILDING VIOLATION") == 1))
-        //                    Console.WriteLine(string.Format("{0,-15}  {1,-40}  {2,20}  {3,40}", finalAnalysis[i].storeLicenceID, finalAnalysis[i].storeName, finalAnalysis[i].storeInspectionStatus, finalAnalysis[i].violation));
-        //            }
-
-        //        }                    
-        //        Console.Write("\n Do you wish to continue ? (Y/N) : ");
-        //        answer = Console.ReadLine();
-        //        while(string.Compare(answer.ToUpper(), "N")!=0 &&string.Compare(answer.ToUpper(), "Y")!=0)
-        //        {
-        //            Console.WriteLine("\n Invalid Input Entered!!!!");
-        //            Console.Write(" Please reenter your choice , Do you wish to continue (Y/N) : ");
-        //            answer = Console.ReadLine();
-        //        } 
-                
-        //    }while ((string.Compare(answer.ToUpper(), "Y") == 0));
-
-                           
-          
-        //}
+        }   
     }
 }
