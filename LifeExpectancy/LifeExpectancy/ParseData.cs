@@ -42,24 +42,9 @@ namespace Project
         };
 
 
-        public struct CorrelationAnalysis
-        {
-            public double lifePoverty;
-            public double lifeUnemp;
-            public double lifeCapita;
-           
-        };
-
-        public struct TempRecordMatch
-        {
-            public string status;
-            public string licenseID;
-            public DateTime date;
-        }
             
-        lifeExpectancy[] lifeExpectancyData = new lifeExpectancy[6000];
-        CorrelationAnalysis[] finalCorrelationData = new CorrelationAnalysis[20000];
-        SocioEconomicIndicators[] socioeconomicData = new SocioEconomicIndicators[200000];
+        lifeExpectancy[] lifeExpectancyData = new lifeExpectancy[78];       
+        SocioEconomicIndicators[] socioeconomicData = new SocioEconomicIndicators[78];
         //TempRecordMatch[] record_match = new TempRecordMatch[1000];
 
         int lifeExpectancyCnt = 0;
@@ -132,15 +117,15 @@ namespace Project
 
        
         //Method for Analyzing the Grocery Stores. Food Inspection and Building Violations File        
-        public CorrelationAnalysis[] finalCorrelationAnalysis(lifeExpectancy[] lifeExpectancyData, SocioEconomicIndicators[] socioEconomicData)
+        public void CorrelationAnalysis(lifeExpectancy[] lifeExpectancyData, SocioEconomicIndicators[] socioEconomicData)
         {
 
             int l=0;
 
-            double[] expectancy = new double[500];
-            double[] poverty = new double[500];
-            double[] unemployment = new double[500];
-            double[] perCapitaIncome = new double[500];
+            double[] expectancy = new double[78];
+            double[] poverty = new double[78];
+            double[] unemployment = new double[78];
+            double[] perCapitaIncome = new double[78];
 
             for (int k = 0; k < lifeExpectancyData.Length; k++)
             {
@@ -159,14 +144,14 @@ namespace Project
                 perCapitaIncome[k] = Convert.ToDouble(socioEconomicData[k].perCapitaIncome);
             }
             int i=0;
-            var correl = Correlation.Pearson(expectancy, poverty);
+            var correlLifePoverty = Correlation.Pearson(expectancy, poverty);            
+            var correlLifeUnemp = Correlation.Pearson(expectancy, unemployment);
+            var correlLifePerCapita = Correlation.Pearson(expectancy, perCapitaIncome);
+            Console.WriteLine("\n Correlation between Life Expectancy and Poverty is  {0} ", correlLifePoverty);
+            Console.WriteLine("\n Correlation between Life Expectancy and Unemployment is {0} ", correlLifeUnemp);
+            Console.WriteLine("\n Correlation between Life Expectancy and Per Capita Income is {0} ", correlLifePerCapita);
+            
 
-
-
-                
-           
-
-                return finalCorrelationData;
            
         }
         //public void displayData(FinalAnalysis[] finalAnalysis, ref int n)

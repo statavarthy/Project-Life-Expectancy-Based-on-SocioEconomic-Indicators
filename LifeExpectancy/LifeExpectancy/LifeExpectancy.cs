@@ -50,7 +50,7 @@ namespace Project
                        
             
             //Function call to Analyze data
-            Project.ParseData.CorrelationAnalysis[] finalCorrelationData = pd.finalCorrelationAnalysis(lifeExpectancyData, socioEconomicData);
+             pd.CorrelationAnalysis(lifeExpectancyData, socioEconomicData);
             //pd.displayData(finalAnalysis, ref size);
             
         }
