@@ -1,11 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 11.00
-# Visual Studio 2010
-VisualStudioVersion = 11.0.30501.0
-MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI-LifeExpectancy", "GUI-LifeExpectancy\GUI-LifeExpectancy.csproj", "{D61AE960-AF46-4781-B9A5-A8B9346F0E5D}"
+# Visual C# Express 2010
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "GUI-LifeExpectancy", "GUI-LifeExpectancy.csproj", "{D61AE960-AF46-4781-B9A5-A8B9346F0E5D}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeExpectancy", "..\LifeExpectancy\LifeExpectancy\LifeExpectancy.csproj", "{E8998571-AF7B-4332-9526-53095FA7A72F}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LifeExpectancy", "..\..\LifeExpectancy\LifeExpectancy\LifeExpectancy.csproj", "{E8998571-AF7B-4332-9526-53095FA7A72F}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

@@ -8,7 +8,7 @@
         <CheckBox Content="Correlation between Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="60,77,0,0" VerticalAlignment="Top"  Name="LifePoverty"/>
         <CheckBox Content="Correlation between Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="60,97,0,0" VerticalAlignment="Top"  Name="LifeUnemployment"/>
         <CheckBox Content="Correlation between Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="60,117,0,0" VerticalAlignment="Top"  Name="LifeperCapita"/>
-        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="186,148,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click"/>
+        <Button Content="Correlation" HorizontalAlignment="Left" Margin="186,148,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click"/>
         <TextBox HorizontalAlignment="Left" Height="117" Margin="22,180,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="475" Name="ResultBox"/>
         <Button Content="Button" HorizontalAlignment="Left" Margin="422,148,0,0" VerticalAlignment="Top" Width="75"/>
 
