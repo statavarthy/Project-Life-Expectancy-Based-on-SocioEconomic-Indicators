@@ -66,13 +66,20 @@ namespace Project
             Project.ParseData.correlation result;
             LifeExpectancy lf1 = new LifeExpectancy();
             result=lf1.processData();
-            var newTextBox = new TextBox();
+            string data_lifePoverty = (result.correlLifePoverty).ToString();
+            string data_lifeUnemp = (result.correlLifeUnemp).ToString();
+            string data_lifeperCapita = (result.correlLifePerCapita).ToString();
+            ResultBox.Text = "Correlation between Life Expectancy and Poverty is " + data_lifePoverty;
+            ResultBox.AppendText("\n Correlation between Life Expectancy and Unemployment is " + data_lifeUnemp);
+            ResultBox.AppendText("\n Correlation between Life Expectancy and per Capita Income is " + data_lifeperCapita);
+
+
+            
+            
 
         }
 
-        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
-        {
 
-        }
+       
     }
 }
