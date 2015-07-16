@@ -78,12 +78,8 @@ namespace Project
             if (isLifeUnempChked)
                 ResultBox.AppendText("\n Correlation between Life Expectancy and Unemployment is " + data_lifeUnemp);
             if (isLifeperCapita)
-                ResultBox.AppendText("\n Correlation between Life Expectancy and per Capita Income is " + data_lifeperCapita);             
-            
-
+                ResultBox.AppendText("\n Correlation between Life Expectancy and per Capita Income is " + data_lifeperCapita);                         
         }
-
-
-       
+     
     }
 }
