@@ -111,7 +111,7 @@ namespace Project
 
        
         //Method for Calculating the Correlation between Life Expectancy and Socio Economic Indicators        
-        public void CorrelationAnalysis(lifeExpectancy[] lifeExpectancyData, SocioEconomicIndicators[] socioEconomicData)
+        public double CorrelationAnalysis(lifeExpectancy[] lifeExpectancyData, SocioEconomicIndicators[] socioEconomicData,bool flag)
         {
      
 
@@ -137,7 +137,8 @@ namespace Project
                 perCapitaIncome[k] = Convert.ToDouble(socioEconomicData[k].perCapitaIncome);
             }
             //Pearson Correlation for calculating correlation between life expectancies and different socioeconomic indicators
-            var correlLifePoverty = Correlation.Pearson(expectancy, poverty);            
+            if(flag)
+                var correlLifePoverty = Correlation.Pearson(expectancy, poverty);            
             var correlLifeUnemp = Correlation.Pearson(expectancy, unemployment);
             var correlLifePerCapita = Correlation.Pearson(expectancy, perCapitaIncome);
             Console.WriteLine("\n Correlation between Life Expectancy and Poverty is  {0} ", correlLifePoverty);

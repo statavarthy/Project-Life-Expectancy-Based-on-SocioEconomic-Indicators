@@ -7,7 +7,7 @@
     <ProjectGuid>{D61AE960-AF46-4781-B9A5-A8B9346F0E5D}</ProjectGuid>
     <OutputType>WinExe</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>GUI_LifeExpectancy</RootNamespace>
+    <RootNamespace>Project</RootNamespace>
     <AssemblyName>GUI-LifeExpectancy</AssemblyName>
     <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
@@ -92,6 +92,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\LifeExpectancy\LifeExpectancy\LifeExpectancy.csproj">
+      <Project>{e8998571-af7b-4332-9526-53095fa7a72f}</Project>
+      <Name>LifeExpectancy</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

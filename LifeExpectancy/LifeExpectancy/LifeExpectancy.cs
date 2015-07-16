@@ -29,15 +29,21 @@ namespace Project
 
     public class LifeExpectancy
     {
-        
+
         static void Main(string[] args)
+        {
+            bool flag = true;
+            LifeExpectancy lf = new LifeExpectancy();
+            lf.executive(flag);
+        }
+        public void executive(bool flag)
         {
             //File path where data is stored
             string filePath = "..\\..\\..\\..\\Data\\";    
             //File path where the life expectancy file is saved
             string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
             //File path where the Socio Economic indicators file is saved
-            string SocioEconomicIndicatorsFilePath = filePath + "SocioEconomic_Indicators_Chicago.csv";                       
+            string SocioEconomicIndicatorsFilePath = filePath + "SocioEconomic_Indicators_Chicago.csv";
             
             ParseData pd = new ParseData();
             // Function call to parse Life Expectancy file
@@ -47,7 +53,7 @@ namespace Project
             Project.ParseData.SocioEconomicIndicators[] socioEconomicData = pd.parsesocioEconomicData(SocioEconomicIndicatorsFilePath);
                                    
             //Function call to find correlation between the data
-            pd.CorrelationAnalysis(lifeExpectancyData, socioEconomicData);
+            double lifePovertycorrel = pd.CorrelationAnalysis(lifeExpectancyData, socioEconomicData, flag);
             
             
         }

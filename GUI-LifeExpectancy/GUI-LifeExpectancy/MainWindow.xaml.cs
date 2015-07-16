@@ -13,13 +13,15 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace GUI_LifeExpectancy
+namespace Project
 {
     /// <summary>
     /// Interaction logic for MainWindow.xaml
     /// </summary>
     public partial class MainWindow : Window
     {
+        LifeExpectancy lf1 = new LifeExpectancy();
+           
         public MainWindow()
         {
             InitializeComponent();
@@ -28,6 +30,19 @@ namespace GUI_LifeExpectancy
         private void TextBox_TextChanged(object sender, TextChangedEventArgs e)
         {
 
+        }
+
+        private void life_poverty(object sender, RoutedEventArgs e)
+        {
+            Handle(sender as CheckBox);
+        }
+        void Handle(CheckBox checkbox)
+        {
+            bool flag = checkbox.IsChecked.Value;
+            if (flag)
+            {
+                lf1.executive(flag);
+            }
         }
     }
 }
