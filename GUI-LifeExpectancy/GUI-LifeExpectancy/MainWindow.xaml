@@ -3,6 +3,7 @@
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" Height="350" Width="525">
     <Grid>
-        
+        <TextBox HorizontalAlignment="Center" Height="30" Margin="109,10,117,0" TextWrapping="Wrap" Text="Life Expectancy Based on Socio Economic Indicators" VerticalAlignment="Top" Width="291" TextChanged="TextBox_TextChanged"/>
+
     </Grid>
 </Window>
