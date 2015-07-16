@@ -32,35 +32,7 @@ namespace Project
 
         }
 
-        private void life_poverty(object sender, RoutedEventArgs e)
-        {
-            Handle1(sender as CheckBox);
-        }
-        private void life_unemployment(object sender, RoutedEventArgs e)
-        {
-            Handle2(sender as CheckBox);
-        }
-        private void life_perCapitaIncome(object sender, RoutedEventArgs e)
-        {
-            Handle3(sender as CheckBox);
-        }
-        void Handle1(CheckBox checkbox)
-        {
-            bool flag = checkbox.IsChecked.Value;
-            if (flag)
-            {
-                
-            }
-        }
-        void Handle2(CheckBox checkbox)
-        {
-           
-        }
-        void Handle3(CheckBox checkbox)
-        {
-           
-        }
-
+       
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             Project.ParseData.correlation result;
