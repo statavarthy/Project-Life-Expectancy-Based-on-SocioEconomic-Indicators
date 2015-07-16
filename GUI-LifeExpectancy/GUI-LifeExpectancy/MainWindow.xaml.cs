@@ -45,6 +45,7 @@ namespace Project
             
             bool isLifeUnempChked=LifeUnemployment.IsChecked.Value;
             bool isLifeperCapita = LifeperCapita.IsChecked.Value;
+            ResultBox.Text = "";
             
             if(isLifePovertyChked)
                 ResultBox.Text = "Correlation between Life Expectancy and Poverty is " + data_lifePoverty;           
