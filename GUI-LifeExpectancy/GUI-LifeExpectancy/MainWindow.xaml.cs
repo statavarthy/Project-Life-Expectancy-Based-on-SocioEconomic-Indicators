@@ -49,8 +49,7 @@ namespace Project
             bool flag = checkbox.IsChecked.Value;
             if (flag)
             {
-                LifeExpectancy lf1 = new LifeExpectancy();
-                lf1.processData(flag);
+                
             }
         }
         void Handle2(CheckBox checkbox)
@@ -60,6 +59,20 @@ namespace Project
         void Handle3(CheckBox checkbox)
         {
            
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            Project.ParseData.correlation result;
+            LifeExpectancy lf1 = new LifeExpectancy();
+            result=lf1.processData();
+            var newTextBox = new TextBox();
+
+        }
+
+        private void TextBox_TextChanged_1(object sender, TextChangedEventArgs e)
+        {
+
         }
     }
 }

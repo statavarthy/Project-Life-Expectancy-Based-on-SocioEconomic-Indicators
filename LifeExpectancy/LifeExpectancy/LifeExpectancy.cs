@@ -32,11 +32,11 @@ namespace Project
 
         static void Main(string[] args)
         {
-            bool flag = true;
+            //bool flag = true;
             LifeExpectancy lf = new LifeExpectancy();
-            lf.processData(flag);
+            lf.processData();
         }
-        public void processData(bool flag)
+        public Project.ParseData.correlation processData()
         {
             //File path where data is stored
             string filePath = "..\\..\\..\\..\\Data\\";    
@@ -53,7 +53,8 @@ namespace Project
             Project.ParseData.SocioEconomicIndicators[] socioEconomicData = pd.parsesocioEconomicData(SocioEconomicIndicatorsFilePath);
                                    
             //Function call to find correlation between the data
-            double lifePovertycorrel = pd.CorrelationAnalysis(lifeExpectancyData, socioEconomicData, flag);
+            Project.ParseData.correlation corr = pd.CorrelationAnalysis(lifeExpectancyData, socioEconomicData);
+            return corr;
             
             
         }
