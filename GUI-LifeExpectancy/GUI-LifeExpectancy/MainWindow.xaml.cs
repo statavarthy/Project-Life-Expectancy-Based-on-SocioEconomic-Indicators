@@ -53,6 +53,13 @@ namespace Project
             if (isLifeperCapita)
                 ResultBox.AppendText("\n Correlation between Life Expectancy and per Capita Income is " + data_lifeperCapita);                         
         }
+
+        private void Button_Click_1(object sender, RoutedEventArgs e)
+        {
+            ResultBox.Text = "";
+        }
+
+        
      
     }
 }
