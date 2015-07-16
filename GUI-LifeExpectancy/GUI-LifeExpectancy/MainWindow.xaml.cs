@@ -42,11 +42,12 @@ namespace Project
             string data_lifeUnemp = (result.correlLifeUnemp).ToString();
             string data_lifeperCapita = (result.correlLifePerCapita).ToString();
             bool isLifePovertyChked=LifePoverty.IsChecked.Value;
+            
             bool isLifeUnempChked=LifeUnemployment.IsChecked.Value;
             bool isLifeperCapita = LifeperCapita.IsChecked.Value;
             
             if(isLifePovertyChked)
-                ResultBox.Text = "Correlation between Life Expectancy and Poverty is " + data_lifePoverty;
+                ResultBox.Text = "Correlation between Life Expectancy and Poverty is " + data_lifePoverty;           
             if (isLifeUnempChked)
                 ResultBox.AppendText("\n Correlation between Life Expectancy and Unemployment is " + data_lifeUnemp);
             if (isLifeperCapita)
