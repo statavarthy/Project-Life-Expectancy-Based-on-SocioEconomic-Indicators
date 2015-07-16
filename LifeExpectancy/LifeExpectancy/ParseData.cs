@@ -129,11 +129,11 @@ namespace Project
             double[] perCapitaIncome = new double[78];
 
 
-            for (int k = 0; k < 1; k++)
+            for (int k = 0; k < lifeExpectancyData.Length; k++)
             {
                 expectancy[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy);
             }
-            for (int k = 0; k < 1; k++)
+            for (int k = 0; k < socioEconomicData.Length; k++)
             {
                 poverty[k] = Convert.ToDouble(socioEconomicData[k].poverty);
             }
@@ -149,11 +149,11 @@ namespace Project
                  correl.correlLifePoverty = Correlation.Pearson(expectancy, poverty);
                  correl.correlLifeUnemp = Correlation.Pearson(expectancy, unemployment);
                  correl.correlLifePerCapita = Correlation.Pearson(expectancy, perCapitaIncome);
-                 return correl;
-            //Console.WriteLine("\n Correlation between Life Expectancy and Poverty is  {0} ", correlLifePoverty);
-            //Console.WriteLine("\n Correlation between Life Expectancy and Unemployment is {0} ", correlLifeUnemp);
-            //Console.WriteLine("\n Correlation between Life Expectancy and Per Capita Income is {0} ", correlLifePerCapita);
-                      
+                 
+                 Console.WriteLine("\n Correlation between Life Expectancy and Poverty is  {0} ", correl.correlLifePoverty);
+                 Console.WriteLine("\n Correlation between Life Expectancy and Unemployment is {0} ", correl.correlLifeUnemp);
+                 Console.WriteLine("\n Correlation between Life Expectancy and Per Capita Income is {0} ", correl.correlLifePerCapita);
+                 return correl;    
         }   
     }
 }
