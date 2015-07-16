@@ -16,10 +16,8 @@ This project is distributed with the hope to determine if there is any relations
 INSTALLATIONS:
 This product includes the following libraries and packages:
 MathNet.Numerics is used to provide methods and algorithm for numerical computation and for finding the correlation between different factors.
-
 NUnit framework is used for unit testing. It is an open source software. 
 
-
-
 DOCUMENTATION:
+Developer's Guide and User Guide is available in GIT WiKi, having a detailed description for both users and developers to goahead with the project and get benefitted. 
 
