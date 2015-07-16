@@ -34,9 +34,9 @@ namespace Project
         {
             bool flag = true;
             LifeExpectancy lf = new LifeExpectancy();
-            lf.executive(flag);
+            lf.processData(flag);
         }
-        public void executive(bool flag)
+        public void processData(bool flag)
         {
             //File path where data is stored
             string filePath = "..\\..\\..\\..\\Data\\";    

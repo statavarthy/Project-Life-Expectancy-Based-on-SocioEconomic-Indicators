@@ -119,6 +119,9 @@ namespace Project
             double[] poverty = new double[78];
             double[] unemployment = new double[78];
             double[] perCapitaIncome = new double[78];
+            double correlLifePoverty=0;
+            double correlLifeUnemp=0;
+            double correlLifePerCapita=0;
 
             for (int k = 0; k < 1; k++)
             {
@@ -138,12 +141,13 @@ namespace Project
             }
             //Pearson Correlation for calculating correlation between life expectancies and different socioeconomic indicators
             if(flag)
-                var correlLifePoverty = Correlation.Pearson(expectancy, poverty);            
-            var correlLifeUnemp = Correlation.Pearson(expectancy, unemployment);
-            var correlLifePerCapita = Correlation.Pearson(expectancy, perCapitaIncome);
-            Console.WriteLine("\n Correlation between Life Expectancy and Poverty is  {0} ", correlLifePoverty);
-            Console.WriteLine("\n Correlation between Life Expectancy and Unemployment is {0} ", correlLifeUnemp);
-            Console.WriteLine("\n Correlation between Life Expectancy and Per Capita Income is {0} ", correlLifePerCapita);
+                 correlLifePoverty = Correlation.Pearson(expectancy, poverty);
+            return correlLifePoverty;
+            // correlLifeUnemp = Correlation.Pearson(expectancy, unemployment);
+            // correlLifePerCapita = Correlation.Pearson(expectancy, perCapitaIncome);
+            //Console.WriteLine("\n Correlation between Life Expectancy and Poverty is  {0} ", correlLifePoverty);
+            //Console.WriteLine("\n Correlation between Life Expectancy and Unemployment is {0} ", correlLifeUnemp);
+            //Console.WriteLine("\n Correlation between Life Expectancy and Per Capita Income is {0} ", correlLifePerCapita);
                       
         }   
     }
