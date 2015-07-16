@@ -22,7 +22,9 @@ DOCUMENTATION:
 Developer's Guide and User Guide is available in GIT WiKi, having a detailed description for both users and developers to goahead with the project and get benefitted. 
 
 Programmers can be reached at:
+
 Email: Smruti email id
+
        pagarwal@luc.edu
        
 Conclusion:
