@@ -1,7 +1,7 @@
 ﻿<Window x:Class="Project.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="MainWindow" 
+        Title="Chicago Data Portal" 
         Height="350" 
     Width="525"
         Background="WhiteSmoke" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow">
