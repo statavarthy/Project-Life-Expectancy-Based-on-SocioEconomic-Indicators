@@ -61,6 +61,12 @@ namespace Project
         {
             ResultBox.Text = "";
 
+
+
+            LifeUnemployment.IsChecked = false;
+            LifeperCapita.IsChecked = false;
+            LifePoverty.IsChecked = false;
+
         }
 
         
