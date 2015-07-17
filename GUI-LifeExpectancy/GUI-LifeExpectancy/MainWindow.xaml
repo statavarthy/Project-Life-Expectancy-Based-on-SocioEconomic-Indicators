@@ -24,7 +24,7 @@
                  ScrollViewer.VerticalScrollBarVisibility="Auto"
                  ScrollViewer.CanContentScroll="True"
                  Height="75" Margin="22,153,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" Name="ResultBox" Grid.Row="1" Grid.Column="1" />
-        <Button Content="Clear" HorizontalAlignment="Left" Margin="195,116,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="1" Grid.Row="1" />
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="184,116,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="1" Grid.Row="1" />
         <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" Foreground="Gray" Margin="22,0,0,0" FontSize="15" />
         <Label Content="Life Expectancy Based on SocioEconomic Indicators" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontFamily="Tahoma" FontWeight="Bold" FontSize="15" Background="darkturquoise" Width="404" Grid.Column="1" Foreground="White" Margin="0,0,0,240" Grid.RowSpan="2" />
         <Label Content="City Of Chicago" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="label1" FontFamily="Tahoma" Background="darkturquoise" Width="103" FontWeight="Bold" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,400,240" Grid.RowSpan="2" />
