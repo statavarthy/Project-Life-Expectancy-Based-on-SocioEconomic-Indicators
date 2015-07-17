@@ -58,6 +58,9 @@ namespace Project
         private void Button_Click_1(object sender, RoutedEventArgs e)
         {
             ResultBox.Text = "";
+            LifeUnemployment.IsChecked = false;
+            LifeperCapita.IsChecked = false;
+            LifePoverty.IsChecked = false;
         }
 
         
