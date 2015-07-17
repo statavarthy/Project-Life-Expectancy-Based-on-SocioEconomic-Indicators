@@ -7,21 +7,27 @@
         Background="WhiteSmoke" WindowStartupLocation="CenterScreen">
     <Grid>
         <Grid.RowDefinitions>
-            <RowDefinition Height="82" />
+            <RowDefinition Height="71" />
             
-            <RowDefinition Height="229*" />
+            <RowDefinition Height="240*" />
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="91*"/>
-            <ColumnDefinition Width="412*"/>
+            <ColumnDefinition Width="103*"/>
+            <ColumnDefinition Width="404*"/>
         </Grid.ColumnDefinitions>
-        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="33,35,0,0" VerticalAlignment="Top"  Name="LifePoverty" Grid.Row="1" Grid.Column="1" />
-        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="33,70,0,0" VerticalAlignment="Top"  Name="LifeUnemployment" Grid.Row="1" Grid.Column="1" />
-        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="33,104,0,0" VerticalAlignment="Top"  Name="LifeperCapita" Grid.Row="1" Grid.Column="1" />
-        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="63,153,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="1" Grid.Row="2" />
-        <TextBox HorizontalAlignment="Left" Height="117" Margin="22,192,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="475" Name="ResultBox" Grid.ColumnSpan="2" Grid.Row="2" />
-        <Button Content="Clear" HorizontalAlignment="Left" Margin="310,153,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="1" Grid.Row="2" />
-        <Label Content="Find the Correlation between:" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Top" Target="{Binding}" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" />
-        <Label Content="Life Expectancy Based on SocioEconomic Indicators" Grid.Row="0" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Left" FontFamily="Tahoma" FontWeight="Bold" FontSize="15" />
+        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="25,32,0,0" VerticalAlignment="Top"  Name="LifePoverty" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
+        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="25,57,0,0" VerticalAlignment="Top"  Name="LifeUnemployment" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
+        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="25,83,0,0" VerticalAlignment="Top"  Name="LifeperCapita" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
+        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="29,117,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="1" Grid.Row="1" />
+        <TextBox HorizontalAlignment="Left"
+                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
+                 ScrollViewer.VerticalScrollBarVisibility="Auto"
+                 ScrollViewer.CanContentScroll="True"
+                 Height="75" Margin="22,153,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" Name="ResultBox" Grid.Row="1" Grid.Column="1" />
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="195,116,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="1" Grid.Row="1" />
+        <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" Foreground="Gray" Margin="22,0,0,0" FontSize="15" />
+        <Label Content="Life Expectancy Based on SocioEconomic Indicators" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontFamily="Tahoma" FontWeight="Bold" FontSize="15" Background="darkturquoise" Width="404" Grid.Column="1" Foreground="White" Margin="0,0,0,240" Grid.RowSpan="2" />
+        <Label Content="City Of Chicago" HorizontalContentAlignment="Center" VerticalContentAlignment="Center" Name="label1" FontFamily="Tahoma" Background="darkturquoise" Width="103" FontWeight="Bold" Foreground="White" Grid.ColumnSpan="2" Margin="0,0,400,240" Grid.RowSpan="2" />
+        
     </Grid>
 </Window>
