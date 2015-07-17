@@ -2,21 +2,26 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="MainWindow" 
-        Height="{Binding SystemParameters.PrimaryScreenHeight}" 
-    Width="{Binding SystemParameters.PrimaryScreenWidth}"
-        Background="WhiteSmoke" WindowStartupLocation="CenterScreen" WindowStyle="SingleBorderWindow">
+        Height="350" 
+    Width="525"
+        Background="WhiteSmoke" WindowStartupLocation="CenterScreen">
     <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="82" />
+            
+            <RowDefinition Height="229*" />
+        </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="175*"/>
-            <ColumnDefinition Width="342*"/>
+            <ColumnDefinition Width="91*"/>
+            <ColumnDefinition Width="412*"/>
         </Grid.ColumnDefinitions>
-        <CheckBox Content="Correlation between Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="60,88,0,0" VerticalAlignment="Top"  Name="LifePoverty" Grid.ColumnSpan="2"/>
-        <CheckBox Content="Correlation between Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="60,108,0,0" VerticalAlignment="Top"  Name="LifeUnemployment" Grid.ColumnSpan="2"/>
-        <CheckBox Content="Correlation between Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="60,128,0,0" VerticalAlignment="Top"  Name="LifeperCapita" Grid.ColumnSpan="2"/>
-        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="0,153,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="1"/>
-        <TextBox HorizontalAlignment="Left" Height="117" Margin="22,192,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="475" Name="ResultBox" Grid.ColumnSpan="2"/>
-        <Button Content="Clear" HorizontalAlignment="Left" Margin="247,153,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="1"/>
-        <Label Content="Life Expectancy Based on Socio Economic Indicators" HorizontalAlignment="Left" Margin="122,207,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" Target="{Binding}" />
-        <Label Content="This project aims to find the correlation between the life expectancy and&#xD;&#xA; Socieconomic indicators like Poverty,Unemployment,per Capita Income" Margin="45,12,0,0" VerticalAlignment="Top" Grid.ColumnSpan="2" HorizontalAlignment="Left" Width="395" Height="50"/>
+        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="33,35,0,0" VerticalAlignment="Top"  Name="LifePoverty" Grid.Row="1" Grid.Column="1" />
+        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="33,70,0,0" VerticalAlignment="Top"  Name="LifeUnemployment" Grid.Row="1" Grid.Column="1" />
+        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="33,104,0,0" VerticalAlignment="Top"  Name="LifeperCapita" Grid.Row="1" Grid.Column="1" />
+        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="63,153,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="1" Grid.Row="2" />
+        <TextBox HorizontalAlignment="Left" Height="117" Margin="22,192,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="475" Name="ResultBox" Grid.ColumnSpan="2" Grid.Row="2" />
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="310,153,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="1" Grid.Row="2" />
+        <Label Content="Find the Correlation between:" HorizontalAlignment="Left" Margin="30,0,0,0" VerticalAlignment="Top" Target="{Binding}" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" />
+        <Label Content="Life Expectancy Based on SocioEconomic Indicators" Grid.Row="0" Grid.Column="1" VerticalAlignment="Stretch" HorizontalAlignment="Left" FontFamily="Tahoma" FontWeight="Bold" FontSize="15" />
     </Grid>
 </Window>
