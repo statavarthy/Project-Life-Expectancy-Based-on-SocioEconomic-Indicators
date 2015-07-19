@@ -4,7 +4,7 @@
         xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit" x:Class="Project.MainWindow"
         Title="Chicago Data Portal" 
         Height="700" 
-    Width="1000"
+    Width="700"
         Background="WhiteSmoke" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow">
     <Grid>
         <Grid.RowDefinitions>
@@ -16,40 +16,19 @@
             <ColumnDefinition Width="103*"/>
             <ColumnDefinition Width="404*"/>
         </Grid.ColumnDefinitions>
-<<<<<<< HEAD
-        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="25,32,0,0" VerticalAlignment="Top"  x:Name="LifePoverty" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
-        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="25,57,0,0" VerticalAlignment="Top"  x:Name="LifeUnemployment" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
-        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="25,83,0,0" VerticalAlignment="Top"  x:Name="LifeperCapita" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
-        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="29,117,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="1" Grid.Row="1" />
+        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="25,189,0,0" VerticalAlignment="Top"  x:Name="LifePoverty" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
+        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="25,210,0,0" VerticalAlignment="Top"  x:Name="LifeUnemployment" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
+        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="25,231,0,0" VerticalAlignment="Top"  x:Name="LifeperCapita" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
+        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="29,290,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="1" Grid.Row="1" />
         <TextBox HorizontalAlignment="Left"
 			ScrollViewer.HorizontalScrollBarVisibility="Auto"
 			ScrollViewer.VerticalScrollBarVisibility="Auto"
 			ScrollViewer.CanContentScroll="True"
-			Height="75" Margin="78,152,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" x:Name="ResultBox" Grid.Row="1" Grid.ColumnSpan="2" />
-        <Button Content="Clear" HorizontalAlignment="Left" Margin="195,116,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="1" Grid.Row="1" />
-        <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" Foreground="Gray" Margin="22,0,0,0" FontSize="15" />
-        <Label Content="Life Expectancy Based on Socio Economic IndicatorsCity of Chicago" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontFamily="Tahoma" FontWeight="Bold" FontSize="15" Background="darkturquoise" Width="404" Foreground="White" Margin="61,13,0,10" Grid.ColumnSpan="2" />
-        <chartingToolkit:DateTimeAxis Grid.Column="1" HorizontalAlignment="Left" Height="100" Margin="490,136,0,0" Grid.Row="1" VerticalAlignment="Top" Width="100"/>
-
-=======
-        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="25,189,0,0" VerticalAlignment="Top"  Name="LifePoverty" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
-        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="25,210,0,0" VerticalAlignment="Top"  Name="LifeUnemployment" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
-        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="25,231,0,0" VerticalAlignment="Top"  Name="LifeperCapita" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" />
-        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="29,290,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="1" Grid.Row="1" />
-        <TextBox HorizontalAlignment="Left"
-                 ScrollViewer.HorizontalScrollBarVisibility="Auto"
-                 ScrollViewer.VerticalScrollBarVisibility="Auto"
-                 ScrollViewer.CanContentScroll="True"
-                 Height="75" Margin="78,367,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" Name="ResultBox" Grid.Row="1" Grid.ColumnSpan="2" />
+			Height="75" Margin="78,367,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" x:Name="ResultBox" Grid.Row="1" Grid.ColumnSpan="2" />
         <Button Content="Clear" HorizontalAlignment="Left" Margin="195,289,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="1" Grid.Row="1" />
         <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" Foreground="Gray" Margin="22,157,0,0" FontSize="15" />
-        <Label Content="Life Expectancy Based on Socio Economic IndicatorsCity of Chicago" VerticalContentAlignment="Center" HorizontalAlignment="Left" FontFamily="Tahoma" FontWeight="Bold" FontSize="15" Background="darkturquoise" Width="404" Foreground="White" Margin="61,13,0,10" Grid.ColumnSpan="2" />
-        <Label BorderThickness="1" BorderBrush="Black" Background="White"  Grid.Row="1" Height="108" VerticalContentAlignment="Bottom" Margin="12,10,509,0" Name="label1" VerticalAlignment="Top" Grid.ColumnSpan="2" FontFamily="Tahoma" FontSize="10">
-            
-            <TextBlock FontSize="9" Margin="5" VerticalAlignment="Center" Height="36" Width="135" HorizontalAlignment="Center">Click here to view poverty in diff. <LineBreak/>communities of Chicago in graphi-<LineBreak/>cal format</TextBlock>
-            
-        </Label>
-        <Image Grid.Row="1" Height="49" HorizontalAlignment="Left" Margin="37,19,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="104" Source="/GUI-LifeExpectancy;component/Images/graph11.jpg" Grid.ColumnSpan="2" />
->>>>>>> 561ce9b31420db7fb90a9c78f45b85a12e3bec6f
+        <Label Content="Life Expectancy Based on Socio Economic IndicatorsCity of Chicago" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" FontSize="18" Background="darkturquoise" Width="700" Foreground="White"  Grid.ColumnSpan="2" />
+        <Image Grid.Row="1" Height="49" HorizontalAlignment="Left" Margin="37,19,0,0" x:Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="104" Source="/GUI-LifeExpectancy;component/Images/graph11.jpg" Grid.ColumnSpan="2"/>
+        <Button Grid.ColumnSpan="2" Content="Click here to view poverty for &#xD;&#xA;different communities in Chicago" HorizontalAlignment="Left" Margin="22,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="195" Height="99" Click="Button_Click_2"/>
     </Grid>
 </Window>
