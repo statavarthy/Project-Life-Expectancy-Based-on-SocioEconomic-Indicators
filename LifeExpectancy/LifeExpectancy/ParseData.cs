@@ -33,7 +33,9 @@ namespace Project
         public struct lifeExpectancy
         {
             public string communityName;
-            public string expectancy;            
+            public string expectancy;
+            public string expectancy_1990;
+            public string expectancy_2000;
         };
 
         //Structure for storing parsed data from Socio Economic Indicators file
@@ -74,6 +76,8 @@ namespace Project
                     var line = reader.ReadLine();
                     var values = line.Split(',');
                     lifeExpectancyData[i].communityName = values[1];
+                    lifeExpectancyData[i].expectancy_1990 = values[2];
+                    lifeExpectancyData[i].expectancy_2000 = values[5];
                     lifeExpectancyData[i].expectancy = values[8];                    
                     i++;
                 }
