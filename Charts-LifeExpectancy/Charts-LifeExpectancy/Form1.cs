@@ -66,7 +66,7 @@ namespace Project
 
          void Form1_Load(object sender, EventArgs e)
         {
-            LoadPieChart();
+            //LoadPieChart();
             LoadBarChart();
         }
 
@@ -85,22 +85,9 @@ namespace Project
                 ChartType = SeriesChartType.Pie
             };
             pieChart.Series.Add(series1);
-            ParseData pd = new ParseData();
-            string filePath = "..\\..\\..\\..\\Data\\";    
-            string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
-            Project.ParseData.lifeExpectancy[] lifeExpectancyData = pd.parselifeExpectancyData(lifeExpectancyFilePath);
-            Console.WriteLine("sfasfsafsaf");
-            
-            series1.Points.Add(70000);
-            series1.Points.Add(30000);
-            var p1 = series1.Points[0];
-            p1.AxisLabel = "70000";
-            p1.LegendText = "Hiren Khirsaria";
-            var p2 = series1.Points[1];
-            p2.AxisLabel = "30000";
-            p2.LegendText = "ABC XYZ";
+                                                                 
             pieChart.Invalidate();
-            panel1.Controls.Add(pieChart);
+            //panel1.Controls.Add(pieChart);
         }
         void LoadBarChart()
         {
@@ -116,20 +103,27 @@ namespace Project
                 IsVisibleInLegend = false,
                 ChartType = SeriesChartType.Column
             };
-            barChart.Series.Add(series);
-            series.Points.Add(70000);
-            var p1 = series.Points[0];
-            p1.Color = Color.Red;
-            p1.AxisLabel = "Hiren Khirsaria";
-            p1.LegendText = "Hiren Khirsaria";
-            p1.Label = "70000";
-           
-            series.Points.Add(30000);
-            var p2 = series.Points[1];
-            p2.Color = Color.Yellow;
-            p2.AxisLabel = "ABC XYZ";
-            p2.LegendText = "ABC XYZ";
-            p2.Label = "30000";
+
+            ParseData pd = new ParseData();
+            string filePath = "..\\..\\..\\..\\Data\\";
+            string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
+            Project.ParseData.lifeExpectancy[] lifeExpectancyData = pd.parselifeExpectancyData(lifeExpectancyFilePath);
+            double[] expectancy = new double[78];
+            for (int k = 0; k < lifeExpectancyData.Length; k++)
+            {
+                expectancy[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy);
+            }
+            for (int i = 0; i < lifeExpectancyData.Length; i++)
+            {
+                series.Points.Add(expectancy[i]);
+                series.Points[i].Label = lifeExpectancyData[i].communityName;
+                //series.Points[i].LegendText = lifeExpectancyData[i].communityName;
+                series.Points[i].Color = Color.Red;
+                
+
+            }        
+
+            barChart.Series.Add(series);                                                          
             barChart.Invalidate();
             
             panel2.Controls.Add(barChart);
