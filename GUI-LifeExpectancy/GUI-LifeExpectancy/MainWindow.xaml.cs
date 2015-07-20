@@ -105,12 +105,7 @@ namespace Project
             perCapita_Vs_Community F4 = new perCapita_Vs_Community();
             F4.Show();
         }
-
-        private void Button_Click_7(object sender, RoutedEventArgs e)
-        {
-            Form5 F5 = new Form5();
-            F5.Show();
-        }
+       
         
 
         private void ComboBox_Loaded(object sender, RoutedEventArgs e)
@@ -134,26 +129,27 @@ namespace Project
 
         private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
+            //// ... Get the ComboBox.
+            //var comboBox = sender as System.Windows.Controls.ComboBox;
+
+            //// ... Set SelectedItem as Window Title.
+            //string value = comboBox.SelectedItem as string;
+            //this.Title = "Selected: " + value;
+            //Form5 F5 = new Form5(value);
+            //F5.Show();            
+
+        }
+
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
             // ... Get the ComboBox.
             var comboBox = sender as System.Windows.Controls.ComboBox;
 
             // ... Set SelectedItem as Window Title.
             string value = comboBox.SelectedItem as string;
             this.Title = "Selected: " + value;
-
-            ParseData pd = new ParseData();
-            string filePath = "..\\..\\..\\..\\Data\\";
-            string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
-            Project.ParseData.lifeExpectancy[] lifeExpectancyData = pd.parselifeExpectancyData(lifeExpectancyFilePath);
-            for (int i = 0; i < lifeExpectancyData.Length; i++)
-            {
-                if (string.Compare(value, lifeExpectancyData[i].communityName) == 0)
-                {
-                    Form5 F5 = new Form5();
-                    F5.Show();
-                }
-            }
-
+            Form5 F5 = new Form5(value);
+            F5.Show(); 
 
         }
      

@@ -15,10 +15,13 @@ namespace Project
     public partial class Form5 : Form
     {
         Chart barChart;
-        public Form5()
+        string value_selected="";
+        public Form5(string value)
         {
             InitializeComponent();
             InitializeChart();
+            value_selected = value;
+
         }
 
         public void InitializeChart()
@@ -52,7 +55,7 @@ namespace Project
 
         private void Form5_Load(object sender, EventArgs e)
         {
-            //LoadBarChart();
+            LoadBarChart();
 
         }
 
@@ -96,13 +99,24 @@ namespace Project
             {
                 expectancy_1990[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy_1990);
             }
-            //for (int i = 0; i < lifeExpectancyData.Length; i++)
-            //{
-            //    series.Points.Add(perCapitaIncome[i]);
-            //    series.Points[i].Label = perCapitaIncome[i].ToString();
-            //    series.Points[i].AxisLabel = socioEconomicData[i].communityName;
-            //    series.Points[i].Color = Color.DarkSlateGray;
-            //}
+
+            for (int i = 0; i < lifeExpectancyData.Length; i++)
+            {
+                if (lifeExpectancyData[i].communityName.Equals(value_selected))
+                {
+
+                    series.Points.Add(expectancy_1990[i]);
+                    series.Points.Add(expectancy_2000[i]);
+                    series.Points.Add(expectancy_2010[i]);
+                    series.Points[i].Label = expectancy_1990[i].ToString();
+                    series.Points[i].Label = expectancy_2000[i].ToString();
+                    series.Points[i].Label = expectancy_2010[i].ToString();
+                    series.Points[i].AxisLabel = "1990";
+                    series.Points[i].AxisLabel = "2000";
+                    series.Points[i].AxisLabel = "2010";
+                    series.Points[i].Color = Color.DarkSlateGray;
+                }
+            }
             series["PointWidth"] = (0.7).ToString();
 
             barChart.Series.Add(series);
