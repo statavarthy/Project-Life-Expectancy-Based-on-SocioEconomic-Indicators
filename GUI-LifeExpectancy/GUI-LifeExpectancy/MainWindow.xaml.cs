@@ -90,19 +90,19 @@ namespace Project
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            Form2 F2 = new Form2();
+            poverty_Vs_Community F2 = new poverty_Vs_Community();
             F2.Show();
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            Form3 F3 = new Form3();
+            unemployment_Vs_Community F3 = new unemployment_Vs_Community();
             F3.Show();
         }
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-            Form4 F4 = new Form4();
+            perCapita_Vs_Community F4 = new perCapita_Vs_Community();
             F4.Show();
         }
 

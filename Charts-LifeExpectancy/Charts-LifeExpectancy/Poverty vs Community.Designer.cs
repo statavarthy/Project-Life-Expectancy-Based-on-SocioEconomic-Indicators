@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class Form2
+    partial class poverty_Vs_Community
     {
         /// <summary>
         /// Required designer variable.

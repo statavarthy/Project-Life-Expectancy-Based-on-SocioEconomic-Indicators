@@ -18,7 +18,10 @@ namespace Project
         Chart barChart;
         public LifeExpectancy_Vs_Community()
         {
+            int newWidth = 1400;
             InitializeComponent();
+            panel2.MaximumSize = new Size(newWidth, panel2.Height);
+            panel2.Size = new Size(newWidth, panel2.Height);
             InitializeChart();
         }
          public void InitializeChart()

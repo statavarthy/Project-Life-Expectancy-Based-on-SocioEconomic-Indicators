@@ -12,12 +12,15 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Project
 {
-    public partial class Form4 : Form
+    public partial class perCapita_Vs_Community : Form
     {
         Chart barChart;
-        public Form4()
+        public perCapita_Vs_Community()
         {
             InitializeComponent();
+            int newWidth = 1400;           
+            panel1.MaximumSize = new Size(newWidth, panel1.Height);
+            panel1.Size = new Size(newWidth, panel1.Height);
             InitializeChart();
         }
 
@@ -84,7 +87,7 @@ namespace Project
             double[] perCapitaIncome = new double[78];
             for (int k = 0; k < socioEconomicData.Length; k++)
             {
-                perCapitaIncome[k] = Convert.ToDouble(socioEconomicData[k].unemployment);
+                perCapitaIncome[k] = Convert.ToDouble(socioEconomicData[k].perCapitaIncome);
             }
             for (int i = 0; i < socioEconomicData.Length; i++)
             {

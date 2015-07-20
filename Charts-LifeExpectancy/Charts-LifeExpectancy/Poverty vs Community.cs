@@ -12,13 +12,17 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Project
 {
-    public partial class Form2 : Form
+    public partial class poverty_Vs_Community : Form
     {
         Chart barChart;
-        public Form2()
+        public poverty_Vs_Community()
         {
-            InitializeComponent();            
+            InitializeComponent();
+            int newWidth = 1400;            
+            panel1.MaximumSize = new Size(newWidth, panel1.Height);
+            panel1.Size = new Size(newWidth, panel1.Height);
             InitializeChart();
+            
         }
 
         public void InitializeChart()

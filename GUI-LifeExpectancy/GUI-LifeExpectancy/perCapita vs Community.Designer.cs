@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class Form4
+    partial class perCapita_Vs_Community
     {
         /// <summary>
         /// Required designer variable.
