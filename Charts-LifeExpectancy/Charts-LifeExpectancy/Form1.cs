@@ -21,7 +21,7 @@ namespace Project
             InitializeComponent();
              InitializeChart();
         }
-         private void InitializeChart()
+         public void InitializeChart()
         {
 
             this.components = new System.ComponentModel.Container();
@@ -64,7 +64,7 @@ namespace Project
 
         }
 
-         void Form1_Load(object sender, EventArgs e)
+         public void Form1_Load(object sender, EventArgs e)
         {
             //LoadPieChart();
             LoadBarChart();
@@ -102,10 +102,7 @@ namespace Project
             barChart.ChartAreas[0].AxisX.IsStartedFromZero = true;
             barChart.ChartAreas[0].AxisX.LabelStyle.Interval= 1;
             barChart.ChartAreas[0].AxisX.Maximum = 79;
-            
-            
-
-
+                       
             Series series = new Series
             {
                 Name = "series2",
@@ -127,10 +124,7 @@ namespace Project
                 series.Points.Add(expectancy[i]);
                 series.Points[i].Label = lifeExpectancyData[i].expectancy;                
                 series.Points[i].AxisLabel = lifeExpectancyData[i].communityName;
-                series.Points[i].Color = Color.Green;
-                
-                
-
+                series.Points[i].Color = Color.Green;                               
             }
             series["PointWidth"] = (0.7).ToString();
 

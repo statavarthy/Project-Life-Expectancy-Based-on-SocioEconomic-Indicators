@@ -12,6 +12,9 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using System.Windows.Forms;
+using System.Windows.Forms.DataVisualization;
+using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Project
 {
@@ -78,11 +81,8 @@ namespace Project
 
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
-            try
-            {
-                System.Diagnostics.Process.Start("..\\..\\..\\..\\Data\\test.jpg");
-            }
-            catch { }
+            Form1 F1 = new Form1();
+            F1.Show();
 
         }
 
