@@ -89,7 +89,8 @@ namespace Project
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-
+            Form F2 = new Form2();
+            F2.Show();
         }
 
         

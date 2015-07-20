@@ -19,7 +19,7 @@ namespace Project
         public Form1()
         {
             InitializeComponent();
-             InitializeChart();
+            InitializeChart();
         }
          public void InitializeChart()
         {

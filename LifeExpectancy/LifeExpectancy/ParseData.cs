@@ -42,6 +42,7 @@ namespace Project
             public string poverty;
             public string unemployment;
             public string perCapitaIncome;
+            public string communityName;
         };
 
         public struct correlation
@@ -97,7 +98,8 @@ namespace Project
                 while (!reader1.EndOfStream)
                 {
                     var line = reader1.ReadLine();
-                    var values = line.Split(',');                    
+                    var values = line.Split(',');
+                    socioeconomicData[j].communityName = values[1];
                     socioeconomicData[j].unemployment = values[4];
                     socioeconomicData[j].poverty = values[3];
                     socioeconomicData[j].perCapitaIncome = values[7];
