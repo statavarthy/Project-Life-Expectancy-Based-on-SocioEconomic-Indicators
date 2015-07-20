@@ -12,6 +12,10 @@ This project deals with the two main datasets provided in Chicago Data portal. D
 1.SocioEconomic Indicator in chicago.
 2. Life Expectancy in Chicago.
 
+Public health Statistice- Life Expectancy By Community Area - https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Life-Expectancy-By-Commun/qjr3-bm53
+
+census data- Socio Economic indicators-https://data.cityofchicago.org/Health-Human-Services/Census-Data-Selected-socioeconomic-indicators-in-C/kn9c-c2s2
+
 ######MOTIVATION:
 
 This project is distributed with the hope to determine if there is any relationship of life expectancy in chicago communities with the socioeconomic factors like Poverty, Unemployment, and Per Capita Income
@@ -28,10 +32,12 @@ Developer's Guide and User Guide is available in GIT WiKi, having a detailed des
 
 ######Programmers can be reached at:
 
-Email: Smruti email id
+Email: 
 
-       pagarwal@luc.edu
-       
+Pagarwal@luc.edu
+
+statavarthy@luc.edu
+
 Conclusion:
 
 
