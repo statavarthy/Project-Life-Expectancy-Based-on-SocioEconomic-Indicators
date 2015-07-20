@@ -6,7 +6,7 @@
         Height="700" 
     Width="700"
         Background="WhiteSmoke" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow">
-    <Grid>
+    <Grid Margin="0,0,-190,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="71" />
 
@@ -29,6 +29,7 @@
         <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" Foreground="Gray" Margin="22,157,0,0" FontSize="15" />
         <Label Content="Life Expectancy Based on Socio Economic IndicatorsCity of Chicago" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" FontSize="18" Background="darkturquoise" Width="700" Foreground="White"  Grid.ColumnSpan="2" />
         <Button Grid.ColumnSpan="2" Content="Click here to view Life Expectancy for &#xD;&#xA;different communities in Chicago" HorizontalAlignment="Left" Margin="22,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="225" Height="99" Click="Button_Click_2"/>
-        <Button Content="Click here to view Poverties for  &#xD;&#xA; different communities" Grid.Column="1" HorizontalAlignment="Left" Margin="132,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Click="Button_Click_4" Height="99"/>
+        <Button Content="Click here to view Poverties for  &#xD;&#xA; different communities" Grid.Column="1" HorizontalAlignment="Left" Margin="102,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Click="Button_Click_4" Height="99"/>
+        <Button Content="Click here to view Unemployment for &#xD;&#xA; different communities" Grid.Column="1" HorizontalAlignment="Left" Margin="350,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="99" Click="Button_Click_5"/>
     </Grid>
 </Window>

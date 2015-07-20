@@ -12,12 +12,12 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Project
 {
-    public partial class Form2 : Form
+    public partial class Form3 : Form
     {
         Chart barChart;
-        public Form2()
+        public Form3()
         {
-            InitializeComponent();            
+            InitializeComponent();
             InitializeChart();
         }
 
@@ -27,9 +27,9 @@ namespace Project
             this.components = new System.ComponentModel.Container();
             ChartArea chartArea1 = new ChartArea();
             Legend legend1 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
-            Legend legend2 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };           
+            Legend legend2 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
             barChart = new Chart();
-           
+
             ((ISupportInitialize)(barChart)).BeginInit();
 
             SuspendLayout();
@@ -44,12 +44,11 @@ namespace Project
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             //this.ClientSize = new System.Drawing.Size(284, 262);           
-            this.Load += new EventHandler(Form2_Load);            
+            this.Load += new EventHandler(Form3_Load);
             ((ISupportInitialize)(this.barChart)).EndInit();
             this.ResumeLayout(false);
 
         }
-
 
         private void Form2_Load(object sender, EventArgs e)
         {
@@ -102,10 +101,11 @@ namespace Project
             panel1.Controls.Add(barChart);
         }
 
+
+
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 
         }
-
     }
 }

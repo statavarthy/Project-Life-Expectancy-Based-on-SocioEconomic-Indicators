@@ -93,6 +93,12 @@ namespace Project
             F2.Show();
         }
 
+        private void Button_Click_5(object sender, RoutedEventArgs e)
+        {
+            Form F3 = new Form3();
+            F3.Show();
+        }
+
         
      
     }
