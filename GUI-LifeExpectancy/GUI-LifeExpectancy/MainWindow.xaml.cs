@@ -105,6 +105,12 @@ namespace Project
             F4.Show();
         }
 
+        private void Button_Click_7(object sender, RoutedEventArgs e)
+        {
+            Form5 F5 = new Form5();
+            F5.Show();
+        }
+
         
      
     }

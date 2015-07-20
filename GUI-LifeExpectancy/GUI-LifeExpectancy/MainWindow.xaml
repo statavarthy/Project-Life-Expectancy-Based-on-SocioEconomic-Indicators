@@ -32,5 +32,6 @@
         <Button Content="Click here to view Poverties for  &#xD;&#xA; different communities" Grid.Column="1" HorizontalAlignment="Left" Margin="69,37,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Click="Button_Click_4" Height="99"/>
         <Button Content="Click here to view Unemployment for &#xD;&#xA; different communities" Grid.Column="1" HorizontalAlignment="Left" Margin="311,37,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="99" Click="Button_Click_5"/>
         <Button Content="Click here to view per Capita Income for &#xD;&#xA; different communities" Grid.Column="1" HorizontalAlignment="Left" Margin="547,41,0,0" Grid.Row="1" VerticalAlignment="Top" Width="246" Height="91" Click="Button_Click_6"/>
+        <Button Content="Click Here to view the trend of life Expectancy in Chicago" Grid.Column="1" HorizontalAlignment="Left" Margin="345,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="326" Height="133" Click="Button_Click_7"/>
     </Grid>
 </Window>
