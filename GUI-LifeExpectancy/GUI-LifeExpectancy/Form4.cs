@@ -91,7 +91,7 @@ namespace Project
                 series.Points.Add(perCapitaIncome[i]);
                 series.Points[i].Label = perCapitaIncome[i].ToString();
                 series.Points[i].AxisLabel = socioEconomicData[i].communityName;
-                series.Points[i].Color = Color.Blue;
+                series.Points[i].Color = Color.DarkSlateGray;
             }
             series["PointWidth"] = (0.7).ToString();
 
