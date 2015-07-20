@@ -5,10 +5,25 @@
         Title="Chicago Data Portal" 
         Height="700" 
     Width="700"
-        Background="WhiteSmoke" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow">
-    <Grid Margin="-213,0,-190,0">
+        Background="WhiteSmoke" WindowStartupLocation="CenterScreen" WindowStyle="ToolWindow" WindowState="Maximized" Cursor="IBeam">
+    <Window.Effect>
+        <DropShadowEffect/>
+    </Window.Effect>
+    <Window.BorderBrush>
+        <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+            <GradientStop Color="Black" Offset="0"/>
+            <GradientStop Color="White" Offset="1"/>
+        </LinearGradientBrush>
+    </Window.BorderBrush>
+    <Grid Margin="-213,0,-190,0" Cursor="Hand" Background="{DynamicResource {x:Static SystemColors.WindowBrushKey}}">
+        <Grid.OpacityMask>
+            <LinearGradientBrush EndPoint="0.5,1" StartPoint="0.5,0">
+                <GradientStop Color="Black" Offset="0"/>
+                <GradientStop Color="White" Offset="1"/>
+            </LinearGradientBrush>
+        </Grid.OpacityMask>
         <Grid.RowDefinitions>
-            <RowDefinition Height="71" />
+            <RowDefinition Height="Auto" />
 
             <RowDefinition Height="240*" />
         </Grid.RowDefinitions>
@@ -17,23 +32,43 @@
             <ColumnDefinition Width="33*"/>
             <ColumnDefinition Width="258*"/>
         </Grid.ColumnDefinitions>
-        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="25,189,0,0" VerticalAlignment="Top"  x:Name="LifePoverty" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Grid.ColumnSpan="2" />
-        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="25,210,0,0" VerticalAlignment="Top"  x:Name="LifeUnemployment" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Grid.ColumnSpan="2" />
-        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="25,231,0,0" VerticalAlignment="Top"  x:Name="LifeperCapita" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Grid.ColumnSpan="2" />
+        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="25,351,0,0" VerticalAlignment="Top"  x:Name="LifePoverty" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Grid.ColumnSpan="2" />
+        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="25,372,0,0" VerticalAlignment="Top"  x:Name="LifeUnemployment" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Grid.ColumnSpan="2" />
+        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="22,392,0,0" VerticalAlignment="Top"  x:Name="LifeperCapita" Grid.Row="1" Grid.Column="1" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Grid.ColumnSpan="2" />
         <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="29,290,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="1" Grid.Row="1" Grid.ColumnSpan="2" />
         <TextBox HorizontalAlignment="Left"
 			ScrollViewer.HorizontalScrollBarVisibility="Auto"
 			ScrollViewer.VerticalScrollBarVisibility="Auto"
 			ScrollViewer.CanContentScroll="True"
-			Height="75" Margin="78,367,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" x:Name="ResultBox" Grid.Row="1" Grid.ColumnSpan="3" />
+			Height="75" Margin="10,434,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" x:Name="ResultBox" Grid.Row="1" Grid.ColumnSpan="2" Grid.Column="1" />
         <Button Content="Clear" HorizontalAlignment="Left" Margin="96.06,289,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="2" Grid.Row="1" />
-        <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" Foreground="Gray" Margin="22,157,0,0" FontSize="15" Grid.ColumnSpan="2" />
-        <Label Content="Life Expectancy Based on Socio Economic Indicators&#xD;&#xA;City of Chicago" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Tahoma" FontWeight="Bold" FontSize="18" Background="darkturquoise" Width="700" Foreground="White"  Grid.ColumnSpan="3" Margin="193,10,202,588" Grid.RowSpan="2" />
-        <Button Grid.ColumnSpan="2" Content="Click here to view Life Expectancy for &#xD;&#xA;different communities in Chicago" HorizontalAlignment="Left" Margin="61,37,0,0" Grid.Row="1" VerticalAlignment="Top" Width="225" Height="99" Click="Button_Click_2"/>
-        <Button Content="Click here to view Poverties for  &#xD;&#xA; different communities" Grid.Column="1" HorizontalAlignment="Left" Margin="69,37,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Click="Button_Click_4" Height="99" Grid.ColumnSpan="2"/>
-        <Button Content="Click here to view Unemployment for &#xD;&#xA; different communities" Grid.Column="2" HorizontalAlignment="Left" Margin="212.06,37,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="99" Click="Button_Click_5"/>
-        <Button Content="Click here to view per Capita Income for &#xD;&#xA; different communities" Grid.Column="2" HorizontalAlignment="Left" Margin="448.06,41,0,0" Grid.Row="1" VerticalAlignment="Top" Width="246" Height="91" Click="Button_Click_6"/>
-        <Button Content="Click Here to view the trend of life Expectancy in Chicago &#xD;&#xA;Select community from the drop down below" Grid.Column="2" HorizontalAlignment="Left" Margin="246.06,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="326" Height="133" Click="Button_Click_7"/>
-        <ComboBox Grid.Column="2" HorizontalAlignment="Left" Margin="259.06,350,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" Name ="comboBox1" Height="79"/>
+        <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="1" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" Foreground="Gray" Margin="22,316,0,0" FontSize="15" Grid.ColumnSpan="2" />
+        <Label Content="Life Expectancy Based on Socio Economic Indicators&#xD;&#xA;                                 City of Chicago" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Californian FB" FontSize="24" Background="#FF0009D1" Width="700" Foreground="White"  Grid.ColumnSpan="3" Margin="208,10,187,588" Grid.RowSpan="2" ScrollViewer.HorizontalScrollBarVisibility="Visible" FontWeight="Bold" >
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
+        </Label>
+        <Button Grid.ColumnSpan="2" Content="Click here to view Life Expectancy for &#xD;&#xA;different communities in Chicago" HorizontalAlignment="Left" Margin="28,155,0,0" Grid.Row="1" VerticalAlignment="Top" Width="225" Height="99" Click="Button_Click_2" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}" Cursor="Hand" OpacityMask="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="0"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Click here to view Poverties for  &#xD;&#xA; different communities" Grid.Column="1" HorizontalAlignment="Left" Margin="66,155,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Click="Button_Click_4" Height="99" Grid.ColumnSpan="2">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="0"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Click here to view Unemployment for &#xD;&#xA; different communities" Grid.Column="2" HorizontalAlignment="Left" Margin="229,151,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="99" Click="Button_Click_5">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="0"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Click here to view per Capita Income for &#xD;&#xA; different communities" Grid.Column="2" HorizontalAlignment="Left" Margin="478,155,0,0" Grid.Row="1" VerticalAlignment="Top" Width="246" Height="91" Click="Button_Click_6">
+            <Button.Effect>
+                <DropShadowEffect BlurRadius="0"/>
+            </Button.Effect>
+        </Button>
+        <Button Content="Click Here to view the trend of life Expectancy in Chicago &#xD;&#xA;Select community from the drop down below" Grid.Column="2" HorizontalAlignment="Left" Margin="246,281,0,0" Grid.Row="1" VerticalAlignment="Top" Width="326" Height="133" Click="Button_Click_7"/>
+        <ComboBox Grid.Column="2" HorizontalAlignment="Left" Margin="315,430,0,0" Grid.Row="1" VerticalAlignment="Top" Width="198" Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" Name ="comboBox1" Height="79"/>
     </Grid>
 </Window>
