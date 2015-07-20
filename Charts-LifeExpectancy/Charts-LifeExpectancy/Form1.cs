@@ -66,6 +66,7 @@ namespace Project
 
          public void Form1_Load(object sender, EventArgs e)
         {
+
             //LoadPieChart();
             LoadBarChart();
         }
