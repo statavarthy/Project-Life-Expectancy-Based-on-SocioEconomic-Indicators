@@ -50,7 +50,7 @@ namespace Project
 
         }
 
-        private void Form2_Load(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
             LoadBarChart();
 
@@ -81,17 +81,17 @@ namespace Project
             string filePath = "..\\..\\..\\..\\Data\\";
             string SocioEconomicIndicatorsFilePath = filePath + "SocioEconomic_Indicators_Chicago.csv";
             Project.ParseData.SocioEconomicIndicators[] socioEconomicData = pd.parsesocioEconomicData(SocioEconomicIndicatorsFilePath);
-            double[] poverty = new double[78];
+            double[] unemployment = new double[78];
             for (int k = 0; k < socioEconomicData.Length; k++)
             {
-                poverty[k] = Convert.ToDouble(socioEconomicData[k].poverty);
+                unemployment[k] = Convert.ToDouble(socioEconomicData[k].unemployment);
             }
             for (int i = 0; i < socioEconomicData.Length; i++)
             {
-                series.Points.Add(poverty[i]);
-                series.Points[i].Label = poverty[i].ToString();
+                series.Points.Add();
+                series.Points[i].Label = unemployment[i].ToString();
                 series.Points[i].AxisLabel = socioEconomicData[i].communityName;
-                series.Points[i].Color = Color.Red;
+                series.Points[i].Color = Color.Blue;
             }
             series["PointWidth"] = (0.7).ToString();
 
