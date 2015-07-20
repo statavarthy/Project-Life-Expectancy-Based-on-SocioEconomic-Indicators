@@ -88,7 +88,7 @@ namespace Project
             }
             for (int i = 0; i < socioEconomicData.Length; i++)
             {
-                series.Points.Add();
+                series.Points.Add(unemployment[i]);
                 series.Points[i].Label = unemployment[i].ToString();
                 series.Points[i].AxisLabel = socioEconomicData[i].communityName;
                 series.Points[i].Color = Color.Blue;

@@ -89,13 +89,13 @@ namespace Project
 
         private void Button_Click_4(object sender, RoutedEventArgs e)
         {
-            Form F2 = new Form2();
+            Form2 F2 = new Form2();
             F2.Show();
         }
 
         private void Button_Click_5(object sender, RoutedEventArgs e)
         {
-            Form F3 = new Form3();
+            Form3 F3 = new Form3();
             F3.Show();
         }
 
