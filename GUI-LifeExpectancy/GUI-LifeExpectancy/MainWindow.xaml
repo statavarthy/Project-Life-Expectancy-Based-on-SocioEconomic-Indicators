@@ -6,7 +6,7 @@
         Height="700" 
     Width="700"
         Background="WhiteSmoke" WindowStartupLocation="CenterScreen" WindowStyle="ThreeDBorderWindow">
-    <Grid Margin="0,0,-190,0">
+    <Grid Margin="-213,0,-190,0">
         <Grid.RowDefinitions>
             <RowDefinition Height="71" />
 
@@ -31,5 +31,6 @@
         <Button Grid.ColumnSpan="2" Content="Click here to view Life Expectancy for &#xD;&#xA;different communities in Chicago" HorizontalAlignment="Left" Margin="22,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="225" Height="99" Click="Button_Click_2"/>
         <Button Content="Click here to view Poverties for  &#xD;&#xA; different communities" Grid.Column="1" HorizontalAlignment="Left" Margin="102,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="200" Click="Button_Click_4" Height="99"/>
         <Button Content="Click here to view Unemployment for &#xD;&#xA; different communities" Grid.Column="1" HorizontalAlignment="Left" Margin="350,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="192" Height="99" Click="Button_Click_5"/>
+        <Button Content="Click here to view per Capita Income for &#xD;&#xA; different communities" Grid.Column="1" HorizontalAlignment="Left" Margin="617,19,0,0" Grid.Row="1" VerticalAlignment="Top" Width="246" Height="91" Click="Button_Click_6"/>
     </Grid>
 </Window>
