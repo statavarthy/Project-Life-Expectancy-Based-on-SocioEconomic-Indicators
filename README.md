@@ -32,12 +32,12 @@ Developer's Guide and User Guide is available in GIT WiKi, having a detailed des
 
 ######Programmers can be reached at:
 
-Email: statavarthy@luc.edu
+Email: 
 
-       pagarwal@luc.edu
+Pagarwal@luc.edu
 
-       
-       
+statavarthy@luc.edu
+
 Conclusion:
 
 
