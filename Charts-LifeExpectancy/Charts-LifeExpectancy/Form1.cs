@@ -97,6 +97,11 @@ namespace Project
             barChart.ChartAreas[0].BackColor = Color.Transparent;
             barChart.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
             barChart.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
+            barChart.ChartAreas[0].AxisX.LabelStyle.Angle = 45;
+            barChart.ChartAreas[0].AxisX.LabelAutoFitMinFontSize = 5;
+            barChart.ChartAreas[0].AxisX.IsStartedFromZero = true;
+            barChart.ChartAreas[0].AxisX.LabelStyle.Interval= 1;
+
             Series series = new Series
             {
                 Name = "series2",
@@ -116,8 +121,8 @@ namespace Project
             for (int i = 0; i < lifeExpectancyData.Length; i++)
             {
                 series.Points.Add(expectancy[i]);
-                series.Points[i].Label = lifeExpectancyData[i].communityName;
-                //series.Points[i].LegendText = lifeExpectancyData[i].communityName;
+                series.Points[i].Label = lifeExpectancyData[i].expectancy;                
+                series.Points[i].AxisLabel = lifeExpectancyData[i].communityName;
                 series.Points[i].Color = Color.Red;
                 
 
