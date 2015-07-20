@@ -47,7 +47,7 @@
             this.ClientSize = new System.Drawing.Size(1122, 516);
             this.Controls.Add(this.panel1);
             this.Name = "Form2";
-            this.Text = "Form2";
+            this.Text = "Poverty vs Communiity";
             this.Load += new System.EventHandler(this.Form2_Load);
             this.ResumeLayout(false);
 

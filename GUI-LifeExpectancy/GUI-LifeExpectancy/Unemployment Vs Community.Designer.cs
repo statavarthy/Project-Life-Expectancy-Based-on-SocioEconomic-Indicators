@@ -46,7 +46,7 @@
             this.ClientSize = new System.Drawing.Size(1124, 605);
             this.Controls.Add(this.panel1);
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Unemployment vs Community";
             this.ResumeLayout(false);
 
         }

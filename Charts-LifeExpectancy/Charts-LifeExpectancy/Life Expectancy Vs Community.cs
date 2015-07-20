@@ -12,11 +12,11 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Project
 {
-    public partial class Form1 : Form
+    public partial class LifeExpectancy_Vs_Community : Form
     {
         Chart pieChart;
         Chart barChart;
-        public Form1()
+        public LifeExpectancy_Vs_Community()
         {
             InitializeComponent();
             InitializeChart();

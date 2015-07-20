@@ -1,6 +1,6 @@
 ﻿namespace Project
 {
-    partial class Form1
+    partial class LifeExpectancy_Vs_Community
     {
         /// <summary>
         /// Required designer variable.
@@ -42,15 +42,15 @@
             this.panel2.TabIndex = 1;
             this.panel2.Paint += new System.Windows.Forms.PaintEventHandler(this.panel2_Paint);
             // 
-            // Form1
+            // LifeExpectancy_Vs_Community
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoSize = true;
             this.ClientSize = new System.Drawing.Size(484, 461);
             this.Controls.Add(this.panel2);
-            this.Name = "Form1";
-            this.Text = "Form1";
+            this.Name = "LifeExpectancy_Vs_Community";
+            this.Text = "Life Expectancy Vs Community";
             this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();

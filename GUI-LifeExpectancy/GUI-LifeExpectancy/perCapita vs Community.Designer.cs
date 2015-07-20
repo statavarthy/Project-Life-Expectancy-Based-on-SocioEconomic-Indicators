@@ -46,7 +46,7 @@
             this.ClientSize = new System.Drawing.Size(1125, 604);
             this.Controls.Add(this.panel1);
             this.Name = "Form4";
-            this.Text = "Form4";
+            this.Text = "per Capita Income Vs Community";
             this.ResumeLayout(false);
 
         }

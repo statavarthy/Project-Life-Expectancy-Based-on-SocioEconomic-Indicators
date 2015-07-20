@@ -83,7 +83,7 @@ namespace Project
         private void Button_Click_2(object sender, RoutedEventArgs e)
         {
             
-            Form1 F1 = new Form1();
+            LifeExpectancy_Vs_Community F1 = new LifeExpectancy_Vs_Community();
             F1.Show();
 
         }
