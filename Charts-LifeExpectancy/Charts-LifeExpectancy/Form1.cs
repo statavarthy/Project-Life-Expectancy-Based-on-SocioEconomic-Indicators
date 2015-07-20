@@ -92,7 +92,7 @@ namespace Project
         void LoadBarChart()
         {
             barChart.Series.Clear();
-            barChart.BackColor = Color.LightYellow;           
+            barChart.BackColor = Color.PowderBlue;           
             barChart.Palette = ChartColorPalette.Fire;
             barChart.ChartAreas[0].BackColor = Color.Transparent;
             barChart.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
@@ -101,6 +101,10 @@ namespace Project
             barChart.ChartAreas[0].AxisX.LabelAutoFitMinFontSize = 5;
             barChart.ChartAreas[0].AxisX.IsStartedFromZero = true;
             barChart.ChartAreas[0].AxisX.LabelStyle.Interval= 1;
+            barChart.ChartAreas[0].AxisX.Maximum = 79;
+            
+            
+
 
             Series series = new Series
             {
@@ -123,10 +127,12 @@ namespace Project
                 series.Points.Add(expectancy[i]);
                 series.Points[i].Label = lifeExpectancyData[i].expectancy;                
                 series.Points[i].AxisLabel = lifeExpectancyData[i].communityName;
-                series.Points[i].Color = Color.Red;
+                series.Points[i].Color = Color.Green;
+                
                 
 
-            }        
+            }
+            series["PointWidth"] = (0.7).ToString();
 
             barChart.Series.Add(series);                                                          
             barChart.Invalidate();
@@ -141,6 +147,11 @@ namespace Project
         }
 
         private void panel2_Paint(object sender, PaintEventArgs e)
+        {
+
+        }
+
+        private void Form1_Load_1(object sender, EventArgs e)
         {
 
         }
