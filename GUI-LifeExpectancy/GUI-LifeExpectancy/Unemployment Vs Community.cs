@@ -12,10 +12,10 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Project
 {
-    public partial class Form5 : Form
+    public partial class Form3 : Form
     {
         Chart barChart;
-        public Form5()
+        public Form3()
         {
             InitializeComponent();
             InitializeChart();
@@ -44,15 +44,15 @@ namespace Project
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             //this.ClientSize = new System.Drawing.Size(284, 262);           
-            this.Load += new EventHandler(Form5_Load);
+            this.Load += new EventHandler(Form3_Load);
             ((ISupportInitialize)(this.barChart)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        private void Form5_Load(object sender, EventArgs e)
+        private void Form3_Load(object sender, EventArgs e)
         {
-            //LoadBarChart();
+            LoadBarChart();
 
         }
 
@@ -79,30 +79,20 @@ namespace Project
 
             ParseData pd = new ParseData();
             string filePath = "..\\..\\..\\..\\Data\\";
-            string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
-            Project.ParseData.lifeExpectancy[] lifeExpectancyData = pd.parselifeExpectancyData(lifeExpectancyFilePath);
-            double[] expectancy_2010 = new double[78];
-            double[] expectancy_2000 = new double[78];
-            double[] expectancy_1990 = new double[78];
-            for (int k = 0; k < lifeExpectancyData.Length; k++)
+            string SocioEconomicIndicatorsFilePath = filePath + "SocioEconomic_Indicators_Chicago.csv";
+            Project.ParseData.SocioEconomicIndicators[] socioEconomicData = pd.parsesocioEconomicData(SocioEconomicIndicatorsFilePath);
+            double[] unemployment = new double[78];
+            for (int k = 0; k < socioEconomicData.Length; k++)
             {
-                expectancy_2010[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy);
+                unemployment[k] = Convert.ToDouble(socioEconomicData[k].unemployment);
             }
-            for (int k = 0; k < lifeExpectancyData.Length; k++)
+            for (int i = 0; i < socioEconomicData.Length; i++)
             {
-                expectancy_2000[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy_2000);
+                series.Points.Add(unemployment[i]);
+                series.Points[i].Label = unemployment[i].ToString();
+                series.Points[i].AxisLabel = socioEconomicData[i].communityName;
+                series.Points[i].Color = Color.Blue;
             }
-            for (int k = 0; k < lifeExpectancyData.Length; k++)
-            {
-                expectancy_1990[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy_1990);
-            }
-            //for (int i = 0; i < lifeExpectancyData.Length; i++)
-            //{
-            //    series.Points.Add(perCapitaIncome[i]);
-            //    series.Points[i].Label = perCapitaIncome[i].ToString();
-            //    series.Points[i].AxisLabel = socioEconomicData[i].communityName;
-            //    series.Points[i].Color = Color.DarkSlateGray;
-            //}
             series["PointWidth"] = (0.7).ToString();
 
             barChart.Series.Add(series);
@@ -110,6 +100,8 @@ namespace Project
 
             panel1.Controls.Add(barChart);
         }
+
+
 
         private void panel1_Paint(object sender, PaintEventArgs e)
         {

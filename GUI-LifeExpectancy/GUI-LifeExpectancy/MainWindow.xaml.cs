@@ -13,6 +13,7 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 using System.Windows.Forms;
+using System.Windows.Controls;
 using System.Windows.Forms.DataVisualization;
 using System.Windows.Forms.DataVisualization.Charting;
 
@@ -110,12 +111,7 @@ namespace Project
             Form5 F5 = new Form5();
             F5.Show();
         }
-
-        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            
-
-        }
+        
 
         private void ComboBox_Loaded(object sender, RoutedEventArgs e)
         {
@@ -125,7 +121,7 @@ namespace Project
             string filePath = "..\\..\\..\\..\\Data\\";
             string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
             Project.ParseData.lifeExpectancy[] lifeExpectancyData = pd.parselifeExpectancyData(lifeExpectancyFilePath);
-
+            data.Add("Community Name");
             for (int i = 0; i < lifeExpectancyData.Length; i++)
             {
                 data.Add(lifeExpectancyData[i].communityName);
@@ -144,8 +140,22 @@ namespace Project
             // ... Set SelectedItem as Window Title.
             string value = comboBox.SelectedItem as string;
             this.Title = "Selected: " + value;
+
+            ParseData pd = new ParseData();
+            string filePath = "..\\..\\..\\..\\Data\\";
+            string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
+            Project.ParseData.lifeExpectancy[] lifeExpectancyData = pd.parselifeExpectancyData(lifeExpectancyFilePath);
+            for (int i = 0; i < lifeExpectancyData.Length; i++)
+            {
+                if (string.Compare(value, lifeExpectancyData[i].communityName) == 0)
+                {
+                    Form5 F5 = new Form5();
+                    F5.Show();
+                }
+            }
+
+
         }
-        
      
     }
 

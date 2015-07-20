@@ -12,12 +12,12 @@ using System.Windows.Forms.DataVisualization.Charting;
 
 namespace Project
 {
-    public partial class Form5 : Form
+    public partial class Form2 : Form
     {
         Chart barChart;
-        public Form5()
+        public Form2()
         {
-            InitializeComponent();
+            InitializeComponent();            
             InitializeChart();
         }
 
@@ -27,9 +27,9 @@ namespace Project
             this.components = new System.ComponentModel.Container();
             ChartArea chartArea1 = new ChartArea();
             Legend legend1 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
-            Legend legend2 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
+            Legend legend2 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };           
             barChart = new Chart();
-
+           
             ((ISupportInitialize)(barChart)).BeginInit();
 
             SuspendLayout();
@@ -44,15 +44,16 @@ namespace Project
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             //this.ClientSize = new System.Drawing.Size(284, 262);           
-            this.Load += new EventHandler(Form5_Load);
+            this.Load += new EventHandler(Form2_Load);            
             ((ISupportInitialize)(this.barChart)).EndInit();
             this.ResumeLayout(false);
 
         }
 
-        private void Form5_Load(object sender, EventArgs e)
+
+        private void Form2_Load(object sender, EventArgs e)
         {
-            //LoadBarChart();
+            LoadBarChart();
 
         }
 
@@ -79,30 +80,20 @@ namespace Project
 
             ParseData pd = new ParseData();
             string filePath = "..\\..\\..\\..\\Data\\";
-            string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
-            Project.ParseData.lifeExpectancy[] lifeExpectancyData = pd.parselifeExpectancyData(lifeExpectancyFilePath);
-            double[] expectancy_2010 = new double[78];
-            double[] expectancy_2000 = new double[78];
-            double[] expectancy_1990 = new double[78];
-            for (int k = 0; k < lifeExpectancyData.Length; k++)
+            string SocioEconomicIndicatorsFilePath = filePath + "SocioEconomic_Indicators_Chicago.csv";
+            Project.ParseData.SocioEconomicIndicators[] socioEconomicData = pd.parsesocioEconomicData(SocioEconomicIndicatorsFilePath);
+            double[] poverty = new double[78];
+            for (int k = 0; k < socioEconomicData.Length; k++)
             {
-                expectancy_2010[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy);
+                poverty[k] = Convert.ToDouble(socioEconomicData[k].poverty);
             }
-            for (int k = 0; k < lifeExpectancyData.Length; k++)
+            for (int i = 0; i < socioEconomicData.Length; i++)
             {
-                expectancy_2000[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy_2000);
+                series.Points.Add(poverty[i]);
+                series.Points[i].Label = poverty[i].ToString();
+                series.Points[i].AxisLabel = socioEconomicData[i].communityName;
+                series.Points[i].Color = Color.Red;
             }
-            for (int k = 0; k < lifeExpectancyData.Length; k++)
-            {
-                expectancy_1990[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy_1990);
-            }
-            //for (int i = 0; i < lifeExpectancyData.Length; i++)
-            //{
-            //    series.Points.Add(perCapitaIncome[i]);
-            //    series.Points[i].Label = perCapitaIncome[i].ToString();
-            //    series.Points[i].AxisLabel = socioEconomicData[i].communityName;
-            //    series.Points[i].Color = Color.DarkSlateGray;
-            //}
             series["PointWidth"] = (0.7).ToString();
 
             barChart.Series.Add(series);
@@ -115,5 +106,6 @@ namespace Project
         {
 
         }
+
     }
 }
