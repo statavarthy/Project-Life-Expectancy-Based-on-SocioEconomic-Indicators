@@ -101,7 +101,8 @@ namespace Project
 
         private void Button_Click_6(object sender, RoutedEventArgs e)
         {
-
+            Form4 F4 = new Form4();
+            F4.Show();
         }
 
         
