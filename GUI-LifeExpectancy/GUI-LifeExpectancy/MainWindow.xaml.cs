@@ -111,6 +111,40 @@ namespace Project
             F5.Show();
         }
 
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            
+
+        }
+
+        private void ComboBox_Loaded(object sender, RoutedEventArgs e)
+        {
+            List<string> data = new List<string>();
+
+            ParseData pd = new ParseData();
+            string filePath = "..\\..\\..\\..\\Data\\";
+            string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
+            Project.ParseData.lifeExpectancy[] lifeExpectancyData = pd.parselifeExpectancyData(lifeExpectancyFilePath);
+
+            for (int i = 0; i < lifeExpectancyData.Length; i++)
+            {
+                data.Add(lifeExpectancyData[i].communityName);
+            }
+
+            var comboBox = sender as System.Windows.Controls.ComboBox;
+            comboBox.ItemsSource = data;
+            comboBox.SelectedIndex = 0;
+        }
+
+        private void ComboBox_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            // ... Get the ComboBox.
+            var comboBox = sender as System.Windows.Controls.ComboBox;
+
+            // ... Set SelectedItem as Window Title.
+            string value = comboBox.SelectedItem as string;
+            this.Title = "Selected: " + value;
+        }
         
      
     }
