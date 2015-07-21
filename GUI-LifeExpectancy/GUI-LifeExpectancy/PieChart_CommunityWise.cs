@@ -53,13 +53,13 @@ namespace Project
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             //this.ClientSize = new System.Drawing.Size(284, 262);           
-            this.Load += new EventHandler(Form1_Load);
+            this.Load += new EventHandler(PieChart_CommunityWise_Load);
             ((ISupportInitialize)(this.pieChart)).EndInit();
             
             this.ResumeLayout(false);
         }
 
-        public void Form1_Load(object sender, EventArgs e)
+        public void PieChart_CommunityWise_Load(object sender, EventArgs e)
         {
 
             LoadPieChart();
@@ -72,16 +72,11 @@ namespace Project
             pieChart.BackColor = Color.AntiqueWhite;
             pieChart.Palette = ChartColorPalette.BrightPastel;
             pieChart.ChartAreas[0].BackColor = Color.Transparent;
-            pieChart.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
-            pieChart.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
-            pieChart.ChartAreas[0].AxisX.LabelStyle.Angle = 45;
-            pieChart.ChartAreas[0].AxisX.LabelAutoFitMinFontSize = 5;
-            pieChart.ChartAreas[0].AxisX.IsStartedFromZero = true;
-            pieChart.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
-            pieChart.ChartAreas[0].AxisX.Maximum = 3;
-            pieChart.ChartAreas[0].AxisY.Maximum = 100;
-            pieChart.ChartAreas[0].AxisY.Title = "% Life Expectancy";
-            pieChart.ChartAreas[0].AxisX.Title = "Year";
+            
+           
+           
+            
+           
 
             Series series = new Series
             {
@@ -92,7 +87,7 @@ namespace Project
 
             ParseData pd = new ParseData();
             string filePath = "..\\..\\..\\..\\Data\\";
-            string SocioEconomicIndicatorsFilePath = filePath + "SocioEconomicIndicators.csv";
+            string SocioEconomicIndicatorsFilePath = filePath + "SocioEconomic_Indicators_Chicago.csv";
             Project.ParseData.SocioEconomicIndicators[] socioEconomicData = pd.parsesocioEconomicData(SocioEconomicIndicatorsFilePath);
             double[] housingCrowded = new double[78];
             double[] poverty = new double[78];
