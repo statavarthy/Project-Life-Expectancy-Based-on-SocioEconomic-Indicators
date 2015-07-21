@@ -24,6 +24,7 @@ namespace Project
        
         public MainWindow()
         {
+            this.WindowState = WindowState.Maximized;
             InitializeComponent();
         }
 

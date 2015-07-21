@@ -1,23 +1,23 @@
 ﻿<Window x:Class="Project.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Chicago Data Portal" Height="394.737" Width="753.947">
+        Title="Chicago Data Portal" Height="1171.937" Width="1964.947">
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
             <ColumnDefinition Width="721*"/>
         </Grid.ColumnDefinitions>
-        <Label Content="Welcome to the Chicago Data Portal" HorizontalAlignment="Left" Margin="173.053,21,0,0" VerticalAlignment="Top" Height="42" Width="333" FontSize="20" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Column="1">
+        <Label Content="Welcome to the Chicago Data Portal" Margin="0,100,0,0" VerticalAlignment="Top" HorizontalAlignment="Center" Height="42" Width="333" FontSize="20" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.Column="1">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Label Content="                      This is a unique GUI that will throw light on some interesting facts related to Life Expectancy. &#xA;                       What are the factors that affect life Expectancy? Is it Poverty, Unemployment or Income?&#xD;&#xA;               This UI will show some statistics that might help understand the correlation between life Expectancy and&#xD;&#xA;                                  Socio Economic Indicators like Poverty, Unemployment, and the Incomes. &#xD;&#xA;&#xD;&#xA;                              &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;                             Click on the Start Button below to have a graphical representation of these Statistics" HorizontalAlignment="Left" Margin="10,84,0,0" VerticalAlignment="Top" Height="213" Width="726" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.ColumnSpan="2">
+        <Label Content="                      This is a unique GUI that will throw light on some interesting facts related to Life Expectancy. &#xA;                       What are the factors that affect life Expectancy? Is it Poverty, Unemployment or Income?&#xD;&#xA;               This UI will show some statistics that might help understand the correlation between life Expectancy and&#xD;&#xA;                                  Socio Economic Indicators like Poverty, Unemployment, and the Incomes. &#xD;&#xA;&#xD;&#xA;                              &#xD;&#xA;&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;                             Click on the Start Button below to have a graphical representation of these Statistics" HorizontalAlignment="Center" Margin="0,200,37,0" VerticalAlignment="Top" Height="213" Width="750" FontSize="14" Background="{DynamicResource {x:Static SystemColors.GradientActiveCaptionBrushKey}}" Grid.ColumnSpan="2">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Button Content="Start" HorizontalAlignment="Left" Margin="303.053,321,0,0" VerticalAlignment="Top" Width="96" Height="33" FontSize="16" ToolTip="Click Start to view the life expectancies based on Socio Economic Indicators" Click="Button_Click" Grid.Column="1">
+        <Button Content="Start" HorizontalAlignment="Center" Margin="0,450,0,0" VerticalAlignment="Top" Width="96" Height="33" FontSize="16" ToolTip="Click Start to view the life expectancies based on Socio Economic Indicators" Click="Button_Click" Grid.Column="1">
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>

@@ -35,17 +35,17 @@
             // 
             this.panel1.Location = new System.Drawing.Point(3, 2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(1132, 614);
+            this.panel1.Size = new System.Drawing.Size(1132, 710);
             this.panel1.TabIndex = 0;
             this.panel1.Paint += new System.Windows.Forms.PaintEventHandler(this.panel1_Paint);
             // 
-            // Form4
+            // perCapita_Vs_Community
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1125, 604);
+            this.ClientSize = new System.Drawing.Size(1349, 663);
             this.Controls.Add(this.panel1);
-            this.Name = "Form4";
+            this.Name = "perCapita_Vs_Community";
             this.Text = "per Capita Income Vs Community";
             this.ResumeLayout(false);
 

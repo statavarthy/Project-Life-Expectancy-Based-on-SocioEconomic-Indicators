@@ -46,7 +46,7 @@
             this.ClientSize = new System.Drawing.Size(1349, 663);
             this.Controls.Add(this.panel1);
             this.Name = "Form5";
-            this.Text = "Form5";
+            this.Text = "Trend of Life Expectancy";
             this.ResumeLayout(false);
 
         }
