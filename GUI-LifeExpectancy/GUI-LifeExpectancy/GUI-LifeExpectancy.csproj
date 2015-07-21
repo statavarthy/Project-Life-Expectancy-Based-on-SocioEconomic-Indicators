@@ -77,6 +77,12 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Compile Include="PieChart_CommunityWise.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="PieChart_CommunityWise.Designer.cs">
+      <DependentUpon>PieChart_CommunityWise.cs</DependentUpon>
+    </Compile>
     <Compile Include="Unemployment Vs Community.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -114,6 +120,9 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <EmbeddedResource Include="PieChart_CommunityWise.resx">
+      <DependentUpon>PieChart_CommunityWise.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Unemployment Vs Community.resx">
       <DependentUpon>Unemployment Vs Community.cs</DependentUpon>
     </EmbeddedResource>

@@ -45,6 +45,9 @@ namespace Project
             public string unemployment;
             public string perCapitaIncome;
             public string communityName;
+            public string under18over65;
+            public string noDiploma;
+            public string housingCrowded;
         };
 
         public struct correlation
@@ -107,6 +110,9 @@ namespace Project
                     socioeconomicData[j].unemployment = values[4];
                     socioeconomicData[j].poverty = values[3];
                     socioeconomicData[j].perCapitaIncome = values[7];
+                    socioeconomicData[j].noDiploma = values[5];
+                    socioeconomicData[j].under18over65 = values[6];
+                    socioeconomicData[j].housingCrowded = values[2];
                     j++;
                     
                 }

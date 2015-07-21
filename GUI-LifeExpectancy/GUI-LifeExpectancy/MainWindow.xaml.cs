@@ -155,6 +155,22 @@ namespace Project
             F5.Show(); 
 
         }
+
+
+        private void Button_Click_9(object sender, RoutedEventArgs e)
+        {
+            // ... Get the ComboBox.
+            var comboBox = sender as System.Windows.Controls.ComboBox;
+
+            string value = comboBox1.SelectedItem.ToString();
+
+            // ... Set SelectedItem as Window Title.
+            // string value = comboBox.SelectedItem as string;
+            //this.Title = "Selected: " + value;
+            PieChart_CommunityWise Pie = new PieChart_CommunityWise(value);
+            Pie.Show();
+
+        }
      
     }
 
