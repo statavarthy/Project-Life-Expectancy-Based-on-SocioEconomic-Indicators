@@ -65,7 +65,7 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Button Content="Life Expectancy Statistics" HorizontalAlignment="Left" Margin="1020,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="345" Height="40" Click="Button_Click_2" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}" Cursor="Hand" OpacityMask="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Grid.Column="4" ToolTip="Click here to view  Life Expectancy in different communities" FontSize="14">
+        <Button Content="Life Expectancy Statistics" HorizontalAlignment="Left" Margin="1020,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="345" Height="40" Click="Button_Click_2" Cursor="Hand" Grid.Column="4" ToolTip="Click here to view  Life Expectancy in different communities" FontSize="14">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
