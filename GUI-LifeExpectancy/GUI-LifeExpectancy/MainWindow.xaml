@@ -4,7 +4,7 @@
         xmlns:chartingToolkit="clr-namespace:System.Windows.Controls.DataVisualization.Charting;assembly=System.Windows.Controls.DataVisualization.Toolkit" x:Class="Project.SubWindow"
         Title="Chicago Data Portal" 
         
-        Background="WhiteSmoke" WindowStartupLocation="CenterScreen">
+        Background="WhiteSmoke" WindowStartupLocation="CenterScreen" Width="6271.8">
     <Window.Effect>
         <DropShadowEffect/>
     </Window.Effect>
@@ -58,17 +58,17 @@
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Poverty Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="0,220,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Click="Button_Click_4" Height="40" ToolTip="Click here to view poverty in different communities">
+        <Button Content="Poverty Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="0,220,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Click="Button_Click_4" Height="40" ToolTip="Click here to view poverty in different communities" Cursor="Hand">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Unemployment Statistics" Grid.Column="4" HorizontalAlignment="Right" Margin="0,220,685,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_5" ToolTip="Click here to view  Unemployment in different communities">
+        <Button Content="Unemployment Statistics" Grid.Column="4" HorizontalAlignment="Right" Margin="0,220,685,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_5" ToolTip="Click here to view  Unemployment in different communities" Cursor="Hand">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Per Capita Income Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="680,220,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_6" ToolTip="Click here to view per Capita Statistics in different communities">
+        <Button Content="Per Capita Income Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="680,220,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_6" ToolTip="Click here to view per Capita Statistics in different communities" Cursor="Hand">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
@@ -77,19 +77,16 @@
         <ComboBox Grid.Column="4" HorizontalAlignment="Left" Margin="10,363,0,0" Grid.Row="1" VerticalAlignment="Top" Width="159" Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" Name ="comboBox1" Height="36" ToolTip="Select a comunity from the drop down below to view the life expectancy trend" Grid.RowSpan="2" />
         <Label Grid.Column="4" HorizontalAlignment="Left" Margin="345,68,0,0" Grid.Row="2" VerticalAlignment="Top" Height="10" Width="10"/>
         <Label Content="Life Expectancy Trend" Grid.Column="4" HorizontalAlignment="Left" Margin="10,322,0,0" Grid.Row="1" VerticalAlignment="Top" Height="34" Width="143" FontSize="14"/>
-<<<<<<< HEAD
-        <Image Grid.Column="4" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="0,0,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="220"  Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" />
-        <Image Grid.Column="4" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="220,0,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" />
-=======
-        <Image Grid.Column="4" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="0,0,0,0" Name="image1" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" DataContext="{Binding}" />
-        <Image Grid.Column="4" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="220,0,0,0" Name="image2" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" DataContext="{Binding}" />
->>>>>>> daad884de08781a60da21aca2c0a158d87db917f
-        <Image Grid.Column="4" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="440,0,0,0" Name="image3" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" />
-        <Image Grid.Column="4" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="660,0,0,0" Name="image4" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" />
-        <Image Grid.Column="4" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="880,0,0,0" Name="image5" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" />
-        <Image Grid.Column="4" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="1100,0,0,0" Name="image6" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" />
-        <Image Grid.Column="4" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="1320,0,0,0" Name="image7" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" />
         <Image Grid.Column="4" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="1540,0,0,0" Name="image8" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" />
-        <Image Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="100" Margin="95,72,0,0" Grid.RowSpan="2" VerticalAlignment="Top" Width="100"/>
+        <Image Grid.ColumnSpan="5" HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag1.jpg" Margin="138,0,0,0"/>
+        <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag12.jpg" Margin="276,0,0,0" Grid.Column="4"/>
+        <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag13.jpg" Margin="418,0,0,0" Grid.Column="4"/>
+        <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="560,0,0,0" Grid.Column="4"/>
+        <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="702,0,0,0" Grid.Column="4"/>
+        <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="844,0,0,0" Grid.Column="4"/>
+        <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="986,0,0,0" Grid.Column="4"/>
+        <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="1128,0,0,0" Grid.Column="4"/>
+        <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="1270,0,-44,0" Grid.Column="4" Grid.ColumnSpan="3"/>
+        <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag1.jpg" Margin="-4,0,0,0" Grid.ColumnSpan="5"/>
     </Grid>
 </Window>

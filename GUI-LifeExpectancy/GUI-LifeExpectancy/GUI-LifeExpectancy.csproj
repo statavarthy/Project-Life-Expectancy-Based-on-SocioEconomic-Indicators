@@ -147,6 +147,21 @@
       <Name>LifeExpectancy</Name>
     </ProjectReference>
   </ItemGroup>
+  <ItemGroup>
+    <Resource Include="flag1.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="flag11.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="flag12.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="flag13.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="flag14.jpg" />
+  </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
