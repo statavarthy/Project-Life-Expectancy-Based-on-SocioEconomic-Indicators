@@ -20,6 +20,12 @@ namespace Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        
+        public void Main()
+        {
+            Project.InvokeCharts invokeCharts = new Project.InvokeCharts();
+            invokeCharts.startProject();
+        }
         public MainWindow()
         {
             InitializeComponent();
@@ -27,8 +33,7 @@ namespace Project
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            InvokeCharts i = new InvokeCharts();
-            i.startProject();
+           
         }
     }
 }
