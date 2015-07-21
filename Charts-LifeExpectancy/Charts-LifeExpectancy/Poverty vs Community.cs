@@ -30,8 +30,8 @@ namespace Project
 
             this.components = new System.ComponentModel.Container();
             ChartArea chartArea1 = new ChartArea();
-            Legend legend1 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
-            Legend legend2 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };           
+            //Legend legend1 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
+            Legend legend2 = new Legend() {BackColor = Color.AntiqueWhite, Title = "Legend" };           
             barChart = new Chart();
            
             ((ISupportInitialize)(barChart)).BeginInit();
@@ -42,8 +42,8 @@ namespace Project
             chartArea1.Name = "BarChartArea";
             barChart.ChartAreas.Add(chartArea1);
             barChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend3";
-            barChart.Legends.Add(legend2);
+            legend2.Name = "Legend";
+            //barChart.Legends.Add(legend2);
 
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -65,7 +65,7 @@ namespace Project
         {
             barChart.Series.Clear();
             barChart.BackColor = Color.PowderBlue;
-            barChart.Palette = ChartColorPalette.Fire;
+            barChart.Palette = ChartColorPalette.Grayscale;
             barChart.ChartAreas[0].BackColor = Color.Transparent;
             barChart.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
             barChart.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
@@ -74,11 +74,13 @@ namespace Project
             barChart.ChartAreas[0].AxisX.IsStartedFromZero = true;
             barChart.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
             barChart.ChartAreas[0].AxisX.Maximum = 80;
+            barChart.ChartAreas[0].AxisY.Title = "% Household below Poverty";
+            barChart.ChartAreas[0].AxisX.Title = "Community Name";
 
             Series series = new Series
             {
-                Name = "series2",
-                IsVisibleInLegend = false,
+                Name = "Percent Households below Poverty",
+                IsVisibleInLegend = true,
                 ChartType = SeriesChartType.Column
             };
 
