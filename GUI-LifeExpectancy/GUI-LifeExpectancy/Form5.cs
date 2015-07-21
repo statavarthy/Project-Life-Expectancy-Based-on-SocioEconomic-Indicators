@@ -62,8 +62,8 @@ namespace Project
         void LoadBarChart()
         {
             barChart.Series.Clear();
-            barChart.BackColor = Color.PowderBlue;
-            barChart.Palette = ChartColorPalette.Fire;
+            barChart.BackColor = Color.LightGray;
+            barChart.Palette = ChartColorPalette.Chocolate;
             barChart.ChartAreas[0].BackColor = Color.Transparent;
             barChart.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
             barChart.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
@@ -71,13 +71,14 @@ namespace Project
             barChart.ChartAreas[0].AxisX.LabelAutoFitMinFontSize = 5;
             barChart.ChartAreas[0].AxisX.IsStartedFromZero = true;
             barChart.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
-            barChart.ChartAreas[0].AxisX.Maximum = 80;
+            barChart.ChartAreas[0].AxisX.Maximum = 3;
+            barChart.ChartAreas[0].AxisY.Maximum = 100;
 
             Series series = new Series
             {
                 Name = "series2",
                 IsVisibleInLegend = false,
-                ChartType = SeriesChartType.Column
+                ChartType = SeriesChartType.Line
             };
 
             ParseData pd = new ParseData();
@@ -104,18 +105,17 @@ namespace Project
             {
                 if (lifeExpectancyData[i].communityName.Equals(value_selected))
                 {
-
+                    
                     series.Points.Add(expectancy_1990[i]);
                     series.Points.Add(expectancy_2000[i]);
                     series.Points.Add(expectancy_2010[i]);
-                    series.Points[i].Label = expectancy_1990[i].ToString();
-                    series.Points[i].Label = expectancy_2000[i].ToString();
-                    series.Points[i].Label = expectancy_2010[i].ToString();
-                    series.Points[i].AxisLabel = "1990";
-                    series.Points[i].AxisLabel = "2000";
-                    series.Points[i].AxisLabel = "2010";
-                    series.Points[i].Color = Color.DarkSlateGray;
-                }
+                    series.Points[0].Label = expectancy_1990[i].ToString();
+                    series.Points[1].Label = expectancy_2000[i].ToString();
+                    series.Points[2].Label = expectancy_2010[i].ToString();
+                    series.Points[0].AxisLabel = "1990";
+                    series.Points[1].AxisLabel = "2000";
+                    series.Points[2].AxisLabel = "2010";
+                }                
             }
             series["PointWidth"] = (0.7).ToString();
 

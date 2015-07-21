@@ -145,9 +145,11 @@ namespace Project
             // ... Get the ComboBox.
             var comboBox = sender as System.Windows.Controls.ComboBox;
 
+            string value = comboBox1.SelectedItem.ToString();
+
             // ... Set SelectedItem as Window Title.
-            string value = comboBox.SelectedItem as string;
-            this.Title = "Selected: " + value;
+           // string value = comboBox.SelectedItem as string;
+            //this.Title = "Selected: " + value;
             Form5 F5 = new Form5(value);
             F5.Show(); 
 
