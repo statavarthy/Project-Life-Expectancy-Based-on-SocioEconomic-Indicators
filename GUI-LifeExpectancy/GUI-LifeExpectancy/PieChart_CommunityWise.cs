@@ -14,8 +14,9 @@ namespace Project
 {
     public partial class PieChart_CommunityWise : Form
     {
+        string value_selected = "";
         Chart pieChart;
-        public PieChart_CommunityWise()
+        public PieChart_CommunityWise(string value)
         {
             this.WindowState = FormWindowState.Maximized;
             int newWidth = 1400;
@@ -23,6 +24,8 @@ namespace Project
             panel1.MaximumSize = new Size(newWidth, panel1.Height);
             panel1.Size = new Size(newWidth, panel1.Height);
             InitializeChart();
+            value_selected = value;
+            
         }
         public void InitializeChart()
         {
@@ -112,29 +115,35 @@ namespace Project
             {
                 under18over65[k] = Convert.ToDouble(socioEconomicData[k].under18over65);
             }
-
-            for (int i = 0; i < lifeExpectancyData.Length; i++)
+            for (int k = 0; k < socioEconomicData.Length; k++)
             {
-                if (lifeExpectancyData[i].communityName.Equals(value_selected))
+                housingCrowded[k] = Convert.ToDouble(socioEconomicData[k].housingCrowded);
+            }
+
+            for (int i = 0; i < socioEconomicData.Length; i++)
+            {
+                if (socioEconomicData[i].communityName.Equals(value_selected))
                 {
 
-                    series.Points.Add(expectancy_1990[i]);
-                    series.Points.Add(expectancy_2000[i]);
-                    series.Points.Add(expectancy_2010[i]);
-                    series.Points[0].Label = expectancy_1990[i].ToString();
-                    series.Points[1].Label = expectancy_2000[i].ToString();
-                    series.Points[2].Label = expectancy_2010[i].ToString();
-                    series.Points[0].AxisLabel = "1990";
-                    series.Points[1].AxisLabel = "2000";
-                    series.Points[2].AxisLabel = "2010";
+                    series.Points.Add(poverty[i]);
+                    series.Points.Add(unemployment[i]);
+                    series.Points.Add(noDiploma[i]);
+                    series.Points.Add(under18over65[i]);
+                    series.Points.Add(housingCrowded[i]);
+                    series.Points[0].Label = poverty[i].ToString();
+                    series.Points[1].Label = unemployment[i].ToString();
+                    series.Points[2].Label = noDiploma[i].ToString();
+                    series.Points[3].Label = under18over65[i].ToString();
+                    series.Points[4].Label = housingCrowded[i].ToString();
+                   
                 }
             }
             series["PointWidth"] = (0.5).ToString();
 
-            barChart.Series.Add(series);
-            barChart.Invalidate();
+            pieChart.Series.Add(series);
+            pieChart.Invalidate();
 
-            panel1.Controls.Add(barChart);
+            panel1.Controls.Add(pieChart);
         }
 
 
