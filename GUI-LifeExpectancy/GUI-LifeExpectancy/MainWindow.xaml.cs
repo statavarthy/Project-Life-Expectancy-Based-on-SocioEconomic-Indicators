@@ -28,7 +28,8 @@ namespace Project
            
         public SubWindow()
         {
-            
+
+            this.WindowState = WindowState.Maximized;
             InitializeComponent();
             
         }
