@@ -58,7 +58,6 @@ namespace Project
             LoadBarChart();
 
         }
-
         void LoadBarChart()
         {
             barChart.Series.Clear();
