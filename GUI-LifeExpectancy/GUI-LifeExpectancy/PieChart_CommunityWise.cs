@@ -48,7 +48,7 @@ namespace Project
             pieChart.Dock = System.Windows.Forms.DockStyle.Fill;
             legend1.Name = "Legend1";
             pieChart.Legends.Add(legend1);
-            pieChart.Location = new System.Drawing.Point(0, 50);
+            pieChart.Location = new System.Drawing.Point(0, 250);
 
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -69,21 +69,18 @@ namespace Project
         void LoadPieChart()
         {
             pieChart.Series.Clear();
-            pieChart.BackColor = Color.AntiqueWhite;
-            pieChart.Palette = ChartColorPalette.BrightPastel;
+            pieChart.Palette = ChartColorPalette.Fire;
+            pieChart.BackColor = Color.LightYellow;
+            
             pieChart.ChartAreas[0].BackColor = Color.Transparent;
-            
-           
-           
-            
-           
-
+      
             Series series = new Series
             {
-                Name = "series2",
-                IsVisibleInLegend = false,
+                Name = "Socio Economic Indicators",
+                IsVisibleInLegend = true,
                 ChartType = SeriesChartType.Pie
             };
+            pieChart.Series.Add(series);
 
             ParseData pd = new ParseData();
             string filePath = "..\\..\\..\\..\\Data\\";
@@ -130,12 +127,13 @@ namespace Project
                     series.Points[2].Label = noDiploma[i].ToString();
                     series.Points[3].Label = under18over65[i].ToString();
                     series.Points[4].Label = housingCrowded[i].ToString();
+                    pieChart.Titles.Add("Socio Economic Indicators for " + value_selected);
                    
                 }
             }
             series["PointWidth"] = (0.5).ToString();
 
-            pieChart.Series.Add(series);
+            //pieChart.Series.Add(series);
             pieChart.Invalidate();
 
             panel1.Controls.Add(pieChart);

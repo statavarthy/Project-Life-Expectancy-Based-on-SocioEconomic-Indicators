@@ -73,7 +73,7 @@
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="GO" Grid.Column="4" HorizontalAlignment="Left" Margin="196,366,0,0" Grid.Row="1" VerticalAlignment="Top" Width="66" Height="36" Click="Button_Click_7" ToolTip="Click here to view the trend of life Expectancy in Chicago &amp;#xD;&amp;#xA;Select community from the drop down below" Grid.RowSpan="2" />
+        <Button Content="Line Trend" Grid.Column="4" HorizontalAlignment="Left" Margin="196,366,0,0" Grid.Row="1" VerticalAlignment="Top" Width="66" Height="36" Click="Button_Click_7" ToolTip="Click here to view the trend of life Expectancy in Chicago " Grid.RowSpan="2" />
         <ComboBox Grid.Column="4" HorizontalAlignment="Left" Margin="10,363,0,0" Grid.Row="1" VerticalAlignment="Top" Width="159" Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" Name ="comboBox1" Height="36" ToolTip="Select a comunity from the drop down below to view the life expectancy trend" Grid.RowSpan="2" />
         <Label Grid.Column="4" HorizontalAlignment="Left" Margin="345,68,0,0" Grid.Row="2" VerticalAlignment="Top" Height="10" Width="10"/>
         <Label Content="Life Expectancy Trend" Grid.Column="4" HorizontalAlignment="Left" Margin="10,322,0,0" Grid.Row="1" VerticalAlignment="Top" Height="34" Width="143" FontSize="14"/>
@@ -88,6 +88,6 @@
         <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="1128,0,0,0" Grid.Column="4"/>
         <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="1270,0,-44,0" Grid.Column="4" Grid.ColumnSpan="3"/>
         <Image HorizontalAlignment="Left" Height="115" Grid.RowSpan="2" VerticalAlignment="Top" Width="142" Source="flag1.jpg" Margin="-4,0,0,0" Grid.ColumnSpan="5"/>
-        <Button Content="Pie" Grid.Column="4" HorizontalAlignment="Left" Margin="276,67,0,0" Grid.Row="2" VerticalAlignment="Top" Width="78" Height="37" Click="Button_Click_9"/>
+        <Button Content="Pie" Grid.Column="4" HorizontalAlignment="Left" Margin="276,32,0,0" Grid.Row="2" VerticalAlignment="Top" Width="69" Height="35" Click="Button_Click_9" ToolTip="Click here to see the pie chart distribution of Socio Economic Indicators"/>
     </Grid>
 </Window>
