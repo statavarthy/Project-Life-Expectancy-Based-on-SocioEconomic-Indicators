@@ -65,44 +65,44 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Button Content="Life Expectancy Statistics" HorizontalAlignment="Left" Margin="1020,158,0,0" Grid.Row="1" VerticalAlignment="Top" Width="345" Height="40" Click="Button_Click_2" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}" Cursor="Hand" OpacityMask="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Grid.Column="4" ToolTip="Click here to view  Life Expectancy in different communities" FontSize="14">
+        <Button Content="Life Expectancy Statistics" HorizontalAlignment="Left" Margin="1020,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="345" Height="40" Click="Button_Click_2" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}" Cursor="Hand" OpacityMask="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Grid.Column="4" ToolTip="Click here to view  Life Expectancy in different communities" FontSize="14">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Poverty Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="0,158,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Click="Button_Click_4" Height="40" ToolTip="Click here to view poverty in different communities" Cursor="Hand" FontSize="14">
+        <Button Content="Poverty Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="0,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Click="Button_Click_4" Height="40" ToolTip="Click here to view poverty in different communities" Cursor="Hand" FontSize="14">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Unemployment Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="340,158,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_5" ToolTip="Click here to view  Unemployment in different communities" Cursor="Hand" FontSize="14">
+        <Button Content="Unemployment Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="340,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_5" ToolTip="Click here to view  Unemployment in different communities" Cursor="Hand" FontSize="14">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Per Capita Income Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="680,158,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_6" ToolTip="Click here to view per Capita Statistics in different communities" Cursor="Hand" FontSize="14">
+        <Button Content="Per Capita Income Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="680,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_6" ToolTip="Click here to view per Capita Statistics in different communities" Cursor="Hand" FontSize="14">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Check the Trend" Grid.Column="4" HorizontalAlignment="Left" Margin="115,622,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Height="36" Click="Button_Click_7" ToolTip="Click here to view the trend of life Expectancy in Chicago.Select community from the drop down below" Grid.RowSpan="2" Cursor="Hand" >
+        <Button Content="Check the Trend" Grid.Column="4" HorizontalAlignment="Left" Margin="115,629,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Height="36" Click="Button_Click_7" ToolTip="Click here to view the trend of life Expectancy in Chicago.Select community from the drop down below" Grid.RowSpan="2" Cursor="Hand" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <ComboBox Grid.Column="4" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="232,532,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" Name ="comboBox1" Height="30" ToolTip="Select a comunity from the drop down below to view the life expectancy trend" Cursor="Hand" >
+        <ComboBox Grid.Column="4" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="232,524,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" Name ="comboBox1" Height="30" ToolTip="Select a comunity from the drop down below to view the life expectancy trend" Cursor="Hand" >
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
         </ComboBox>
         <Label Grid.Column="4" HorizontalAlignment="Left" Margin="345,453,0,0" Grid.Row="1" VerticalAlignment="Top" Height="10" Width="10"/>
-        <Label Content="Life Expectancy for the year 1990, 2000 and 2010" Grid.Column="4" HorizontalAlignment="Left" Margin="28,573,0,0" Grid.Row="1" VerticalAlignment="Top" Height="34" Width="312" FontSize="14" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" >
+        <Label Content="Life Expectancy for the year 1990, 2000 and 2010" Grid.Column="4" HorizontalAlignment="Left" Margin="28,579,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="312" FontSize="14" Background="Bisque" >
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
         <Image Grid.Column="7" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="1540,0,0,0" Name="image8" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" />
-        <Button Content="Check the Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="403,619,0,0" Grid.Row="1" VerticalAlignment="Top" Width="131" Height="37" Click="Button_Click_9" Grid.RowSpan="2" Cursor="Hand" >
+        <Button Content="Check the Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="403,626,0,0" Grid.Row="1" VerticalAlignment="Top" Width="131" Height="37" Click="Button_Click_9" Grid.RowSpan="2" Cursor="Hand" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -112,12 +112,12 @@
                 <DropShadowEffect BlurRadius="1" Color="#FFB9CFB7" ShadowDepth="3" Direction="315" />
             </Label.Effect>
         </Label>
-        <Label Content="Socio-Economic Indicators Analysis " Grid.Column="4" Grid.Row="1" Height="34" HorizontalAlignment="Right" Margin="0,573,770,0" Name="label2" VerticalAlignment="Top" FontSize="14" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Width="231" >
+        <Label Content="Socio-Economic Indicators Analysis " Grid.Column="4" Grid.Row="1" Height="30" HorizontalAlignment="Right" Margin="0,579,770,0" Name="label2" VerticalAlignment="Top" FontSize="14" Background="Bisque" Width="231" >
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Label Content="Select the Neighbourhood name from the drop down " Grid.Column="4" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="155,495,0,0" Name="label3" VerticalAlignment="Top" FontSize="14" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" ToolTip="Select a community from below to view statistic related to them" Cursor="Hand" >
+        <Label Content="Select the Neighbourhood name from the drop down " Grid.Column="4" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="155,484,0,0" Name="label3" VerticalAlignment="Top" FontSize="14" Background="Bisque" ToolTip="Select a community from below to view statistic related to them" Cursor="Hand" >
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
