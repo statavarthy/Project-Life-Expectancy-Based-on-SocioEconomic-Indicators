@@ -18,6 +18,7 @@ namespace Project
         Chart barChart;
         public LifeExpectancy_Vs_Community()
         {
+            this.WindowState = FormWindowState.Maximized;
             int newWidth = 1400;
             InitializeComponent();
             panel2.MaximumSize = new Size(newWidth, panel2.Height);
@@ -106,6 +107,8 @@ namespace Project
             barChart.ChartAreas[0].AxisX.IsStartedFromZero = true;
             barChart.ChartAreas[0].AxisX.LabelStyle.Interval= 1;
             barChart.ChartAreas[0].AxisX.Maximum = 79;
+            barChart.ChartAreas[0].AxisY.Title = "% Life Expectancies for the year 2010";
+            barChart.ChartAreas[0].AxisX.Title = "Community Name";
                        
             Series series = new Series
             {

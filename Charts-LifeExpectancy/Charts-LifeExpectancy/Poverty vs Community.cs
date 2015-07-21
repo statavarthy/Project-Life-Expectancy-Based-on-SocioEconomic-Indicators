@@ -17,6 +17,7 @@ namespace Project
         Chart barChart;
         public poverty_Vs_Community()
         {
+            this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
             int newWidth = 1400;            
             panel1.MaximumSize = new Size(newWidth, panel1.Height);

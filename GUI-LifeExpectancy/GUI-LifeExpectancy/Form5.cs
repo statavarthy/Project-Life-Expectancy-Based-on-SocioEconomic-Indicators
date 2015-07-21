@@ -18,6 +18,8 @@ namespace Project
         string value_selected="";
         public Form5(string value)
         {
+
+            this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
             InitializeChart();
             value_selected = value;
@@ -61,8 +63,8 @@ namespace Project
         void LoadBarChart()
         {
             barChart.Series.Clear();
-            barChart.BackColor = Color.LightGray;
-            barChart.Palette = ChartColorPalette.Chocolate;
+            barChart.BackColor = Color.AntiqueWhite;
+            barChart.Palette = ChartColorPalette.BrightPastel;
             barChart.ChartAreas[0].BackColor = Color.Transparent;
             barChart.ChartAreas[0].AxisX.MajorGrid.Enabled = false;
             barChart.ChartAreas[0].AxisY.MajorGrid.Enabled = false;
@@ -72,6 +74,8 @@ namespace Project
             barChart.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
             barChart.ChartAreas[0].AxisX.Maximum = 3;
             barChart.ChartAreas[0].AxisY.Maximum = 100;
+            barChart.ChartAreas[0].AxisY.Title = "% Life Expectancy";
+            barChart.ChartAreas[0].AxisX.Title = "Year";
 
             Series series = new Series
             {
@@ -116,7 +120,7 @@ namespace Project
                     series.Points[2].AxisLabel = "2010";
                 }                
             }
-            series["PointWidth"] = (0.7).ToString();
+            series["PointWidth"] = (0.5).ToString();
 
             barChart.Series.Add(series);
             barChart.Invalidate();

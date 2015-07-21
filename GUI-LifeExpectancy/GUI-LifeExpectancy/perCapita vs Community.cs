@@ -17,6 +17,7 @@ namespace Project
         Chart barChart;
         public perCapita_Vs_Community()
         {
+            this.WindowState = FormWindowState.Maximized;
             InitializeComponent();
             int newWidth = 1400;           
             panel1.MaximumSize = new Size(newWidth, panel1.Height);
@@ -72,6 +73,8 @@ namespace Project
             barChart.ChartAreas[0].AxisX.IsStartedFromZero = true;
             barChart.ChartAreas[0].AxisX.LabelStyle.Interval = 1;
             barChart.ChartAreas[0].AxisX.Maximum = 80;
+            barChart.ChartAreas[0].AxisY.Title = "Per Capita Incomes";
+            barChart.ChartAreas[0].AxisX.Title = "Community Name";
 
             Series series = new Series
             {
