@@ -12,11 +12,12 @@ namespace Project
         /// The main entry point for the application.
         /// </summary>
         [STAThread]
-        public void startProject()
+        public static void Main()
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
             Application.Run(new LifeExpectancy_Vs_Community());
         }
+
     }
 }

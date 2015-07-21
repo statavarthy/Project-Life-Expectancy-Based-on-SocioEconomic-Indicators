@@ -92,7 +92,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <ProjectReference Include="..\..\..\LifeExpectancy\LifeExpectancy\LifeExpectancy\LifeExpectancy.csproj">
+    <ProjectReference Include="..\..\LifeExpectancy\LifeExpectancy\LifeExpectancy.csproj">
       <Project>{e8998571-af7b-4332-9526-53095fa7a72f}</Project>
       <Name>LifeExpectancy</Name>
     </ProjectReference>

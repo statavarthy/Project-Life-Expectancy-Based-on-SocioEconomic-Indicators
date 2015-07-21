@@ -98,6 +98,10 @@
       <Project>{d15f3ca3-2004-4b9e-87ab-35263b7e2e55}</Project>
       <Name>Charts-LifeExpectancy</Name>
     </ProjectReference>
+    <ProjectReference Include="..\..\GUI-LifeExpectancy\GUI-LifeExpectancy\GUI-LifeExpectancy.csproj">
+      <Project>{d61ae960-af46-4781-b9a5-a8b9346f0e5d}</Project>
+      <Name>GUI-LifeExpectancy</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
