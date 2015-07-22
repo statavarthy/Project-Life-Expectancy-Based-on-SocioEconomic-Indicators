@@ -40,6 +40,8 @@ statavarthy@luc.edu
 
 ######Conclusion:
 
+Significance of value
+
 Value of ρ                        Strength of relationship
 
 -1.0 to -0.5 or 1.0 to 0.5      	Strong
