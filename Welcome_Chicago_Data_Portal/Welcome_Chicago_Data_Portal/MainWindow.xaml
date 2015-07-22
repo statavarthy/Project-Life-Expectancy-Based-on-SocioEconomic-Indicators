@@ -36,6 +36,6 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label Content="Lets' Get Started!!" Grid.Column="1" Height="50" HorizontalAlignment="Center" Margin="0,400,0,0" Name="label1"  Width="200" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Normal"></Label>
+        <Label Content="Let's Get Started!!" Grid.Column="1" Height="50" HorizontalAlignment="Center" Margin="0,400,0,0" Name="label1"  Width="200" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Normal"></Label>
     </Grid>
 </Window>
