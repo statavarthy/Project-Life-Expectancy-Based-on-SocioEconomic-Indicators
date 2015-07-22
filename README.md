@@ -12,7 +12,7 @@ This project deals with the two main datasets provided in Chicago Data portal. D
 1.Socio-Economic Indicator in chicago.
 2. Life-Expectancy in Chicago.
 
-Public health Statistice- Life Expectancy By Community Area- https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Life-Expectancy-By-Commun/qjr3-bm53
+Public health Statistice- Life-Expectancy By Community Area- https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Life-Expectancy-By-Commun/qjr3-bm53
 
 census data- Socio Economic indicators-https://data.cityofchicago.org/Health-Human-Services/Census-Data-Selected-socioeconomic-indicators-in-C/kn9c-c2s2
 
