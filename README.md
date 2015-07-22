@@ -28,7 +28,7 @@ NUnit framework is used for unit testing. It is an open source software.
 
 ######DOCUMENTATION:
 
-Developer's Guide and User Guide is available in GIT WiKi, having a detailed description for both users and developers to goahead with the project and get benefitted. 
+Developer's Guide and User Guide is available in GIT WiKi, having a detailed description for both users and developers to goahead with the project and get benefitted.
 
 ######Programmers can be reached at:
 
