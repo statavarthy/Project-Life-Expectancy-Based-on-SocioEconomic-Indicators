@@ -18,7 +18,7 @@ census data- Socio Economic indicators-https://data.cityofchicago.org/Health-Hum
 
 ######MOTIVATION:
 
-This project is distributed with the hope to determine if there is any relationship of life expectancy in chicago communities with the socioeconomic factors like Poverty, Unemployment, and Per Capita Income
+This project is distributed with the hope to determine if there is any relationship of life expectancy in chicago communities with the socioeconomic factors like Poverty, Unemployment, and Per Capita Income.
 
 ######INSTALLATIONS:
 
