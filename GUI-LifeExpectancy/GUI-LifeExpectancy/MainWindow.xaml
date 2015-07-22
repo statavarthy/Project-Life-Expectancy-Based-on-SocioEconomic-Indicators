@@ -88,7 +88,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <ComboBox Grid.Column="4" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="232,524,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" Name ="comboBox1" Height="30" ToolTip="Select a comunity from the drop down below to view the life expectancy trend" Cursor="Hand" >
+        <ComboBox Grid.Column="4" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="232,524,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Loaded="ComboBox_Loaded"  Name ="comboBox1" Height="30" ToolTip="Select a comunity from the drop down below to view the life expectancy trend" Cursor="Hand" >
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
