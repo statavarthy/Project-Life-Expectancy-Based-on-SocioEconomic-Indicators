@@ -1,10 +1,10 @@
-﻿///////////////////////////////////////////////////////////////////////
+﻿////////////////////////////////////////////////////////////////////////
 // LifeExpectancy.cs - Program for per Line trend of life expectancies//
-// Language:    C#, .Net Framework 4.0                               //
-// Application: Open Source Computing, Project, Summer 2015          //
-// Author:      SMRUTI TATAVARTHY, COMP 412, Loyola University       //
-//              statavarthy@luc.edu                                  //
-///////////////////////////////////////////////////////////////////////
+// Language:    C#, .Net Framework 4.0                                //
+// Application: Open Source Computing, Project, Summer 2015           //
+// Author:      SMRUTI TATAVARTHY, COMP 412, Loyola University        //
+//              statavarthy@luc.edu                                   //
+////////////////////////////////////////////////////////////////////////
 /*Summary
  * 
  * The aim of this program is to display the line trend of the life
@@ -12,7 +12,7 @@
  * This program contains logic for populating the life expectancies
  * for 3 years and adding them to the line chart.
  * This is a Windows forms application that will show on selection of the 
- * community form the drop down and then clicking the line trend button
+ * community from the drop down and then clicking the line trend button
  */
 
 using System;
@@ -66,7 +66,7 @@ namespace Project
             ((ISupportInitialize)(this.barChart)).EndInit();
             this.ResumeLayout(false);
         }
-        //Form5 definition to laod bar chart
+        //Form5 definition to load bar chart
         private void Form5_Load(object sender, EventArgs e)
         {
             LoadBarChart();
