@@ -53,7 +53,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="4" Grid.Row="1" FontFamily="Tahoma" Background="Bisque" Margin="893,358,0,0" FontSize="15" Height="28" Width="235" AllowDrop="False">
+        <Label Background="Bisque" Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="4" Grid.Row="1" Foreground="Gray" Margin="893,358,0,0" FontSize="{DynamicResource {x:Static SystemFonts.CaptionFontSizeKey}}" Height="28" Width="235" AllowDrop="False">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
@@ -126,6 +126,6 @@
                 <DropShadowEffect BlurRadius="1" Color="#FFB9CFB7" ShadowDepth="4" Direction="315" />
             </Label.Effect>
         </Label>
-        <Label BorderThickness="2" BorderBrush="#FFB9CFB7" Width="678" Content="     Range of Correlation&#xA;     Value of Correlation                        Strength Relationship&#xA;     -1.0 to -0.5 or 1.0 to 0.5                  Strong&#xA;     -0.5 to -0.3 or 0.3 to 0.5                  Moderate&#xA;     -0.3 to -0.1 or 0.1 to 0.3                  Weak&#xA;     -0.1 to 0.1                                        None or very weak" Grid.Column="4" Grid.Row="1" Height="110" HorizontalAlignment="Left" Margin="684,590,0,0" Name="label6" VerticalAlignment="Top" FontSize="14"/>
+        <Label BorderThickness="2" BorderBrush="#FFB9CFB7" Width="678" Content="     Range of P&#xD;     Value of P                                        Strength Relationship&#xD;     -1.0 to -0.5 or 1.0 to 0.5                  Strong&#xD;     -0.5 to -0.3 or 0.3 to 0.5                  Moderate&#xD;     -0.3 to -0.1 or 0.1 to 0.3                  Weak&#xD;     -0.1 to 0.1                                        None or very weak" Grid.Column="4" Grid.Row="1" Height="110" HorizontalAlignment="Left" Margin="684,590,0,0" Name="label6" VerticalAlignment="Top" FontSize="14"></Label>
     </Grid>
 </Window>
