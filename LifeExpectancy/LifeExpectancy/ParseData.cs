@@ -9,7 +9,8 @@
 /*Summary
  * This program contain methods for parsing data.
  * The different methods help in populating the life Expectancy and 
- * and SocioEconomic Indicators
+ * and SocioEconomic Indicators into data structures.
+ * This Class is used for parsing the files and reading data from them
  * The Correlation Analysis method helps in calculating the correlation between 
  * the life Expectancy and SocioEconomic Indicators.
  * 
@@ -49,7 +50,7 @@ namespace Project
             public string noDiploma;
             public string housingCrowded;
         };
-
+        // Structure for storing correlation values
         public struct correlation
         {
             public double correlLifePoverty;
@@ -98,7 +99,7 @@ namespace Project
         public SocioEconomicIndicators[] parsesocioEconomicData(String SocioEconomicIndicatorsFilePath)
         {
             long j = 0;
-            long num = 0;                
+            //long num = 0;                
                 var reader1 = new StreamReader(File.OpenRead(SocioEconomicIndicatorsFilePath));
                 var line0_new = reader1.ReadLine();
                 // Populating Socio Economic Indicators Data
@@ -140,7 +141,7 @@ namespace Project
             double[] unemployment = new double[78];
             double[] perCapitaIncome = new double[78];
 
-
+            //storing the data struture in arrays for calculation is pearson correlation
             for (int k = 0; k < lifeExpectancyData.Length; k++)
             {
                 expectancy[k] = Convert.ToDouble(lifeExpectancyData[k].expectancy);
