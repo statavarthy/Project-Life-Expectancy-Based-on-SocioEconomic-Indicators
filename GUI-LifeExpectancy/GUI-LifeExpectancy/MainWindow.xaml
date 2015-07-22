@@ -23,9 +23,7 @@
         </Grid.OpacityMask>
         <Grid.RowDefinitions>
             <RowDefinition Height="Auto" />
-
-            <RowDefinition Height="639*" />
-            <RowDefinition Height="6*"/>
+            <RowDefinition Height="645*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="0*"/>
@@ -37,10 +35,10 @@
             <ColumnDefinition Width="0"/>
             <ColumnDefinition Width="4885*" />
         </Grid.ColumnDefinitions>
-        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="903,448,0,0" VerticalAlignment="Top"  x:Name="LifePoverty" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="182" />
-        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="903,470,0,0" VerticalAlignment="Top"  x:Name="LifeUnemployment" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="225" />
-        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="903,492,0,0" VerticalAlignment="Top"  x:Name="LifeperCapita" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="244" />
-        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="863,520,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="4" Grid.Row="1" Height="20" ToolTip="Click here to find out the correlation" Cursor="Hand" >
+        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="903,397,0,0" VerticalAlignment="Top"  x:Name="LifePoverty" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="182" />
+        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="903,421,0,0" VerticalAlignment="Top"  x:Name="LifeUnemployment" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="225" />
+        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="903,444,0,0" VerticalAlignment="Top"  x:Name="LifeperCapita" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="244" />
+        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="880,472,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="4" Grid.Row="1" Height="20" ToolTip="Click here to find out the correlation" Cursor="Hand" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -49,23 +47,23 @@
 			ScrollViewer.HorizontalScrollBarVisibility="Auto"
 			ScrollViewer.VerticalScrollBarVisibility="Auto"
 			ScrollViewer.CanContentScroll="True"
-			Height="75" Margin="845,570,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" x:Name="ResultBox" Grid.Row="1" Grid.Column="4" Grid.RowSpan="2" />
-        <Button Content="Clear" HorizontalAlignment="Left" Margin="1082,520,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="4" Grid.Row="1" Height="20" ToolTip="Click here to clear the results box" Cursor="Hand" >
+			Height="75" Margin="845,509,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" x:Name="ResultBox" Grid.Row="1" Grid.Column="4" />
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="1057,471,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="4" Grid.Row="1" Height="20" ToolTip="Click here to clear the results box" Cursor="Hand" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="4" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" Foreground="Gray" Margin="893,406,0,0" FontSize="15" Height="28" Width="235" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" >
+        <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="4" Grid.Row="1" FontFamily="Tahoma" Background="Bisque" Margin="893,358,0,0" FontSize="15" Height="28" Width="235" AllowDrop="False">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Label Content="Life Expectancy Based on Socio Economic Indicators&#xD;&#xA;                                 City of Chicago" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Californian FB" FontSize="24" Background="#FF00B5D1" Foreground="White" Margin="0,0,0,570" ScrollViewer.HorizontalScrollBarVisibility="Visible" FontWeight="Bold" Grid.Column="4" Grid.Row="1">
+        <Label Content="Life Expectancy Based on Socio Economic Indicators&#xD;&#xA;                                 City of Chicago" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Californian FB" FontSize="24" Background="#FF00B5D1" Foreground="White" Margin="0,0,0,576" ScrollViewer.HorizontalScrollBarVisibility="Visible" FontWeight="Bold" Grid.Column="4" Grid.Row="1">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Button Content="Life Expectancy Statistics" HorizontalAlignment="Left" Margin="1020,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="345" Height="40" Click="Button_Click_2" Cursor="Hand" Grid.Column="4" ToolTip="Click here to view  Life Expectancy in different communities" FontSize="14">
+        <Button Content="Life Expectancy Statistics" HorizontalAlignment="Left" Margin="1020,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="345" Height="40" Click="Button_Click_2" Cursor="Hand" Grid.Column="4" ToolTip="Click here to view  Life Expectancy in different communities" FontSize="14" OverridesDefaultStyle="False">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
@@ -85,7 +83,7 @@
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Check the Trend" Grid.Column="4" HorizontalAlignment="Left" Margin="115,629,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Height="36" Click="Button_Click_7" ToolTip="Click here to view the trend of life Expectancy in Chicago.Select community from the drop down below" Grid.RowSpan="2" Cursor="Hand" >
+        <Button Content="Check the Trend" Grid.Column="4" HorizontalAlignment="Left" Margin="115,629,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Height="36" Click="Button_Click_7" ToolTip="Click here to view the trend of life Expectancy in Chicago.Select community from the drop down below" Cursor="Hand" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -102,14 +100,14 @@
             </Label.Effect>
         </Label>
         <Image Grid.Column="7" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="1540,0,0,0" Name="image8" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" />
-        <Button Content="Check the Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="403,626,0,0" Grid.Row="1" VerticalAlignment="Top" Width="131" Height="37" Click="Button_Click_9" Grid.RowSpan="2" Cursor="Hand" >
+        <Button Content="Check the Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="403,626,0,0" Grid.Row="1" VerticalAlignment="Top" Width="131" Height="37" Click="Button_Click_9" Cursor="Hand" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label Content="Overview&#xA;There are more than 200 neighbourhoods in Chicago but there is no official list of the city's &#xA; neighbourhoods  or their boundaries. Neighborhood names and identities have evolved over &#xA; time due to real estate development  and changing demographics. Chicago is also divided into &#xA; 78 community areas which were drawn by University of Chicago researchers in 1920s. There &#xA; are various Socio-Economic indicators which play a major role in determining the life-expectancy &#xA; in these neighbourhoods. &#xA;&#xA; Select the neighbourhood from the drop box below and to get a graphical layout of socio-economic &#xA; indicator prevailing in the particular area.  Also check the trend of life-Expectancy in the year &#xA; 1990, 2000 and 2010 in the neighbourhood." Grid.Row="1" Height="245" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="2,202,0,0" Name="label1" VerticalAlignment="Top" Grid.Column="4" FontSize="14" Cursor="Hand" Background="GhostWhite" Width="678">
+        <Label BorderThickness="2" BorderBrush="#FFB9CFB7" Content="Overview&#xA;There are more than 200 neighbourhoods in Chicago but there is no official list of the city's &#xA; neighbourhoods  or their boundaries. Neighborhood names and identities have evolved over &#xA; time due to real estate development  and changing demographics. Chicago is also divided into &#xA; 78 community areas which were drawn by University of Chicago researchers in 1920s. There &#xA; are various Socio-Economic indicators which play a major role in determining the life-expectancy &#xA; in these neighbourhoods. &#xA;&#xA; Select the neighbourhood from the drop box below and to get a graphical layout of socio-economic &#xA; indicator prevailing in the particular area.  Also check the trend of life-Expectancy in the year &#xA; 1990, 2000 and 2010 in the neighbourhood." Grid.Row="1" Height="245" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="2,202,0,0" Name="label1" VerticalAlignment="Top" Grid.Column="4" FontSize="14" Cursor="Hand" Background="GhostWhite" Width="678">
             <Label.Effect>
-                <DropShadowEffect BlurRadius="1" Color="#FFB9CFB7" ShadowDepth="3" Direction="315" />
+                <DropShadowEffect BlurRadius="1" Color="#FFB9CFB7" ShadowDepth="4" Direction="315" />
             </Label.Effect>
         </Label>
         <Label Content="Socio-Economic Indicators Analysis " Grid.Column="4" Grid.Row="1" Height="30" HorizontalAlignment="Right" Margin="0,579,770,0" Name="label2" VerticalAlignment="Top" FontSize="14" Background="Bisque" Width="231" >
@@ -123,5 +121,11 @@
             </Label.Effect>
         </Label>
         <Label Content="Click on Poverty Statistics, Unemployment Statistics, Per Capita Income Statistics and Life Expectancy Statistics tab to see a graphical representationof these socio-economic indicators in the neighbourhoods across Chicago. " Grid.Column="4" Grid.Row="1" Height="28" Background="PapayaWhip" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,128,0,0" Name="label4" VerticalAlignment="Top" Width="1365" />
+        <Label  BorderThickness="2" BorderBrush="#FFB9CFB7" Content="     Significance of Correlation&#xA;     In order to find if there is any dependency between Life-Expectancy and various Socio-Economic Indi- &#xA;     cators ;like Poverty, Unemployment and Per-Capita Income, Pearson's Correlation Coefficient is used.&#xA;     Select the checkboxes below to find the correlation coefficient of Life-Expectancy with these Socio-&#xA;     Economic Indicators. Correlation is a technique for investigating the relationship between two quanti-&#xA;    tative, continuous variables, for example, Poverty and Life Expectancy. Pearson's correlation coefficient&#xA;     (r) is a measure of the strength of the association between the two variables." FontSize="14"  Cursor="Hand" Background="GhostWhite" Grid.Column="4" Grid.Row="1" Height="148" HorizontalAlignment="Left" Width="678" Margin="684,202,0,0" Name="label5" VerticalAlignment="Top">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="1" Color="#FFB9CFB7" ShadowDepth="4" Direction="315" />
+            </Label.Effect>
+        </Label>
+        <Label BorderThickness="2" BorderBrush="#FFB9CFB7" Width="678" Content="     Range of Correlation&#xA;     Value of Correlation                        Strength Relationship&#xA;     -1.0 to -0.5 or 1.0 to 0.5                  Strong&#xA;     -0.5 to -0.3 or 0.3 to 0.5                  Moderate&#xA;     -0.3 to -0.1 or 0.1 to 0.3                  Weak&#xA;     -0.1 to 0.1                                        None or very weak" Grid.Column="4" Grid.Row="1" Height="110" HorizontalAlignment="Left" Margin="684,590,0,0" Name="label6" VerticalAlignment="Top" FontSize="14"/>
     </Grid>
 </Window>
