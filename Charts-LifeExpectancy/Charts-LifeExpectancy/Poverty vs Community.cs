@@ -49,7 +49,7 @@ namespace Project
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             //this.ClientSize = new System.Drawing.Size(284, 262);           
-            this.Load += new EventHandler(Form2_Load);            
+            //this.Load += new EventHandler(Form2_Load);            
             ((ISupportInitialize)(this.barChart)).EndInit();
             this.ResumeLayout(false);
 
@@ -102,7 +102,7 @@ namespace Project
                 series.Points[i].Color = Color.Red;
             }
             series["PointWidth"] = (0.7).ToString();
-
+            barChart.Titles.Add(new Title("Poverties in different communities in Chicago", Docking.Top, new Font("Verdana", 28f, FontStyle.Bold), Color.Black));
             barChart.Series.Add(series);
             barChart.Invalidate();
 

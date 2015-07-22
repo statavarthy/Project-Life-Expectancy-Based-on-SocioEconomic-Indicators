@@ -121,7 +121,7 @@ namespace Project
                 }                
             }
             series["PointWidth"] = (0.5).ToString();
-
+            barChart.Titles.Add(new Title("Trend of life Expectancies", Docking.Top, new Font("Verdana", 28f, FontStyle.Bold), Color.Black));
             barChart.Series.Add(series);
             barChart.Invalidate();
 
