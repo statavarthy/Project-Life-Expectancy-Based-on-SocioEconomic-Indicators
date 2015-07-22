@@ -42,7 +42,7 @@ Smruti tatavarty - statavarthy@luc.edu
 
 Significance of value pearson correlation corfficient value:
 
-Value of ρ                        Strength of relationship
+Value of ρ                        Strength of Relationship
 
 -1.0 to -0.5 or 1.0 to 0.5      	Strong
 
