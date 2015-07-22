@@ -18,7 +18,7 @@ census data- Socio Economic indicators-https://data.cityofchicago.org/Health-Hum
 
 ######MOTIVATION:
 
-This project is distributed with the hope to determine if there is any relationship of life expectancy in chicago communities with the socioeconomic factors like Poverty, Unemployment, and Per Capita Income
+This project is distributed with the hope to determine if there is any relationship of life expectancy in chicago communities with the socioeconomic factors like Poverty, Unemployment, and Per Capita Income.
 
 ######INSTALLATIONS:
 
@@ -28,7 +28,7 @@ NUnit framework is used for unit testing. It is an open source software.
 
 ######DOCUMENTATION:
 
-Developer's Guide and User Guide is available in GIT WiKi, having a detailed description for both users and developers to goahead with the project and get benefitted. 
+Developer's Guide and User Guide is available in GIT WiKi, having a detailed description for both users and developers to goahead with the project and get benefitted.
 
 ######Programmers can be reached at:
 
@@ -38,7 +38,7 @@ Pagarwal@luc.edu
 
 statavarthy@luc.edu
 
-Conclusion:
+######Conclusion:
 
 Value of ρ                        Strength of relationship
 
