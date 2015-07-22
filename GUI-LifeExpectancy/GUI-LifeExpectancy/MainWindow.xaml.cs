@@ -68,9 +68,9 @@ namespace Project
             if(isLifePovertyChked)
                 ResultBox.Text = "Correlation between Life Expectancy and Poverty is " + data_lifePoverty;           
             if (isLifeUnempChked)
-                ResultBox.AppendText("\n Correlation between Life Expectancy and Unemployment is " + data_lifeUnemp);
+                ResultBox.AppendText("\nCorrelation between Life Expectancy and Unemployment is " + data_lifeUnemp);
             if (isLifeperCapita)
-                ResultBox.AppendText("\n Correlation between Life Expectancy and per Capita Income is " + data_lifeperCapita);                         
+                ResultBox.AppendText("\nCorrelation between Life Expectancy and per Capita Income is " + data_lifeperCapita);                         
         }
         //logic for the clear button to clear the results in the box
         private void Button_Click_1(object sender, RoutedEventArgs e)
