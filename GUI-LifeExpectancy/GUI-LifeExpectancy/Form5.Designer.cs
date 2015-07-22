@@ -1,4 +1,6 @@
-﻿namespace Project
+﻿
+//This is a system generated file during the creation of the form
+namespace Project
 {
     partial class Form5
     {
