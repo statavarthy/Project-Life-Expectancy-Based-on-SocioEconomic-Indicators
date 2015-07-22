@@ -54,7 +54,7 @@ namespace Project
             this.Controls.Add(this.panel2);
             this.Name = "LifeExpectancy_Vs_Community";
             this.Text = "Life Expectancy Vs Community";
-            this.Load += new System.EventHandler(this.Form1_Load_1);
+           // this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 
