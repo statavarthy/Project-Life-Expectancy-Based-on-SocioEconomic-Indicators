@@ -54,7 +54,9 @@
             </Button.Effect>
         </Button>
         <Label Background="Bisque" Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="4" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" Foreground="Gray" Margin="893,358,0,0" FontSize="15" Height="28" Width="235" AllowDrop="False">
-           
+            <Label.Effect>
+                <DropShadowEffect/>
+            </Label.Effect>
         </Label>
         <Label Content="Life Expectancy Based on Socio Economic Indicators&#xD;&#xA;                                 City of Chicago" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Californian FB" FontSize="24" Background="#FF00B5D1" Foreground="White" Margin="0,0,0,576" ScrollViewer.HorizontalScrollBarVisibility="Visible" FontWeight="Bold" Grid.Column="4" Grid.Row="1">
             <Label.Effect>
