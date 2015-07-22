@@ -40,7 +40,7 @@ Smruti tatavarty - statavarthy@luc.edu
 
 ######Conclusion:
 
-Significance of value pearson correlation corfficient value:
+Significance of pearson correlation corfficient value:
 
 Value of ρ                        Strength of Relationship
 
