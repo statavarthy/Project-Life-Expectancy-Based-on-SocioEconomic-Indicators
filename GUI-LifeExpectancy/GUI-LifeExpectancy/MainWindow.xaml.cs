@@ -1,4 +1,20 @@
-﻿using System;
+﻿///////////////////////////////////////////////////////////////////////
+// LifeExpectancy.cs - Program for GUI                               //
+// Language:    C#, .Net Framework 4.0                               //
+// Application: Open Source Computing, Project, Summer 2015          //
+// Author:      SMRUTI TATAVARTHY, COMP 412, Loyola University       //
+//              statavarthy@luc.edu                                  //
+///////////////////////////////////////////////////////////////////////
+/*Summary
+ * 
+ * The aim of this program is to display the front end GUI
+ * This program contains logic for execution of a small action
+ * on click of buttons.
+ * Code for different buttons, dropdowns have been included and
+ * their corresponding actions on click are included in this program
+ */
+
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
