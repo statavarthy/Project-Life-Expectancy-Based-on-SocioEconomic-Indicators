@@ -40,6 +40,26 @@ statavarthy@luc.edu
 
 Conclusion:
 
+Value of ρ                        Strength of relationship
+
+-1.0 to -0.5 or 1.0 to 0.5      	Strong
+
+-0.5 to -0.3 or 0.3 to 0.5	      Moderate
+
+-0.3 to -0.1 or 0.1 to 0.3      	Weak
+
+-0.1 to 0.1	                      None or very weak
+
+
+The Analysis of Correlation indicates that there is a strong correlation of life Expectancy with Poverty, Unemployment and percapita Income.
+
+
+Correlation between Life Expectancy and Poverty is -0.691494501873792
+
+Correlation between Life Expectancy and Unemployment is -0.80139692321573
+
+Correlation between Life Expectancy and per Capita Income is 0.571586089121265
+
 
 
 
