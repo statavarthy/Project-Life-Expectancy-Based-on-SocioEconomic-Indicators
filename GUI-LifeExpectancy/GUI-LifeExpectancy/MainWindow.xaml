@@ -60,77 +60,68 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Label Content="Life Expectancy Based on Socio Economic Indicators&#xD;&#xA;                                 City of Chicago" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Californian FB" FontSize="24" Background="#FF0009D1" Foreground="White" Margin="0,120,0,454" ScrollViewer.HorizontalScrollBarVisibility="Visible" FontWeight="Bold" Grid.Column="4" Grid.Row="1">
+        <Label Content="Life Expectancy Based on Socio Economic Indicators&#xD;&#xA;                                 City of Chicago" VerticalContentAlignment="Center" HorizontalContentAlignment="Center" FontFamily="Californian FB" FontSize="24" Background="#FF00B5D1" Foreground="White" Margin="0,0,0,570" ScrollViewer.HorizontalScrollBarVisibility="Visible" FontWeight="Bold" Grid.Column="4" Grid.Row="1">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Button Content="Life Expectancy Statistics" HorizontalAlignment="Left" Margin="1020,220,0,0" Grid.Row="1" VerticalAlignment="Top" Width="345" Height="40" Click="Button_Click_2" Background="{DynamicResource {x:Static SystemColors.ScrollBarBrushKey}}" BorderBrush="{DynamicResource {x:Static SystemColors.MenuTextBrushKey}}" Cursor="Hand" OpacityMask="{DynamicResource {x:Static SystemColors.HotTrackBrushKey}}" Grid.Column="4" ToolTip="Click here to view  Life Expectancy in different communities" FontSize="14">
+        <Button Content="Life Expectancy Statistics" HorizontalAlignment="Left" Margin="1020,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="345" Height="40" Click="Button_Click_2" Cursor="Hand" Grid.Column="4" ToolTip="Click here to view  Life Expectancy in different communities" FontSize="14">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Poverty Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="0,220,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Click="Button_Click_4" Height="40" ToolTip="Click here to view poverty in different communities" Cursor="Hand" FontSize="14">
+        <Button Content="Poverty Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="0,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Click="Button_Click_4" Height="40" ToolTip="Click here to view poverty in different communities" Cursor="Hand" FontSize="14">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Unemployment Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="340,220,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_5" ToolTip="Click here to view  Unemployment in different communities" Cursor="Hand" FontSize="14">
+        <Button Content="Unemployment Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="340,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_5" ToolTip="Click here to view  Unemployment in different communities" Cursor="Hand" FontSize="14">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Per Capita Income Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="680,220,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_6" ToolTip="Click here to view per Capita Statistics in different communities" Cursor="Hand" FontSize="14">
+        <Button Content="Per Capita Income Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="680,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="340" Height="40" Click="Button_Click_6" ToolTip="Click here to view per Capita Statistics in different communities" Cursor="Hand" FontSize="14">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
         </Button>
-        <Button Content="Check the Trend" Grid.Column="4" HorizontalAlignment="Left" Margin="115,619,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Height="36" Click="Button_Click_7" ToolTip="Click here to view the trend of life Expectancy in Chicago.Select community from the drop down below" Grid.RowSpan="2" Cursor="Hand" >
+        <Button Content="Check the Trend" Grid.Column="4" HorizontalAlignment="Left" Margin="115,629,0,0" Grid.Row="1" VerticalAlignment="Top" Width="110" Height="36" Click="Button_Click_7" ToolTip="Click here to view the trend of life Expectancy in Chicago.Select community from the drop down below" Grid.RowSpan="2" Cursor="Hand" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <ComboBox Grid.Column="4" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="232,529,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" Name ="comboBox1" Height="30" ToolTip="Select a comunity from the drop down below to view the life expectancy trend" Cursor="Hand" >
+        <ComboBox Grid.Column="4" HorizontalAlignment="Left" HorizontalContentAlignment="Center" Margin="232,524,0,0" Grid.Row="1" VerticalAlignment="Top" Width="150" Loaded="ComboBox_Loaded" SelectionChanged="ComboBox_SelectionChanged" Name ="comboBox1" Height="30" ToolTip="Select a comunity from the drop down below to view the life expectancy trend" Cursor="Hand" >
             <ComboBox.Effect>
                 <DropShadowEffect/>
             </ComboBox.Effect>
         </ComboBox>
         <Label Grid.Column="4" HorizontalAlignment="Left" Margin="345,453,0,0" Grid.Row="1" VerticalAlignment="Top" Height="10" Width="10"/>
-        <Label Content="Life Expectancy for the year 1990, 2000 and 2010" Grid.Column="4" HorizontalAlignment="Left" Margin="28,570,0,0" Grid.Row="1" VerticalAlignment="Top" Height="34" Width="312" FontSize="14" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" >
+        <Label Content="Life Expectancy for the year 1990, 2000 and 2010" Grid.Column="4" HorizontalAlignment="Left" Margin="28,579,0,0" Grid.Row="1" VerticalAlignment="Top" Height="30" Width="312" FontSize="14" Background="Bisque" >
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
         <Image Grid.Column="7" Grid.Row="1" Height="120" HorizontalAlignment="Left" Margin="1540,0,0,0" Name="image8" Stretch="Fill" VerticalAlignment="Top" Width="220" Source="/GUI-LifeExpectancy;component/Images/flag1.jpg" />
-        <Image HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="142" Source="flag1.jpg" Margin="138,0,0,0" Grid.Column="4" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="142" Source="flag12.jpg" Margin="276,0,0,0" Grid.Column="4" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="142" Source="flag13.jpg" Margin="418,0,0,0" Grid.Column="4" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="560,0,0,0" Grid.Column="4" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="702,0,0,0" Grid.Column="4" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="844,0,0,0" Grid.Column="4" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="986,0,0,0" Grid.Column="4" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="1128,0,0,0" Grid.Column="4" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="142" Source="flag14.jpg" Margin="1270,0,0,0" Grid.Column="4" Grid.ColumnSpan="4" Grid.Row="1" />
-        <Image HorizontalAlignment="Left" Height="115" VerticalAlignment="Top" Width="142" Source="flag1.jpg" Margin="-4,0,0,0" Grid.ColumnSpan="5" Grid.Row="1" />
-        <Button Content="Check the Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="403,616,0,0" Grid.Row="1" VerticalAlignment="Top" Width="131" Height="37" Click="Button_Click_9" Grid.RowSpan="2" Cursor="Hand" >
+        <Button Content="Check the Statistics" Grid.Column="4" HorizontalAlignment="Left" Margin="403,626,0,0" Grid.Row="1" VerticalAlignment="Top" Width="131" Height="37" Click="Button_Click_9" Grid.RowSpan="2" Cursor="Hand" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label Content="There are more than 200 neighbourhoods in Chicago but there is no official list of the city's &#xD; neighbourhoods  or their boundaries. Neighborhood names and identities have evolved over &#xD; time due to real estate development  and changing demographics. Chicago is also divided into &#xD; 78 community areas which were drawn by University of Chicago researchers in 1920s. There &#xD; are various Socio-Economic indicators which play a major role in determining the life-expectancy &#xD; in these neighbourhoods. &#xD;&#xD; Select the neighbourhood from the drop box, to get a graphical layout of socio-economic &#xD; indicator prevailing in the particular area.  Also check the trend of life-Expectancy in the year &#xD; 1990, 2000 and 2010 in the neighbourhood." Grid.Row="1" Height="204" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="10,281,0,0" Name="label1" VerticalAlignment="Top" Grid.Column="4" FontSize="14" BorderBrush="Black" Cursor="Hand" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" >
+        <Label Content="&#xD;There are more than 200 neighbourhoods in Chicago but there is no official list of the city's &#xD; neighbourhoods  or their boundaries. Neighborhood names and identities have evolved over &#xD; time due to real estate development  and changing demographics. Chicago is also divided into &#xD; 78 community areas which were drawn by University of Chicago researchers in 1920s. There &#xD; are various Socio-Economic indicators which play a major role in determining the life-expectancy &#xD; in these neighbourhoods. &#xD;&#xD; Select the neighbourhood from the drop box below and to get a graphical layout of socio-economic &#xD; indicator prevailing in the particular area.  Also check the trend of life-Expectancy in the year &#xD; 1990, 2000 and 2010 in the neighbourhood." Grid.Row="1" Height="245" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="2,202,0,0" Name="label1" VerticalAlignment="Top" Grid.Column="4" FontSize="14" Cursor="Hand" Background="GhostWhite" Width="678">
+            <Label.Effect>
+                <DropShadowEffect BlurRadius="1" Color="#FFB9CFB7" ShadowDepth="3" Direction="315" />
+            </Label.Effect>
+        </Label>
+        <Label Content="Socio-Economic Indicators Analysis " Grid.Column="4" Grid.Row="1" Height="30" HorizontalAlignment="Right" Margin="0,579,770,0" Name="label2" VerticalAlignment="Top" FontSize="14" Background="Bisque" Width="231" >
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Label Content="Socio-Economic Indicators Analysis " Grid.Column="4" Grid.Row="1" Height="34" HorizontalAlignment="Right" Margin="0,570,770,0" Name="label2" VerticalAlignment="Top" FontSize="14" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" Width="231" >
+        <Label Content="Select the Neighbourhood name from the drop down " Grid.Column="4" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="155,478,0,0" Name="label3" VerticalAlignment="Top" FontSize="14" Background="Bisque" ToolTip="Select a community from below to view statistic related to them" Cursor="Hand" >
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Label Content="Select the Neighbourhood name from the drop down " Grid.Column="4" Grid.Row="1" Height="28" HorizontalAlignment="Left" Margin="155,492,0,0" Name="label3" VerticalAlignment="Top" FontSize="14" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" ToolTip="Select a community from below to view statistic related to them" Cursor="Hand" >
-            <Label.Effect>
-                <DropShadowEffect/>
-            </Label.Effect>
-        </Label>
+        <Label Content="Click on Poverty Statistics, Unemployment Statistics, Per Capita Income Statistics and Life Expectancy Statistics tab to see a graphical representationof these socio-economic indicators in the neighbourhoods across Chicago. " Grid.Column="4" Grid.Row="1" Height="28" Background="PapayaWhip" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,128,0,0" Name="label4" VerticalAlignment="Top" Width="1365" />
     </Grid>
 </Window>
