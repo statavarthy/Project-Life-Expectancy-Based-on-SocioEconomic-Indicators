@@ -32,7 +32,7 @@ Developer's Guide and User Guide is available in GIT WiKi, having a detailed des
 
 ######Programmers can be reached at:
 
-Email: 
+Write to us Email: 
 
 Pagarwal@luc.edu
 
