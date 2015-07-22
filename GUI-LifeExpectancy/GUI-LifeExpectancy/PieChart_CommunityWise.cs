@@ -19,10 +19,14 @@ namespace Project
         public PieChart_CommunityWise(string value)
         {
             this.WindowState = FormWindowState.Maximized;
-            int newWidth = 1400;
+            ////int newWidth = 1300;
+            //int newHeight = 700;
             InitializeComponent();
-            panel1.MaximumSize = new Size(newWidth, panel1.Height);
-            panel1.Size = new Size(newWidth, panel1.Height);
+            //panel1.MaximumSize = new Size(newWidth, panel1.Height);
+            //panel1.Size = new Size(newWidth, panel1.Height);
+            ////panel1.MaximumSize = new Size(panel1.Width, panel1.Height);
+            //panel1.Size = new Size(panel1.Width, panel1.Height);
+
             InitializeChart();
             value_selected = value;
             
@@ -32,7 +36,7 @@ namespace Project
 
             this.components = new System.ComponentModel.Container();
             ChartArea chartArea1 = new ChartArea();
-            Legend legend1 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "SocioEconomic Indicators" };
+            Legend legend1 = new Legend() { BackColor = Color.FloralWhite, ForeColor = Color.Black, Title = "SocioEconomic Indicators" };
 
             pieChart = new Chart();
 
@@ -45,10 +49,11 @@ namespace Project
             //===Pie chart
             chartArea1.Name = "PieChartArea";
             pieChart.ChartAreas.Add(chartArea1);
-            pieChart.Dock = System.Windows.Forms.DockStyle.Fill;
+            pieChart.Dock = System.Windows.Forms.DockStyle.Fill;           
             legend1.Name = "Legend1";
             pieChart.Legends.Add(legend1);
-            pieChart.Location = new System.Drawing.Point(0, 250);
+            pieChart.Location = new System.Drawing.Point(0, 500);
+            
 
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
@@ -122,13 +127,18 @@ namespace Project
                     series.Points.Add(noDiploma[i]);
                     series.Points.Add(under18over65[i]);
                     series.Points.Add(housingCrowded[i]);
+                    series.Points[0].LegendText = "Poverty";
+                    series.Points[1].LegendText = "Unemployment";
+                    series.Points[2].LegendText = "Percent people with no Diploma";
+                    series.Points[3].LegendText = "Percent people under the age 18 and over 65";
+                    series.Points[4].LegendText = "Percent housing crowded";
                     series.Points[0].Label = poverty[i].ToString();
                     series.Points[1].Label = unemployment[i].ToString();
                     series.Points[2].Label = noDiploma[i].ToString();
                     series.Points[3].Label = under18over65[i].ToString();
                     series.Points[4].Label = housingCrowded[i].ToString();
-                    pieChart.Titles.Add("Socio Economic Indicators for " + value_selected);
-                   
+                    //pieChart.Titles.Add("Socio Economic Indicators for " + value_selected);
+                    pieChart.Titles.Add(new Title("Socio Economic Indicators for " + value_selected, Docking.Top, new Font("Verdana", 28f, FontStyle.Bold), Color.Black));
                 }
             }
             series["PointWidth"] = (0.5).ToString();

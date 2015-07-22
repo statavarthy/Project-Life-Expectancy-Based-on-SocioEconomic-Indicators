@@ -26,6 +26,10 @@ namespace Project
         {
             this.WindowState = WindowState.Maximized;
             InitializeComponent();
+            ImageBrush myBrush = new ImageBrush();
+            myBrush.ImageSource =
+                new BitmapImage(new Uri("../../Images/background2.jpg", UriKind.Relative));
+            this.Background = myBrush;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
