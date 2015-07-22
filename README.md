@@ -34,7 +34,7 @@ Developer's Guide and User Guide is available in GIT WiKi, having a detailed des
 
 Write to us at: 
 
-Pagarwal@luc.edu
+Pallavi Agarwal - Pagarwal@luc.edu
 
 statavarthy@luc.edu
 
