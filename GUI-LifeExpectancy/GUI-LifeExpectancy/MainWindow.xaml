@@ -53,7 +53,7 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label Background="Bisque" Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="4" Grid.Row="1" Foreground="Gray" Margin="893,358,0,0" FontSize="{DynamicResource {x:Static SystemFonts.CaptionFontSizeKey}}" Height="28" Width="235" AllowDrop="False">
+        <Label Background="Bisque" Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="4" Grid.Row="1" Margin="893,358,0,0" FontSize="{DynamicResource {x:Static SystemFonts.CaptionFontSizeKey}}" Height="28" Width="235" AllowDrop="False">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
@@ -121,20 +121,11 @@
             </Label.Effect>
         </Label>
         <Label Content="Click on Poverty Statistics, Unemployment Statistics, Per Capita Income Statistics and Life Expectancy Statistics tab to see a graphical representationof these socio-economic indicators in the neighbourhoods across Chicago. " Grid.Column="4" Grid.Row="1" Height="28" Background="PapayaWhip" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,128,0,0" Name="label4" VerticalAlignment="Top" Width="1365" />
-<<<<<<< HEAD
-        <Label  BorderThickness="2" BorderBrush="#FFB9CFB7" Content="     Significance of Correlation&#xA;     In order to find if there is any dependency between Life-Expectancy and various Socio-Economic Indi- &#xA;     cators ;like Poverty, Unemployment and Per-Capita Income, Pearson's Correlation Coefficient is used.&#xA;     Select the checkboxes below to find the correlation coefficient of Life-Expectancy with these Socio-&#xA;     Economic Indicators. Correlation is a technique for investigating the relationship between two quanti-&#xA;    tative, continuous variables, for example, Poverty and Life Expectancy. Pearson's correlation coefficient&#xA;     (r) is a measure of the strength of the association between the two variables." FontSize="14"  Cursor="Hand" Background="GhostWhite" Grid.Column="4" Grid.Row="1" Height="148" HorizontalAlignment="Left" Width="678" Margin="684,202,0,0" Name="label5" VerticalAlignment="Top">
+        <Label BorderThickness="2" BorderBrush="#FFB9CFB7" Content="     Significance of Correlation&#xA;     In order to find if there is any dependency between Life-Expectancy and various Socio-Economic Indi- &#xA;     cators ;like Poverty, Unemployment and Per-Capita Income, Pearson's Correlation Coefficient is used.&#xA;     Select the checkboxes below to find the correlation coefficient of Life-Expectancy with these Socio-&#xA;     Economic Indicators. Correlation is a technique for investigating the relationship between two quanti-&#xA;    tative, continuous variables, for example, Poverty and Life Expectancy. Pearson's correlation coefficient&#xA;     (r) is a measure of the strength of the association between the two variables." FontSize="14"  Cursor="Hand" Background="GhostWhite" Grid.Column="4" Grid.Row="1" Height="148" HorizontalAlignment="Left" Width="678" Margin="684,202,0,0" Name="label5" VerticalAlignment="Top">
             <Label.Effect>
                 <DropShadowEffect BlurRadius="1" Color="#FFB9CFB7" ShadowDepth="4" Direction="315" />
             </Label.Effect>
         </Label>
-        <Label BorderThickness="2" BorderBrush="#FFB9CFB7" Width="678" Content="     Range of P&#xD;     Value of P                                        Strength Relationship&#xD;     -1.0 to -0.5 or 1.0 to 0.5                  Strong&#xD;     -0.5 to -0.3 or 0.3 to 0.5                  Moderate&#xD;     -0.3 to -0.1 or 0.1 to 0.3                  Weak&#xD;     -0.1 to 0.1                                        None or very weak" Grid.Column="4" Grid.Row="1" Height="110" HorizontalAlignment="Left" Margin="684,590,0,0" Name="label6" VerticalAlignment="Top" FontSize="14"></Label>
-=======
-        <Label  BorderThickness="2" BorderBrush="#FFB9CFB7" Content="&#xD;     In order to find if there is any dependency between Life-Expectancy and various Socio-Economic Indi- &#xD;     cators ;like Poverty, Unemployment and Per-Capita Income, Pearson's Correlation Coefficient is used.&#xD;     Select the checkboxes below to find the correlation coefficient of Life-Expectancy with these Socio-&#xD;     Economic Indicators. Correlation is a technique for investigating the relationship between two quanti-&#xD;    tative, continuous variables, for example, Poverty and Life Expectancy. Pearson's correlation coefficient&#xD;     (r) is a measure of the strength of the association between the two variables." FontSize="14"  Cursor="Hand" Background="GhostWhite" Grid.Column="4" Grid.Row="1" Height="148" HorizontalAlignment="Left" Width="678" Margin="684,202,0,0" Name="label5" VerticalAlignment="Top">
-        <Label.Effect>
-            <DropShadowEffect BlurRadius="1" Color="#FFB9CFB7" ShadowDepth="4" Direction="315" />
-        </Label.Effect>
-            </Label>
-        <Label BorderThickness="2" BorderBrush="#FFB9CFB7" Width="678" Content="     Range of P&#xD;     Value of P                                        Strength Relationship&#xD;     -1.0 to -0.5 or 1.0 to 0.5                  Strong&#xD;     -0.5 to -0.3 or 0.3 to 0.5                  Moderate&#xD;     -0.3 to -0.1 or 0.1 to 0.3                  Weak&#xD;     -0.1 to 0.1                                        None or very weak" Grid.Column="4" Grid.Row="1" Height="110" HorizontalAlignment="Left" Margin="684,590,0,0" Name="label6" VerticalAlignment="Top" FontSize="14"></Label>   
->>>>>>> 2add9df20a927c88ea6757ee5b3a9f6d7c53a15c
+        <Label BorderThickness="2" BorderBrush="#FFB9CFB7" Width="678" Content="     Range of Correlation&#xA;     Value of Correlation                        Strength Relationship&#xA;     -1.0 to -0.5 or 1.0 to 0.5                  Strong&#xA;     -0.5 to -0.3 or 0.3 to 0.5                  Moderate&#xA;     -0.3 to -0.1 or 0.1 to 0.3                  Weak&#xA;     -0.1 to 0.1                                        None or very weak" Grid.Column="4" Grid.Row="1" Height="110" HorizontalAlignment="Left" Margin="684,590,0,0" Name="label6" VerticalAlignment="Top" FontSize="14"></Label>
     </Grid>
 </Window>
