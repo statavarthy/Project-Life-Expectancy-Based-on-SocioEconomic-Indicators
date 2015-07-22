@@ -158,9 +158,9 @@ namespace Project
                 perCapitaIncome[k] = Convert.ToDouble(socioEconomicData[k].perCapitaIncome);
             }
             //Pearson Correlation for calculating correlation between life expectancies and different socioeconomic indicators            
-                 correl.correlLifePoverty = Correlation.Pearson(expectancy, poverty);
-                 correl.correlLifeUnemp = Correlation.Pearson(expectancy, unemployment);
-                 correl.correlLifePerCapita = Correlation.Pearson(expectancy, perCapitaIncome);
+                 correl.correlLifePoverty = Math.Round(Correlation.Pearson(expectancy, poverty),2);
+                 correl.correlLifeUnemp = Math.Round(Correlation.Pearson(expectancy, unemployment),2);
+                 correl.correlLifePerCapita = Math.Round(Correlation.Pearson(expectancy, perCapitaIncome),2);
                  
                  Console.WriteLine("\n Correlation between Life Expectancy and Poverty is  {0} ", correl.correlLifePoverty);
                  Console.WriteLine("\n Correlation between Life Expectancy and Unemployment is {0} ", correl.correlLifeUnemp);
