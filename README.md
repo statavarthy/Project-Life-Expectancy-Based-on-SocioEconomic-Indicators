@@ -36,7 +36,7 @@ Write to us at:
 
 Pallavi Agarwal - Pagarwal@luc.edu
 
-statavarthy@luc.edu
+Smruti tatavarty - statavarthy@luc.edu
 
 ######Conclusion:
 
