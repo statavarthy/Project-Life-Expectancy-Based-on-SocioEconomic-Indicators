@@ -12,6 +12,8 @@
  * By finding correlation between these statistics, it is possbiel to determine
  * if unemployment, poverty and the per capita income of houselholds affects
  * life Expectancy.
+ * This program initiates call to different methods for parsing, populating the 
+ * data structures.
  * 
 
  */
@@ -32,7 +34,7 @@ namespace Project
 
         static void Main(string[] args)
         {
-            //bool flag = true;
+            //creating object of the type life expectancy
             LifeExpectancy lf = new LifeExpectancy();
             lf.processData();
         }
@@ -52,7 +54,7 @@ namespace Project
             // Function call to parse Socio Economic Indicators file
             Project.ParseData.SocioEconomicIndicators[] socioEconomicData = pd.parsesocioEconomicData(SocioEconomicIndicatorsFilePath);
                                    
-            //Function call to find correlation between the data
+            //Function call to find correlation between the data stuctures
             Project.ParseData.correlation corr = pd.CorrelationAnalysis(lifeExpectancyData, socioEconomicData);
             return corr;
             
