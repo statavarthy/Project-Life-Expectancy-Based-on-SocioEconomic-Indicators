@@ -9,7 +9,7 @@ This is a free program; you can redistribute it and/or modify it under the term 
 ######USAGE NOTE:
 
 This project deals with the two main datasets provided in Chicago Data portal. Datasets used are:
-1.SocioEconomic Indicator in chicago.
+1.Socio-Economic Indicator in chicago.
 2. Life Expectancy in Chicago.
 
 Public health Statistice- Life Expectancy By Community Area- https://data.cityofchicago.org/Health-Human-Services/Public-Health-Statistics-Life-Expectancy-By-Commun/qjr3-bm53
