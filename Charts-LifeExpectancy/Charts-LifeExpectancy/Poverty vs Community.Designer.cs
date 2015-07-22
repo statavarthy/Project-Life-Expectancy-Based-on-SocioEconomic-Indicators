@@ -1,4 +1,6 @@
-﻿namespace Project
+﻿
+//This is a system generated file on creation of the form
+namespace Project
 {
     partial class poverty_Vs_Community
     {

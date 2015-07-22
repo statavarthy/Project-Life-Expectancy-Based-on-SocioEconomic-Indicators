@@ -1,4 +1,7 @@
-﻿namespace Project
+﻿
+
+//This is a system generated file on creation of the form
+namespace Project
 {
     partial class LifeExpectancy_Vs_Community
     {
