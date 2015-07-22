@@ -2,14 +2,8 @@
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         Title="Chicago Data Portal" Height="1171.937" Width="1964.947">
-<<<<<<< HEAD
-    
-=======
-    <Window.Background >
-        <ImageBrush  ImageSource="/Welcome_Chicago_Data_Portal;component/Images/background2.jpg" Opacity="1">
-        </ImageBrush>
-    </Window.Background >
->>>>>>> c2d803709cdca280296d4c5abc8863f662f9015d
+
+
     <Grid>
         <Grid.ColumnDefinitions>
             <ColumnDefinition Width="25*"/>
@@ -42,6 +36,6 @@
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label Content="Let' Get Started!!" Grid.Column="1" Height="50" HorizontalAlignment="Center" Margin="0,400,0,0" Name="label1"  Width="200" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Normal"></Label>
+        <Label Content="Lets' Get Started!!" Grid.Column="1" Height="50" HorizontalAlignment="Center" Margin="0,400,0,0" Name="label1"  Width="200" VerticalAlignment="Top" Foreground="White" FontSize="24" FontWeight="Normal"></Label>
     </Grid>
 </Window>
