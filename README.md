@@ -40,7 +40,7 @@ statavarthy@luc.edu
 
 ######Conclusion:
 
-Significance of value correlation value
+Significance of value pearson correlation value
 
 Value of ρ                        Strength of relationship
 
