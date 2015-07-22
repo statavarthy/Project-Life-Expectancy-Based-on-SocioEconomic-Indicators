@@ -42,15 +42,15 @@ Smruti tatavarty - statavarthy@luc.edu
 
 Significance of Pearson Correlation coefficient value:
 
-Value of ρ                        Strength of Relationship
+Value of ρ                         Strength of Relationship
 
--1.0 to -0.5 or 1.0 to 0.5      	Strong
+-1.0 to -0.5 or 1.0 to 0.5      	 Strong
 
--0.5 to -0.3 or 0.3 to 0.5	      Moderate
+-0.5 to -0.3 or 0.3 to 0.5	       Moderate
 
--0.3 to -0.1 or 0.1 to 0.3      	Weak
+-0.3 to -0.1 or 0.1 to 0.3      	 Weak
 
--0.1 to 0.1	                      None or very weak
+-0.1 to 0.1	                       None or very weak
 
 
 The Analysis of Correlation indicates that there is a strong correlation of life Expectancy with Poverty, Unemployment and percapita Income.
