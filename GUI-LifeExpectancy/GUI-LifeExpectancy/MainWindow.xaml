@@ -37,10 +37,10 @@
             <ColumnDefinition Width="0"/>
             <ColumnDefinition Width="4885*" />
         </Grid.ColumnDefinitions>
-        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="903,448,0,0" VerticalAlignment="Top"  x:Name="LifePoverty" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="182" />
-        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="903,470,0,0" VerticalAlignment="Top"  x:Name="LifeUnemployment" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="225" />
-        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="903,492,0,0" VerticalAlignment="Top"  x:Name="LifeperCapita" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="244" />
-        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="863,520,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="4" Grid.Row="1" Height="20" ToolTip="Click here to find out the correlation" Cursor="Hand" >
+        <CheckBox Content="Life Expectancy and Poverty" HorizontalAlignment="Left" Margin="903,374,0,0" VerticalAlignment="Top"  x:Name="LifePoverty" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="182" />
+        <CheckBox Content="Life Expectancy and Unemployment" HorizontalAlignment="Left" Margin="903,396,0,0" VerticalAlignment="Top"  x:Name="LifeUnemployment" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="225" />
+        <CheckBox Content="Life Expectancy and per Capita Income" HorizontalAlignment="Left" Margin="903,418,0,0" VerticalAlignment="Top"  x:Name="LifeperCapita" Grid.Row="1" Grid.Column="4" Foreground="Gray" FontFamily="Tahoma" FontSize="13" Height="15" Width="244" />
+        <Button Content="Calculate Correlation" HorizontalAlignment="Left" Margin="880,446,0,0" VerticalAlignment="Top" Width="128" Click="Button_Click" Grid.Column="4" Grid.Row="1" Height="20" ToolTip="Click here to find out the correlation" Cursor="Hand" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
@@ -49,13 +49,13 @@
 			ScrollViewer.HorizontalScrollBarVisibility="Auto"
 			ScrollViewer.VerticalScrollBarVisibility="Auto"
 			ScrollViewer.CanContentScroll="True"
-			Height="75" Margin="845,570,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" x:Name="ResultBox" Grid.Row="1" Grid.Column="4" Grid.RowSpan="2" />
-        <Button Content="Clear" HorizontalAlignment="Left" Margin="1082,520,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="4" Grid.Row="1" Height="20" ToolTip="Click here to clear the results box" Cursor="Hand" >
+			Height="75" Margin="845,484,0,0" TextWrapping="Wrap"  VerticalAlignment="Top" Width="349" x:Name="ResultBox" Grid.Row="1" Grid.Column="4" />
+        <Button Content="Clear" HorizontalAlignment="Left" Margin="1057,446,0,0" VerticalAlignment="Top" Width="75" Click="Button_Click_1" Grid.Column="4" Grid.Row="1" Height="20" ToolTip="Click here to clear the results box" Cursor="Hand" >
             <Button.Effect>
                 <DropShadowEffect/>
             </Button.Effect>
         </Button>
-        <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="4" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" Foreground="Gray" Margin="893,406,0,0" FontSize="15" Height="28" Width="235" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" >
+        <Label Content="Find the Correlation between:" HorizontalAlignment="Left" VerticalAlignment="Top" Target="{Binding}" Grid.Column="4" Grid.Row="1" FontWeight="Bold" FontFamily="Tahoma" Foreground="Gray" Margin="893,332,0,0" FontSize="15" Height="28" Width="235" Background="{DynamicResource {x:Static SystemColors.ControlLightBrushKey}}" AllowDrop="False">
             <Label.Effect>
                 <DropShadowEffect/>
             </Label.Effect>
@@ -65,7 +65,7 @@
                 <DropShadowEffect/>
             </Label.Effect>
         </Label>
-        <Button Content="Life Expectancy Statistics" HorizontalAlignment="Left" Margin="1020,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="345" Height="40" Click="Button_Click_2" Cursor="Hand" Grid.Column="4" ToolTip="Click here to view  Life Expectancy in different communities" FontSize="14">
+        <Button Content="Life Expectancy Statistics" HorizontalAlignment="Left" Margin="1020,157,0,0" Grid.Row="1" VerticalAlignment="Top" Width="345" Height="40" Click="Button_Click_2" Cursor="Hand" Grid.Column="4" ToolTip="Click here to view  Life Expectancy in different communities" FontSize="14" OverridesDefaultStyle="False">
             <Button.Effect>
                 <DropShadowEffect BlurRadius="0"/>
             </Button.Effect>
@@ -123,10 +123,15 @@
             </Label.Effect>
         </Label>
         <Label Content="Click on Poverty Statistics, Unemployment Statistics, Per Capita Income Statistics and Life Expectancy Statistics tab to see a graphical representationof these socio-economic indicators in the neighbourhoods across Chicago. " Grid.Column="4" Grid.Row="1" Height="28" Background="PapayaWhip" HorizontalAlignment="Center" HorizontalContentAlignment="Center" Margin="0,128,0,0" Name="label4" VerticalAlignment="Top" Width="1365" />
-        <Label  BorderThickness="2" BorderBrush="#FFB9CFB7" Content="&#xD;     In order to find if there is any dependency between Life-Expectancy and various Socio-Economic Indi- &#xD;     cators ;like Poverty, Unemployment and Per-Capita Income, Pearson's Correlation Coefficient is used. " FontSize="14"  Cursor="Hand" Background="GhostWhite" Grid.Column="4" Grid.Row="1" Height="170" HorizontalAlignment="Left" Width="678" Margin="684,202,0,0" Name="label5" VerticalAlignment="Top">
+        <Label  BorderThickness="2" BorderBrush="#FFB9CFB7" Content="&#xD;     In order to find if there is any dependency between Life-Expectancy and various Socio-Economic Indi- &#xD;     cators ;like Poverty, Unemployment and Per-Capita Income, Pearson's Correlation Coefficient is used.&#xD;     Select the checkboxes below to find the correlation coefficient of Life-Expectancy with these Socio-&#xD;     Economic Indicators." FontSize="14"  Cursor="Hand" Background="GhostWhite" Grid.Column="4" Grid.Row="1" Height="113" HorizontalAlignment="Left" Width="678" Margin="684,197,0,0" Name="label5" VerticalAlignment="Top">
         <Label.Effect>
             <DropShadowEffect BlurRadius="1" Color="#FFB9CFB7" ShadowDepth="4" Direction="315" />
         </Label.Effect>
             </Label>
+        <Label BorderThickness="2" BorderBrush="#FFB9CFB7" Width="678" Content="Label" Grid.Column="4" Grid.Row="1" Height="115" HorizontalAlignment="Left" HorizontalContentAlignment="Right" Margin="684,580,0,0" Name="label6" VerticalAlignment="Top" >
+            <Label.Effect>
+            <DropShadowEffect BlurRadius="1" Color="#FFB9CFB7" ShadowDepth="4" Direction="315" />
+            </Label.Effect>
+        </Label>   
     </Grid>
 </Window>
