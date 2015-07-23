@@ -1,4 +1,21 @@
-﻿using System;
+﻿////////////////////////////////////////////////////////////////////////
+// LifeExpectancy.cs - Program for per Line trend of life expectancies//
+// Language:    C#, .Net Framework 4.0                                //
+// Application: Open Source Computing, Project, Summer 2015           //
+// Author:      SMRUTI TATAVARTHY, COMP 412, Loyola University        //
+//              statavarthy@luc.edu                                   //
+////////////////////////////////////////////////////////////////////////
+/*Summary
+ * 
+ * The aim of this program is to display the line trend of the life
+ * expectancies for the years 1990, 2000, 2010.
+ * This program contains logic for populating the life expectancies
+ * for 3 years and adding them to the line chart.
+ * This is a Windows forms application that will show on selection of the 
+ * community from the drop down and then clicking the line trend button
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,8 +31,11 @@ namespace Project
 {
     public partial class Form5 : Form
     {
+        //Initialising bar chart
         Chart barChart;
         string value_selected="";
+
+        //Initialising chart area and window size
         public Form5(string value)
         {
 
@@ -25,41 +45,34 @@ namespace Project
             value_selected = value;
 
         }
-
+        //Initializing Chart area
         public void InitializeChart()
         {
 
             this.components = new System.ComponentModel.Container();
-            ChartArea chartArea1 = new ChartArea();
-            Legend legend1 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
-            Legend legend2 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
+            ChartArea chartArea1 = new ChartArea();            
             barChart = new Chart();
-
             ((ISupportInitialize)(barChart)).BeginInit();
-
             SuspendLayout();
             //====Bar Chart
             chartArea1 = new ChartArea();
             chartArea1.Name = "BarChartArea";
             barChart.ChartAreas.Add(chartArea1);
             barChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend3";
-            barChart.Legends.Add(legend2);
-
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             //this.ClientSize = new System.Drawing.Size(284, 262);           
             this.Load += new EventHandler(Form5_Load);
             ((ISupportInitialize)(this.barChart)).EndInit();
             this.ResumeLayout(false);
-
         }
-
+        //Form5 definition to load bar chart
         private void Form5_Load(object sender, EventArgs e)
         {
             LoadBarChart();
 
         }
+        //Setting properties of the bar chart
         void LoadBarChart()
         {
             barChart.Series.Clear();
@@ -76,14 +89,13 @@ namespace Project
             barChart.ChartAreas[0].AxisY.Maximum = 100;
             barChart.ChartAreas[0].AxisY.Title = "% Life Expectancy";
             barChart.ChartAreas[0].AxisX.Title = "Year";
-
             Series series = new Series
             {
                 Name = "series2",
                 IsVisibleInLegend = false,
                 ChartType = SeriesChartType.Line
             };
-
+            //reading life expectancies and populating them in line chart
             ParseData pd = new ParseData();
             string filePath = "..\\..\\..\\..\\Data\\";
             string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
@@ -124,10 +136,8 @@ namespace Project
             barChart.Titles.Add(new Title("Trend of life Expectancies", Docking.Top, new Font("Verdana", 28f, FontStyle.Bold), Color.Black));
             barChart.Series.Add(series);
             barChart.Invalidate();
-
             panel1.Controls.Add(barChart);
         }
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

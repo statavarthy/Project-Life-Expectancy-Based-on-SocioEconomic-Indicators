@@ -1,4 +1,20 @@
-﻿using System;
+﻿///////////////////////////////////////////////////////////////////////
+// LifeExpectancy.cs - Program for Unemployment Chart                //
+// Language:    C#, .Net Framework 4.0                               //
+// Application: Open Source Computing, Project, Summer 2015          //
+// Author:      SMRUTI TATAVARTHY, COMP 412, Loyola University       //
+//              statavarthy@luc.edu                                  //
+///////////////////////////////////////////////////////////////////////
+/*Summary
+ * 
+ * The aim of this program is to display the graph for the unemployemnt
+ * of different communitities
+ * This program contains logic for populating the unemmployment
+ * and communitites and adding them to the bar chart.
+ * This is a Windows forms application that will show on click of the 
+ * unemployment statistics button
+ */
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,7 +30,9 @@ namespace Project
 {
     public partial class unemployment_Vs_Community : Form
     {
+        //Initialising bar chart
         Chart barChart;
+        //Initialising chart area and window size
         public unemployment_Vs_Community()
         {
             this.WindowState = FormWindowState.Maximized;
@@ -24,42 +42,33 @@ namespace Project
             panel1.Size = new Size(newWidth, panel1.Height);
             InitializeChart();
         }
-
+        //Initializing Chart area
         public void InitializeChart()
         {
-
             this.components = new System.ComponentModel.Container();
-            ChartArea chartArea1 = new ChartArea();
-           // Legend legend1 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
-            //Legend legend2 = new Legend() { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
+            ChartArea chartArea1 = new ChartArea();           
             barChart = new Chart();
-
             ((ISupportInitialize)(barChart)).BeginInit();
-
             SuspendLayout();
             //====Bar Chart
             chartArea1 = new ChartArea();
             chartArea1.Name = "BarChartArea";
             barChart.ChartAreas.Add(chartArea1);
             barChart.Dock = System.Windows.Forms.DockStyle.Fill;
-           // legend2.Name = "Legend3";
-            //barChart.Legends.Add(legend2);
-
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             //this.ClientSize = new System.Drawing.Size(284, 262);           
             this.Load += new EventHandler(Form3_Load);
             ((ISupportInitialize)(this.barChart)).EndInit();
             this.ResumeLayout(false);
-
         }
-
+        //Form3 definition to load bar chart
         private void Form3_Load(object sender, EventArgs e)
         {
             LoadBarChart();
 
         }
-
+        //Setting properties of the bar chart
         void LoadBarChart()
         {
             barChart.Series.Clear();
@@ -82,7 +91,7 @@ namespace Project
                 IsVisibleInLegend = false,
                 ChartType = SeriesChartType.Column
             };
-
+            //reading socio economic indicators and populating them in bar chart
             ParseData pd = new ParseData();
             string filePath = "..\\..\\..\\..\\Data\\";
             string SocioEconomicIndicatorsFilePath = filePath + "SocioEconomic_Indicators_Chicago.csv";
@@ -103,12 +112,8 @@ namespace Project
             barChart.Titles.Add(new Title("UnEmployment for different communities in Chicago" , Docking.Top, new Font("Verdana", 28f, FontStyle.Bold), Color.Black));
             barChart.Series.Add(series);
             barChart.Invalidate();
-
             panel1.Controls.Add(barChart);
         }
-
-
-
         private void panel1_Paint(object sender, PaintEventArgs e)
         {
 

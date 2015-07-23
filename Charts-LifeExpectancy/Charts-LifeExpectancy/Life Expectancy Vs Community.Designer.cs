@@ -1,4 +1,7 @@
-﻿namespace Project
+﻿
+
+//This is a system generated file on creation of the form
+namespace Project
 {
     partial class LifeExpectancy_Vs_Community
     {
@@ -51,7 +54,7 @@
             this.Controls.Add(this.panel2);
             this.Name = "LifeExpectancy_Vs_Community";
             this.Text = "Life Expectancy Vs Community";
-            this.Load += new System.EventHandler(this.Form1_Load_1);
+           // this.Load += new System.EventHandler(this.Form1_Load_1);
             this.ResumeLayout(false);
             this.PerformLayout();
 

@@ -1,4 +1,21 @@
-﻿using System;
+﻿///////////////////////////////////////////////////////////////////////
+// LifeExpectancy.cs - Program for Life Expectancy Chart             //
+// Language:    C#, .Net Framework 4.0                               //
+// Application: Open Source Computing, Project, Summer 2015          //
+// Author:      SMRUTI TATAVARTHY, COMP 412, Loyola University       //
+//              statavarthy@luc.edu                                  //
+///////////////////////////////////////////////////////////////////////
+/*Summary
+ * 
+ * The aim of this program is to display the graph for the life expectancies
+ * of different communitities
+ * This program contains logic for populating the life expectancies
+ * and communitites and adding them to the bar chart.
+ * This is a Windows forms application that will show on click of the 
+ * life expectancies statistics button
+ */
+
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Data;
@@ -14,8 +31,10 @@ namespace Project
 {
     public partial class LifeExpectancy_Vs_Community : Form
     {
-        Chart pieChart;
+        //Initialising bar chart
         Chart barChart;
+
+        //Initialising chart area and window size
         public LifeExpectancy_Vs_Community()
         {
             this.WindowState = FormWindowState.Maximized;
@@ -25,75 +44,34 @@ namespace Project
             panel2.Size = new Size(newWidth, panel2.Height);
             InitializeChart();
         }
+        //Initializing Chart area
          public void InitializeChart()
         {
-
             this.components = new System.ComponentModel.Container();
-            ChartArea chartArea1 = new ChartArea();
-            Legend legend1 = new Legend() 
-              { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
-            Legend legend2 = new Legend() 
-              { BackColor = Color.Green, ForeColor = Color.Black, Title = "Salary" };
-            pieChart = new Chart();
+            ChartArea chartArea1 = new ChartArea();           
             barChart = new Chart();
-
-            ((ISupportInitialize)(pieChart)).BeginInit();
             ((ISupportInitialize)(barChart)).BeginInit();
-
-            SuspendLayout();
-
-            //===Pie chart
-            chartArea1.Name = "PieChartArea";
-            pieChart.ChartAreas.Add(chartArea1);
-            pieChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend1.Name = "Legend1";
-            pieChart.Legends.Add(legend1);
-            pieChart.Location = new System.Drawing.Point(0, 50);
-
+            SuspendLayout();           
             //====Bar Chart
             chartArea1 = new ChartArea();
             chartArea1.Name = "BarChartArea";
             barChart.ChartAreas.Add(chartArea1);
             barChart.Dock = System.Windows.Forms.DockStyle.Fill;
-            legend2.Name = "Legend3";
-            barChart.Legends.Add(legend2);
-
             AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             //this.ClientSize = new System.Drawing.Size(284, 262);           
             this.Load += new EventHandler(Form1_Load);
-            ((ISupportInitialize)(this.pieChart)).EndInit();
             ((ISupportInitialize)(this.barChart)).EndInit();
             this.ResumeLayout(false);
-
         }
 
+         //Form1 definition to load bar chart
          public void Form1_Load(object sender, EventArgs e)
         {
 
-            //LoadPieChart();
             LoadBarChart();
         }
-
-        void LoadPieChart()
-        {
-            pieChart.Series.Clear();
-            pieChart.Palette = ChartColorPalette.Fire;
-            pieChart.BackColor = Color.LightYellow;
-            pieChart.Titles.Add("Employee Salary");
-            pieChart.ChartAreas[0].BackColor = Color.Transparent;
-            Series series1 = new Series
-            {
-                Name = "series1",
-                IsVisibleInLegend = true,
-                Color = System.Drawing.Color.Green,
-                ChartType = SeriesChartType.Pie
-            };
-            pieChart.Series.Add(series1);
-                                                                 
-            pieChart.Invalidate();
-            //panel1.Controls.Add(pieChart);
-        }
+         //Setting properties of the bar chart
         void LoadBarChart()
         {
             barChart.Series.Clear();
@@ -116,7 +94,7 @@ namespace Project
                 IsVisibleInLegend = false,
                 ChartType = SeriesChartType.Column
             };
-
+            //reading socio economic indicators and populating them in bar chart
             ParseData pd = new ParseData();
             string filePath = "..\\..\\..\\..\\Data\\";
             string lifeExpectancyFilePath = filePath + "LifeExpectancy_Chicago.csv";
@@ -136,25 +114,13 @@ namespace Project
             series["PointWidth"] = (0.7).ToString();
             barChart.Titles.Add(new Title("Life Expectancies of different communities in Chicago", Docking.Top, new Font("Verdana", 28f, FontStyle.Bold), Color.Black));
             barChart.Series.Add(series);                                                          
-            barChart.Invalidate();
-            
+            barChart.Invalidate();            
             panel2.Controls.Add(barChart);
         }
-
-
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
         private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void Form1_Load_1(object sender, EventArgs e)
-        {
-
-        }
     }
 }

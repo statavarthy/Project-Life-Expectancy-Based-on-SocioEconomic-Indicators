@@ -1,4 +1,18 @@
-﻿using System;
+﻿///////////////////////////////////////////////////////////////////////
+// LifeExpectancy.cs - Program for Welcome Screen                    //
+// Language:    C#, .Net Framework 4.0                               //
+// Application: Open Source Computing, Project, Summer 2015          //
+// Author:      SMRUTI TATAVARTHY, COMP 412, Loyola University       //
+//              statavarthy@luc.edu                                  //
+///////////////////////////////////////////////////////////////////////
+/*Summary
+ * The aim of this program is to display the Welcome Screen
+ * This program contains logic for starting the code and directing it towards
+ * the rest of the GUI
+ * It contains logic for the start button which calls the sub window containing the
+ * rest of the GUI.
+ */
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -21,7 +35,7 @@ namespace Project
     public partial class MainWindow : Window
     {
         
-       
+       //Main window with background image initialization
         public MainWindow()
         {
             this.WindowState = WindowState.Maximized;
@@ -31,18 +45,12 @@ namespace Project
                 new BitmapImage(new Uri("../../Images/background2.jpg", UriKind.Relative));
             this.Background = myBrush;
         }
-
+        //Click of the start button that calls the sub window
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             SubWindow win = new SubWindow();
             win.Show();
-            this.Close();
-            
-           
-        }
-
-       
-
-        
+            this.Close();                       
+        }              
     }
 }
